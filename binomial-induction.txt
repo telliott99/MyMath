@@ -1,0 +1,145 @@
+.. _binomial-induction:
+
+############################
+Binomial Theorem:  induction
+############################
+
+This section is a work in progress.  I found a proof online here:
+
+https://www.math.hmc.edu/calculus/tutorials/binomial_thm/induction.html
+
+but I couldn't follow all the steps.
+
+We will use :ref:`induction <induction>` to prove that the binomial theorem is valid (for positive integer exponents).  We don't need to worry about the base case, we *know* it works for :math:`n \in {2,3,4}`.
+
+The formula we would like to prove is
+
+.. math::
+
+    (x+y)^n = \sum_{k=0}^{n} \ {n \choose k} \ x^{n-k}y^k
+
+In the inductive step, we assume the formula is correct for 
+
+.. math::
+
+    (x+y)^{n-1} = \sum_{k=0}^{n-1} \ {n-1 \choose k} \ x^{(n-1)-k}y^k
+
+Then we multiply by :math:`(x+y)`
+
+.. math::
+
+    (x+y) \ \sum_{k=0}^{n-1} \ {n-1 \choose k} \ x^{(n-1)-k}y^k
+
+and try to show that we can reduce to the formula we want to prove.  We obtain two terms from the sum
+
+.. math::
+
+    L = x \ \sum_{k=0}^{n-1} \ {n-1 \choose k} \ x^{(n-1)-k}y^k = \sum_{k=0}^{n-1} \ {n-1 \choose k} \ x^{n-k}y^k
+
+    R = y \ \sum_{k=0}^{n-1} \ {n-1 \choose k} \ x^{(n-1)-k}y^k = \sum_{k=0}^{n-1} \ {n-1 \choose k} \ x^{(n-1)-k}y^{k+1}
+
++++++++++++++++++++++++++++
+Massage the right-hand side
++++++++++++++++++++++++++++
+
+We want to manipulate :math:`R` a bit so substitute :math:`j` for :math:`k` as the index variable
+
+.. math::
+
+    \sum_{j=0}^{n-1} \ {n-1 \choose j} \ x^{(n-1)-j}y^{j+1}
+
+Rearrange things so we have :math:`(j+1)` in the crucial places
+
+.. math::
+
+    \sum_{j=0}^{n-1} \ {n-1 \choose j} \ x^{n-(j+1)}y^{j+1}
+
+    \sum_{j=0}^{n-1} \ {n-1 \choose (j+1)-1} \ x^{n-(j+1)}y^{j+1}
+
+Now go back to :math:`k` where :math:`k=j+1`
+
+.. math::
+
+    \sum_{k=1}^{n} \ {n-1 \choose k-1} \ x^{n-k}y^{k}
+
+If (like me) you have a hard time seeing why that works, let's expand a short series (say :math:`n=3`).  In the first summation we go from :math:`j=0 \to 2`
+
+.. math::
+
+    \sum_{j=0}^{2} \ {n-1 \choose j} \ x^{n-(j+1)}y^{j+1} = {2 \choose 0}x^2y^1 + {2 \choose 1}x^1y^2 + {2 \choose 2}x^0y^3
+
+In the second one we go from :math:`k=1 \to 3`
+
+.. math::
+
+    \sum_{k=1}^{3} \ {n-1 \choose k-1} \ x^{n-k}y^k = {2 \choose 0}x^2y^1 + {2 \choose 1}x^1y^2 + {2 \choose 2}x^0y^3
+
+These two series are the same.
+
+++++++++++++++++++++++++++++
+Adjust the limits of the sum
+++++++++++++++++++++++++++++
+
+So now we have
+
+.. math::
+
+    R = \sum_{k=1}^{n} \ {n-1 \choose k-1} \ x^{n-k}y^{k}
+
+We want this sum to run from :math:`0 \to n` so we to make a change on the low side.  We add and subtract the term :math:`k=0`
+
+.. math::
+
+    R = \sum_{k=0}^{n} \ [ \ {n-1 \choose k-1} \ x^{n-k}y^{k} \ ] \  - {n-1 \choose -1}x^ny^0
+
++++++++++++++++++++++
+Go back for :math:`L`
++++++++++++++++++++++
+
+We had
+
+.. math::
+
+    L = \sum_{k=0}^{n-1} \ {n-1 \choose k} \ x^{n-k}y^k
+
+and we want this sum to also run from :math:`0 \to n` so we need to make a change on the high side.  We add and subtract the last term :math:`k=n`
+
+.. math::
+
+    L = \sum_{k=0}^{n}  \ [ \  {n-1 \choose k} \ x^{n-k}y^k  \ ] \  - {n-1 \choose n}x^0y^n
+
+=======================
+Putting it all together
+=======================
+
+.. math::
+
+    L + R = \ [ \ {n-1 \choose k} + {n-1 \choose k-1} \ ] \ x^{n-k}y^k
+    
+    = {n \choose k}x^{n-k}y^k
+    
+Now, I don't understand the meaning of the terms subtracted from :math:`L` and :math:`R` above, but I did find a proof that:
+
+.. math::
+
+    {n - 1 \choose k} + {n - 1 \choose k-1} = {n \choose k}
+
+or equivalently
+
+.. math::
+
+    {n \choose k} + {n \choose k-1} = {n + 1 \choose k}
+    
+The left-hand side is:
+
+.. math::
+
+    \frac{n!}{k! (n-k)!} + \frac{n!}{(k-1)! (n-k+1)! }
+
+    = n! \ [ \ \frac{n + 1 - k}{k!(n + 1 - k)!} + \frac{k}{k!(n + 1 - k)!}  \ ]
+    
+    = \frac{n!(n+1)}{k!(n + 1 - k)!}
+    
+    = \frac{(n+1)!}{k!(n + 1 - k)!}
+    
+    = {n + 1 \choose k }

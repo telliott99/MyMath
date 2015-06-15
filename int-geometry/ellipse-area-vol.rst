@@ -1,0 +1,230 @@
+.. _ellipse-area-vol:
+
+###########
+The ellipse
+###########
+
+The area of an ellipse can be computed in several different ways, all interesting.  The simplest way is rescaling.  In :math:`xy`-coordinates, the formula is
+
+.. math::
+
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+
+    (\frac{bx}{a})^2 + y^2 = b^2
+
+What this says is that if the :math:`x` value of each point on the ellipse is re-scaled by a factor of :math:`b/a`, the result is
+
+.. math::
+
+    u = \frac{b}{a}x
+
+    u^2 + y^2 = b^2
+
+a circle of radius :math:`b` and area :math:`A = \pi b^2`.  Because the scaling factor is only in the :math:`x`-direction
+
+.. math::
+
+    x = \frac{a}{b}u
+
+the area of the original ellipse is bigger by a factor of :math:`a/b`
+
+.. math::
+
+    A = \pi b^2 \ \frac{a}{b} = \pi ab
+
+We might also argue as follows.  The area of the ellipse clearly depends on both :math:`a` and :math:`b`, so we write
+
+.. math::
+
+    A = k a b
+
+where :math:`k` is an unknown constant.  Now, if :math:`a=b`, we obtain
+
+.. math::
+
+    A = k a^2
+
+but this is just a circle, with known area
+
+.. math::
+
+    A = \pi a^2 = k a^2
+
+Hence :math:`k = \pi` and :math:`A = \pi ab`.
+
+========================
+Single variable calculus
+========================
+
+Solve the equation of the ellipse for :math:`y`
+
+.. math::
+
+    y = b \sqrt{1 - \frac{x^2}{a^2} } \ dx
+
+We take the positive square root, and integrate from :math:`x = 0 \rightarrow a`, and should obtain :math:`1/4` the area of the ellipse.
+
+.. math::
+
+    A = 4 b \int \sqrt{1 - \frac{x^2}{a^2} }
+
+The first thing to do is to get rid of the :math:`a` by substitution.  Let :math:`u = x/a`, so :math:`au = x` and :math:`a \ du = dx`, then
+
+.. math::
+
+    A = 4 ab \int \sqrt{1 - u^2} \ du
+
+The next step is to recognize that :math:`f(x) = \sqrt{1-u^2}` is the equation of a circle.  Since we are integrating over the first quadrant, the value of the area is just :math:`\pi/4`.  The whole thing is :math:`\pi` and we pick up the factor :math:`ab` from outside to give :math:`A = \pi ab`.
+
+If you cannot see this, do a trig substitution.  If :math:`u` is the side opposite angle :math:`\theta`, and :math:`1` is the hypotenuse, then 
+
+.. math::
+
+    \sqrt{1-u^2} = \cos \theta
+
+    u = \sin \theta
+
+    du = \cos \theta \ \ d\theta
+
+and the integral becomes
+
+.. math::
+
+    4 ab \int \cos^2 \theta \ d\theta
+
+Before we do the integration, consider the changing bounds.  We originally had :math:`x = 0 \rightarrow a`, in changing to :math:`u` by remembering that
+
+.. math::
+
+    au = x
+
+we obtain :math:`u = 0 \rightarrow 1`.  Then, in changing to :math:`\theta` we have
+
+.. math::
+
+    u = \sin \theta
+
+    \theta = \sin^{-1} u
+
+and we have :math:`\theta = 0 \rightarrow 2\pi`.
+
+I'm not going to do the integral here, but just give the result
+
+.. math::
+
+    \int \cos^2 \theta \ d \theta = \frac{1}{2} (\theta + \sin \theta \cos \theta)
+
+(and there are other ways to write it).  But we will take a moment to check that by differentiating
+
+.. math::
+
+    \frac{d}{d \theta} \ \frac{1}{2} (\theta + \sin \theta \cos \theta)
+
+    =  \frac{1}{2}(1 + \cos^2 \theta - \sin^2 \theta)
+
+    =  \frac{1}{2}(1 + \cos^2 \theta + \cos^2 \theta - 1) = \cos^2 \theta
+
+So we need to evaluate
+
+.. math::
+
+    4ab \ [ \ \frac{1}{2} (\theta + \sin \theta \cos \theta) \ ] \ \bigg |_0^{\pi/2}
+
+Only one term is non-zero and that is :math:`\theta = \pi/2` at the upper limit.  We obtain
+
+.. math::
+
+    A = 4ab \ (\frac{1}{2}\ \frac{\pi}{2}) = \pi ab
+
+===============
+Green's Theorem
+===============
+
+(I'm leaving this here for now even though I haven't laid the groundwork for it)
+
+State the theorem:
+
+.. math::
+
+    \oint_C \mathbf{F} \cdot \mathbf{r} = \iint_R \nabla \times \mathbf{F} \ dA
+
+    \int_C M \ dx + N \ dy = \iint_R (N_x - M_y) \ dx \ dy
+
+The theorem equates the line integral around a closed path with an area over a region.
+
+To start with, if :math:`\mathbf{F}` is the gradient of some function, we call such a function the potential, and the integral of the work over a closed path is just zero.
+
+Of course, my favorite example is the area of the ellipse.  
+
+Suppose :math:`N_x - M_y = 1`.  Then the curl integral is the area of the region.  An example would be if :math:`\mathbf{F} = \ \langle M,N \rangle \ = \ \langle -y/2,x/2 \rangle`.  Parametrize the ellipse.
+
+.. math::
+
+    x = a \cos \theta
+
+    y = b \sin \theta
+
+So, for the left hand side we have
+
+.. math::
+
+    \int_C M \ dx + N \ dy = \int_C -\frac{1}{2}y \ dx + \frac{1}{2}x \ dy
+
+    = \int_0^{2\pi} (-\frac{1}{2})(b \sin \theta) \ (-a \sin \theta) \ d \theta \ + (\frac{1}{2})(a \cos \theta) \ (b \cos \theta) \ d\theta
+
+    = \int_0^{2\pi} (\frac{ab}{2}\sin^2 \theta + \frac{ab}{2}\cos^2 \theta) \ d \theta = \frac{ab}{2} \int_0^{2\pi} \ d \theta = \pi a b
+
+======
+Volume
+======
+
+We want to calculate the volume generated by rotation of an ellipse (centered at the origin) about the x-axis.
+
+.. image:: /figs/ellipse.png
+   :scale: 50 %
+
+The basic idea is that the cross-section of each little slice in the direction we are integrating is a circle with radius equal to :math:`f(x)`.
+
+.. math::
+
+    y = f(x)
+    
+The area of each slice is a function of :math:`x`, given by
+
+.. math::
+
+    A = \pi \ y^2
+    
+We add up all those little slices by doing this integral
+
+.. math::
+
+    V = \pi \int y^2 \ dx
+    
+For the general ellipse we have the equation
+
+.. math::
+
+    \frac{ x^2 }{ a^2 } + \frac{ y^2 }{ b^2 } = 1
+
+    y^2 =  b^2 (1 - \frac{ x^2 }{ a^2 })
+    
+So the integral is
+
+.. math::
+
+    V = \pi \int y^2 dx = \pi \int b^2 (1 - \frac{ x^2 }{ a^2 }) \ dx
+
+which is just
+
+.. math::
+
+    V = \pi b^2 \ ( x - \frac{ x^3 }{ 3a^2 } )
+
+evaluated between :math:`x = -a \rightarrow x = a`
+
+.. math::
+
+    V = \pi  b^2 [ (a - \frac{a}{3}) - (-a - \frac{-a}{3}  ) ] =  \frac{4}{3} \pi b^2 a
+
+This is quite beautiful.  We get a squared contribution for the :math:`b` component, which describes the "stretching" of the ellipse in the direction of the axis of rotation.  Rotation around the :math:`y`-axis would give a formula containing :math:`a^2`, and a bigger solid by a factor of :math:`a/b`.
