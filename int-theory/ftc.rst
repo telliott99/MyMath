@@ -7,11 +7,19 @@ FTC
 .. image:: /figs/FTC_geometric2.png
    :scale: 50 %
 
-The big picture view of the fundamental theorem of calculus (FTC) is that if we consider that the area :math:`A` under the graph of a function :math:`f(x)` is itself a function :math:`A(x)` (having fixed the left-hand boundary for the area), then
+The big picture view of the fundamental theorem of calculus (FTC) is that if we consider that the area :math:`A` under the graph of a function :math:`f(x)` as being itself a function :math:`A(x)` (the left-hand boundary for the area is fixed), then
 
 .. math::
 
     A' = f(x)
+
+After the discussion in the previous chapter :ref:`here <circles>`, this should come as no surprise.  For a circle we asked:
+
+    "how does the area grow with a small change in radius", the answer is that it grows like the circumference :math:`2 \pi r`, times the small change in radius :math:`dr`.
+
+Now we ask:
+
+    How does :math:`A(x)` grow with a small change in :math:`x`?  It grows like :math:`f(x) \times dx`.
 
 and we can find the area function :math:`A` as one of the family of *anti-derivatives* of :math:`f`.  
 
@@ -69,6 +77,6 @@ The area under the curve :math:`f(x) = x^2` between :math:`x=1 \rightarrow 2` is
 
 A simple-minded view of the FTC is that it says that integration and differentiation are the reverse processes for each other.  In fact, this connection is the fundamental insight of Newton and Leibnitz.
 
-However, it is important to emphasize that **the FTC is not the definition of integration**, but the  opposite.  Integration is defined as the limit of Riemann sums of the interval.  What the FTC does is to provide a process that comes to the same answer as the sum method, but without the pain.
+However, it is important to emphasize that **the FTC is not the definition of integration, but the opposite**.  Integration is defined as the limit of Riemann sums of the interval.  What the FTC does is to provide a process that comes to the same answer as the sum method, but without the pain.
 
 (see Bressoud from p. 104 in the AP Calculus handout).

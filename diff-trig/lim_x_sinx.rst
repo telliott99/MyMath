@@ -49,7 +49,7 @@ Now cancel :math:`r^2/2` and divide by :math:`\sin t`
 
     \cos t < \frac{t}{\sin t} < \frac{1}{\cos t}
 
-As :math:`t \rightarrow 0`, both :math:`\cos t` and :math:`1/\cos t` also :math:`\rightarrow 1`.  Therefore the ratio gets squeezed, and it :math:`\rightarrow 1` as well.  Thus
+As :math:`t \rightarrow 0`, both :math:`\cos t` and :math:`1/\cos t` approach the same limit, :math:`1`.  Therefore the ratio gets squeezed, and it approaches the same limit as well.  Therefore:
 
 .. math::
 

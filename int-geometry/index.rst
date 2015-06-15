@@ -8,6 +8,7 @@ Contents:
    :maxdepth: 2
    
    disks-shells
+   improper-int
    surface-area
    line-integrals
    cycloid

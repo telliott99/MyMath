@@ -250,3 +250,5 @@ Now, the roots are just the points when :math:`y=0` and so
     x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
 
 which is the quadratic equation.
+
+Additional material about the parabola is :ref:`here <parabola-more>`.

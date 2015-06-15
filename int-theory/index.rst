@@ -16,6 +16,5 @@ Contents:
    trig_sub
    cosine_sq
    partial_fracs
-   improper-int
    numerical-int
 

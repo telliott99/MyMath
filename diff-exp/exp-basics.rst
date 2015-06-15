@@ -24,13 +24,13 @@ Putting them together
 
 The usual bases are :math:`10` (common logarithm, :math:`\log_{10}`, or just :math:`\log`), :math:`e` (natural logarithm or :math:`\ln`), and :math:`2` (binary logarithm or :math:`\log_2`).
 
-The rules for exponents are simple, if :math:`p` and :math:`q` are two numbers and we know the logarithms of :math:`p` and :math:`q` to base :math:`b`
+The rules for exponents are simple, if :math:`p` and :math:`q` are two numbers and we know the logarithms :math:`u` and :math:`v` of :math:`p` and :math:`q` to base :math:`b`
 
 .. math::
 
     p = b^{u}; \ \ \ q = b^{v}
 
-then their product can be computed as:
+then their product can be found as:
 
 .. math::
 
@@ -66,6 +66,8 @@ and
 
 .. math::
 
+    \log_2 (2^2)^3 = 3 \log_2 4 = 6
+
     (2^2)^3 = 4^3 = 64 = 2^6 = 2^{2 \times 3}
 
 Here is a plot of :math:`\log_{10}(x)` and :math:`\ln x`:
@@ -73,7 +75,7 @@ Here is a plot of :math:`\log_{10}(x)` and :math:`\ln x`:
 .. image:: /figs/log1.png
    :scale: 50 %
 
-The first function reaches the value :math:`1` when :math:`x=10` and the second reaches the value :math:`1` when :math:`x=e`.  Both have the value :math:`0` at :math:`x=1` because :math:`b^0 = 1` for any base, so the logarithm to any base of :math:`1` is equal to :math:`0`.
+The first function reaches the value :math:`1` when :math:`x=10` and the second reaches the value :math:`1` when :math:`x=e = 2.71828`.  Both have the value :math:`0` at :math:`x=1` because :math:`b^0 = 1` for any base, so the logarithm to any base of :math:`1` is equal to :math:`0`.
 
 Since
 
@@ -91,13 +93,19 @@ so
 
     - \log x = \log \frac{1}{x}
 
-It turns out that if we take the logarithm of :math:`x` (where :math:`x` is any number :math:`> 1`) to two *different* bases, the ratio of the logarithms is a constant, independent of the value of :math:`x`.  This is best shown by the change of bases formula.
+It turns out that if we take the logarithm of :math:`x` (where :math:`x` is any number :math:`> 1`) to two *different* bases, the ratio of the logarithms is a constant, independent of the value of :math:`x`.  This is illustrated by the change of bases formula.
+
+.. math::
+
+    \log_a b \ \log_b n = \log_a n
+
+To remember this, I think of the :math:`b`'s on the left-hand side "cancelling", although they don't really.  Rearranging:
 
 .. math::
 
     \log_b n = \frac{\log_a n}{\log_a b}
 
-Start with
+To derive the formula, start with:
 
 .. math::
 
@@ -105,13 +113,13 @@ Start with
 
     x = \log_b y
 
-Take logarithms to the base :math:`a`:
+Take the logarithm to the base :math:`a`:
 
 .. math::
 
     \log_a y = \log_a (b^x)
 
-Using the second rule
+Use the second rule
 
 .. math::
 
@@ -122,6 +130,12 @@ Substitute for :math:`x`
 .. math::
 
     \log_a y = \log_b y \log_a b
+        
+which is what we had, expressed in terms of :math:`y` rather than :math:`x`.  If you prefer:
+
+.. math::
+
+    \log_a x = \log_a b \log_b x
 
 Rearranging:
 
@@ -129,13 +143,7 @@ Rearranging:
 
     \log_b y = \frac{\log_a y}{\log_a b}
 
-:math:`y` can be any value, so replace it by :math:`x`
-
-.. math::
-
-    \log_b x = \frac{\log_a x}{\log_a b}
-
-The way I remember this is that first
+To check this:
 
 .. math::
 
@@ -146,14 +154,6 @@ the logarithms to different bases are connected by some constant :math:`k`, and 
 .. math::
 
     \log_b x = \frac{\log_a x}{\log_a b}
-
-Alternatively, you might look at the other formula
-
-.. math::
-
-    \log_b x \log_a b = \log_a x
-
-and think of the :math:`b`'s canceling in some way (not that they do, of course).
 
 One other thing we can do is to set :math:`x=a` in the above formula.  We start from
 

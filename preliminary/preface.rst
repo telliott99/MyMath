@@ -30,4 +30,4 @@ There are not many problems in this book, because I wanted to minimize the lengt
 
     You cannot learn to do mathematics without effort. “There is no royal road to geometry” was said in ancient Greek times, (Menaechmus to Alexander, around 300 B.C.).
 
-And it wouldn't hurt to work through the examples in this book with paper and pen, as you read through them.    
+It wouldn't hurt to work through the examples in this book with paper and pen, as you read through them.

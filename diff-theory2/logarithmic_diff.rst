@@ -157,3 +157,5 @@ So we multiply by :math:`f(x)` to obtain the result:
     f'(x) = ( \frac{9}{x} + 4 - \frac{x}{(x^2 + 4)}) \  \frac{x^9 e^{4x}}{\sqrt{x^2 + 4}}
 
 which would obviously be a real mess by the standard approach.
+
+:ref:`Here <max_likelihood>` is a nice application.

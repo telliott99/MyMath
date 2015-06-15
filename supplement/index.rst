@@ -7,6 +7,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
+   sum_n^2
+   induction
    proof-product-rule
    binomial-theorem
    combinations

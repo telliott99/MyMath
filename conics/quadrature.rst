@@ -1,8 +1,8 @@
 .. _quadrature:
 
-######################
-Quadrature of the lune
-######################
+##########
+Quadrature
+##########
 
 Here is a figure from wikipedia, showing a parabola and a chord of the parabola, which could be drawn between any two points. A triangle is constructed from the chord in the following way: the point dividing the horizontal distance in half is found and that position is used for the x-value of the third point.
 

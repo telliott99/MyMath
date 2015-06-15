@@ -35,7 +35,7 @@ Rings
 
 In the first approach (left panel), we imagine the area being computed by adding up the individual areas of a series of very thin, concentric rings.
 
-The total area to be computed is that of a circle of a definite, fixed size, and we denote the radius of this circle by capital :math:`R`, a constant.  On the other hand, the series of rings ranges from the origin of the circle to the circumference of the outmost ring.  Each ring in this progression has a different radius, so we use a lowercase :math:`r` to describe them, with :math:`r` being a variable---:math:`r` varies from :math:`0` at the origin to :math:`R` at the outside of the circle.
+The total area to be computed is that of a circle with a definite, fixed size, and we denote the radius of this circle by capital :math:`R`, a constant.  On the other hand, the series of rings ranges from the origin of the circle to the circumference of the outmost ring.  Each ring in this progression has a different radius, so we use a lowercase :math:`r` to describe them, with :math:`r` being a variable---:math:`r` varies from :math:`0` at the origin to :math:`R` at the outside of the circle.
 
 We are working with areas, figures in two dimensions, so the individual rings are similar to the peel or rind surrounding an infinitely thin slice of lemon.  
 
@@ -45,7 +45,7 @@ The area of the ring is the length times the width.  The length is the circumfer
 
     dA = 2 \pi r \ dr
 
-Another way to explain this equation is to ask the question:  **how does area change with increasing radius**?  If we take a circle and increase its radius by a bit, how does the area change?  The answer is, it changes in proportion to the circumference, :math:`2 \pi r`.
+Another way to explain this equation is to ask the question:  **how does area change with increasing radius**?  If we take a circle and increase its radius by a bit, how does the area change?  Again, the answer is, it changes in proportion to the circumference, :math:`2 \pi r`.
 
 Proceeding from the equation, we obtain the total area by summing the areas for each of the series of rings.
 
@@ -55,7 +55,7 @@ Proceeding from the equation, we obtain the total area by summing the areas for 
     
     = \int_0^R 2 \pi r \ dr
 
-It's worth emphasizing how this view is much different than our first uses of integration:  the pieces of area are no longer rectangles but circles.  But it poses most clearly the question we are trying to answer, "how does area vary with :math:`r`"?
+It's worth emphasizing how this view is different than (but similar to) our first uses of integration:  the pieces of area are no longer rectangles but circles.  But it poses most clearly the question we are trying to answer, "how does area vary with :math:`r`"?
 
 The solution is
 
@@ -65,16 +65,16 @@ The solution is
     
     = 2 \pi \ \frac{1}{2}r^2 \ \bigg|_{r=0}^{r=R} = \pi R^2
 
+As expected.
+
 ======
 Wedges
 ======
 
-In the second method (middle panel)
-
 .. image:: /figs/circles.png
    :scale: 50 %
 
-we first need to find the area of a wedge.  For a thin enough slice, a wedge is a triangle (its base is on the circumference of the circle), with a similar formula: one-half the base times the height.  The height is :math:`R`, the radius of the circle.  
+In the second method (middle panel), we first need to find the area of a wedge.  For a thin enough slice, a wedge is a triangle with its base on the circumference of the circle, and its area  has the familiar formula: one-half the base times the height.  The height is :math:`R`, the radius of the circle.  
 
 For the base we need the length of a piece of arc of a circle.  Recall that by definition, if we have a unit circle, then the angle of a wedge is equal to the arc it cuts out.  Thus, the total length if we go all the way around the unit circle is :math:`2 \pi`.  For a circle with radius :math:`R`, the length going all the way around is :math:`2 \pi R`, and the length of arc for any angle :math:`\theta` is :math:`\theta \times R`.
 
@@ -112,7 +112,7 @@ Consider a filled sphere (a mathematical "ball").  How does it grow?  It grows l
 
 .. math::
 
-    dV = 4 \pi r^2 
+    dV = 4 \pi r^2\ dr
 
 The volume is the integral of the surface area times the differential :math:`dr`:
 
@@ -132,7 +132,7 @@ Area under the curve
 
 The third view is the most familiar, but it has a somewhat harder calculation.  Nevertheless, we will do it here for completeness.  
 
-We need to find the area under the positive square root in the equation for a circle.  For this problem, the limits should be :math:`x=0  \Rightarrow R` or :math:`x=-R  \Rightarrow R`.  Start with the standard
+We need to find the area under the positive square root in the equation for a circle.  For this problem, the limits should be :math:`x=0  \rightarrow R` or :math:`x=-R  \rightarrow R`.  Start with the standard
 
 .. math::
 
@@ -140,7 +140,7 @@ We need to find the area under the positive square root in the equation for a ci
     
     y = \sqrt{R^2-x^2}
 
-We use a *trigonometric substitution*
+We use a :ref:`trigonometric substitution <trig_sub>`:
 
 .. math::
 
@@ -188,13 +188,13 @@ Alternatively, we might have just recognized that the value we want to integrate
     
     = R^2 \int \cos^2 \theta \ d\theta
 
-We will look at this integral in detail elsewhere.  Here, let's solve it by looking at a derivative: 
+We will look at this integral in detail :ref:`here <cosine_sq>`.  Let's solve it now by looking at a derivative: 
 
 .. math::
 
     \frac{d}{dx} \sin x \cos x 
     
-    = -\sin^2 x + \cos^2 x 
+    = -\sin^2 x + \cos^2 x
     
     = \cos^2 x - 1 + \cos^2 x
     
@@ -218,7 +218,7 @@ To actually compute the area, we need to evaluate at the limits.  Suppose we tak
 
 .. math::
 
-    x = 0 \Rightarrow  x = R
+    x = 0 \rightarrow  x = R
 
 and agree that we need to multiply the final result by :math:`4`, because we're calculating the area only for the upper-right quadrant of the circle. 
 
@@ -250,10 +250,10 @@ With an upper limit equal to :math:`\pi/2`, and :math:`0` as the lower limit, th
     
     = \frac{\pi}{4}
         
-Recall that we had a factor of :math:`R^2`:
+Recall that we had a factor of :math:`R^2` preceeding the integral so:
 
 .. math::
  
     A = \frac{1}{4} \pi R^2
     
-This is one-fourth of the total, hence the total area is :math:`A =\pi R^2`.
+And this is one-fourth of the total, hence the total area is :math:`A =\pi R^2`.

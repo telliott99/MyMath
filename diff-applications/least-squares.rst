@@ -61,7 +61,7 @@ Let's work with the first equation.
 
     3C + 6D - 8 = 0
 
-    3C = -6D + 8
+    3C + 6D = 8
 
 Leave it that way for now.  Now look at the second equation.
 
@@ -73,20 +73,28 @@ Leave it that way for now.  Now look at the second equation.
 
     C + D - 2 + 2C + 4D - 4 + 3C + 9D - 12 = 0
 
-    6C + 14D - 18 = 0
-
-Substitute for :math:`3C` into equation :math:`2`
+    6C + 14D = 18
+    
+Add :math:`-2 \times` the first equation
 
 .. math::
 
-    6C + 14D - 18 = 2(-6D + 8) + 14D - 18 = 0
+    -6C + -12D = -16
 
-    2D - 2 = 0
+to the second one:
 
+.. math::
+
+    2D = 2
+    
     D = 1
 
-    3C = -6D + 8 = 2
+So from the first equation:
 
+.. math::
+
+    3C + 6 = 8
+    
     C = \frac{2}{3}
 
 If we calculate the actual errors we have
@@ -113,11 +121,13 @@ Notice that the line goes through the :math:`\mu(x), \mu(y)`.  For our problem, 
 
 .. math::
 
-    \mu(x) = 2, \ \ \ \ \mu(y) = \frac{8}{3}
-
-    \mu(xy) =\frac{(1*2 + 2*2 + 3*4)}{3} = \frac{18}{3}
+    \mu(x) = 2
+    
+    \mu(y) = \frac{8}{3}
 
     \mu(x)\mu(y) = \frac{16}{3}
+
+    \mu(xy) =\frac{(1*2 + 2*2 + 3*4)}{3} = \frac{18}{3}
 
     \mu(x^2) = \frac{1 + 4 + 9}{3} = \frac{14}{3}
 
@@ -136,7 +146,7 @@ Just for fun, we can check using R:
 Derivation
 ==========
 
-Here is a derivation of the formula.  We write the sum of the squared deviations as
+Here is a derivation of the formulas with :math:`\mu`.  We write the sum of the squared deviations as
 
 .. math::
 

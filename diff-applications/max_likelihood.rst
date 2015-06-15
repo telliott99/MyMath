@@ -4,7 +4,11 @@
 Maximum likelihood
 ##################
 
-A nice application of logarithmic differentiation is of a set of Bernoulli trials, like a series of coin flips where the coin isn't fair, but instead has a probability :math:`p` of coming up heads (H) and :math:`1-p` of coming up tails (T).  
+A nice application of logarithmic differentiation is of a set of Bernoulli trials, like a series of coin flips where the coin isn't fair, but instead has a probability :math:`p` of coming up heads (H) and :math:`1-p` of coming up tails (T).
+
+Note that this classic example is actually impossible to achieve.  One cannot "weight" a coin to do this, though it is easy with a die (singular of dice).
+
+http://www.stat.columbia.edu/~gelman/research/published/diceRev2.pdf
 
 Now, :math:`p` is unknown, but we have some data about how the coin performs, and we wish to use the data to estimate :math:`p` by the method of maximum likelihood.  We observe this sequence of trials:
 
@@ -18,13 +22,17 @@ Theory says that the probability of observing this sequence of events is depende
 
     p(1-p)pp(1-p)(1-p)(1-p)p(1-p)ppp = p^7(1-p)^5
 
-We call the probability of observing this data, \emph{given} some underlying probability model :math:`p`, the likelihood :math:`L`:
+We call the probability of observing this data, *given* some underlying probability model :math:`p`, the likelihood :math:`L`:
 
 .. math::
 
     L(p) = p^7(1-p)^5
 
-And in general, since each trial is independent and identically distributed, we can write that for :math:`n` trials and :math:`k` successes we would have
+And in general, since each trial is independent and identically distributed
+
+https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables
+
+we can write that for :math:`n` trials and :math:`k` successes we would have
 
 .. math::
 
@@ -38,7 +46,7 @@ To find the maximum for :math:`L` we differentiate and set that equal to 0.
 
     \frac{d}{dp} L = 0
 
-However, we note that since :math:`\ln L` increases and decreases along with :math:`L`, the :math:`p` that gives a maximum for :math:`L` also gives a maximum for :math:`\ln L`, and we will set:
+However, we note that since :math:`\ln L` increases and decreases along with :math:`L`, the value of :math:`p` that gives a maximum for :math:`L` also gives a maximum for :math:`\ln L`.  So we will take the logarithm of :math:`L` and set *that* equal to zero:
 
 .. math::
 
@@ -50,9 +58,11 @@ Take the derivative :math:`d/dp` of both sides (we get a minus sign from the cha
 
 .. math::
 
-    \frac{d}{dp} L = 0 = \frac{k}{p} - \frac{n-k}{1-p}
+    \frac{d}{dp} \ln L = 0 = \frac{k}{p} - \frac{n-k}{1-p}
 
-Rearrange, then multiply through by :math:`1-p` and also by :math:`1/k`:
+    \frac{k}{p} = \frac{n-k}{1-p}
+
+Multiply through by :math:`1-p` and also by :math:`1/k`:
 
 .. math::
 
@@ -62,4 +72,4 @@ Rearrange, then multiply through by :math:`1-p` and also by :math:`1/k`:
 
     p = \frac{k}{n}
 
-As we might have thought, the best guess for :math:`p` is the observed number of successes in that many trials, :math:`k/n`.
+As we might have guessed, the maximum likelihood estimate of :math:`p` is simply the ratio of the observed number of successes to the number of trials:  :math:`k/n`.

@@ -33,7 +33,7 @@ The graphic, which is from wikipedia, shows a typical ellipse.  The geometric de
 
 .. math::
 
-    PF_1 + PF_2 = const
+    PF_1 + PF_2 = \text{constant}
 
 The sum of the distances from any point to each of the two foci is a constant.  The foci lie on the semi-major axis (the long axis of the ellipse), which here is the :math:`x`-axis.  
 
@@ -41,7 +41,7 @@ The formula for the focal distance (the distance along the :math:`x`-axis from t
 
 .. math::
 
-    c^2 = a^2 - b^2
+    a^2 - b^2 = c^2
     
     b^2 + c^2 = a^2
 
@@ -53,7 +53,11 @@ Or solving for :math:`c`:
 
 For example, if :math:`a=5` and :math:`b=3` then :math:`c=4`, so the foci are the two points :math:`(0,-c), (0,c)`.  (Some authors switch the labels :math:`a` and :math:`b` depending on which is the major axis, but I find it confusing).
 
-The distance from :math:`F_1` to :math:`P` (:math:`P_x > 0`) is
+==========
+Derivation
+==========
+
+If :math:`P` (:math:`x,y`) lies to the right of the :math:`y`-axis, (:math:`x > 0`), then the distance from :math:`F_1` to :math:`P` is
 
 .. math::
  
@@ -71,7 +75,7 @@ This sum is a constant, and equal to :math:`2a` as seen from the point :math:`P=
 
     PF_1 + PF_2 = a - c + a + c = 2a
 
-The relation to :math:`b` can be seen from the point :math:`Q=(0,b)` where 
+The relation to :math:`b` can be found from considering the point :math:`Q=(0,b)` where 
 
 .. math::
 
@@ -109,9 +113,9 @@ These are simply
 
 .. math::
 
-    x = a \ cos\theta
+    x = a \cos \theta
 
-    y = b \ sin\theta
+    y = b \sin \theta
 
 It can be verified easily that these solve the basic equation
 
@@ -125,7 +129,7 @@ and note, for example that if :math:`\theta=\pi/4` then :math:`x = a/\sqrt{2}; \
 Equation of the ellipse
 =======================
 
-We have enough to derive the equation of the ellipse, with a moderate amount of algebra.  Recall the definition of constant distance from the foci together of :math:`2a`:
+We have enough to derive the equation of the ellipse, with a moderate amount of algebra.  Recall the definition that the sum of the distances to the two foci together is a constant, equal to :math:`2a`:
 
 .. math::
 
@@ -168,4 +172,8 @@ Recall that :math:`c^2 = a^2 - b^2`:
 
     -\frac{x^2b^2}{a^2} = - b^2 + y^2
 
+    \frac{x^2}{a^2} = 1 - \frac{y^2}{b^2}
+
     \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+
+Additional material about the ellipse is :ref:`here <ellipse-param>`.
