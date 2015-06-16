@@ -11,6 +11,7 @@ Contents:
    induction
    proof-product-rule
    binomial-theorem
+   binomial-newton
    combinations
    binomial-combo
    exp-binomial

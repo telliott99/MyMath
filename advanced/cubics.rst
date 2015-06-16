@@ -22,7 +22,7 @@ As you know, the graph of this function is a parabola, pointing up or down depen
 
     y = \frac{b^2}{4a} - \frac{b^2}{2a} + c = - \frac{b^2}{4a} + c
 
-Now, if the sign of :math:`a` is positive and :math:`y < 0` at the vertex, then the parabola opens up and the vertex is below the :math:`x`-axis and there will be two real roots.  There are two places where :math:`y=0` and the graph crosses the :math:`x`-axis.  If :math:`y=0` then there is a single real root, that is repeated.  And if :math:`a < 0` and :math:`y` is above the :math:`x`-axis, there are no real roots.
+Now, if the sign of the term :math:`ax^2` is positive and :math:`y < 0` at the vertex, then the parabola opens up and the vertex is below the :math:`x`-axis and there will be two real roots.  There are two places where :math:`y=0` and the graph crosses the :math:`x`-axis.  If :math:`y=0` at the vertex, then there is a single real root, that is repeated.  And if :math:`a < 0` and :math:`y` is above the :math:`x`-axis, there are no real roots.
 
 We obtain the quadratic equation by completing the square.
 
