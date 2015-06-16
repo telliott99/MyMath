@@ -28,7 +28,7 @@ plug in for :math:`b = 1/n`
 
     \frac{1}{0!}({\frac{1}{n}})^0 + + \frac{n}{1!}({\frac{1}{n}})^1 + \frac{n(n-1)}{2!}({\frac{1}{n}})^2 + \frac{n(n-1)(n-2)}{3!}({\frac{1}{n}})^3 + \cdots
 
-Now, in the limit as :math:`x \rightarrow \infty`, :math:`n` and :math:`n-1` are nearly equal, and so are :math:`n` and :math:`n-2`, and all the terms :math:`n`, :math:`(n-1)`, :math:`(n-2)1 find just the right number of :math:`n`'s in the denominator to cancel and we get
+Now, in the limit as :math:`x \rightarrow \infty`, :math:`n` and :math:`n-1` are nearly equal, and so are :math:`n` and :math:`n-2`, and all the terms :math:`n`, :math:`(n-1)`, :math:`(n-2)` find just the right number of :math:`n`'s in the denominator to cancel and we get
 
 .. math::
 

@@ -37,21 +37,32 @@ The graphic, which is from wikipedia, shows a typical ellipse.  The geometric de
 
 The sum of the distances from any point to each of the two foci is a constant.  The foci lie on the semi-major axis (the long axis of the ellipse), which here is the :math:`x`-axis.  
 
-The formula for the focal distance (the distance along the :math:`x`-axis from the origin to either focus) is
+The formula for the focal distance (the distance :math:`f` along the :math:`x`-axis from the origin to either focus) is
 
 .. math::
 
-    a^2 - b^2 = c^2
+    a^2 - b^2 = f^2
     
-    b^2 + c^2 = a^2
+    b^2 + f^2 = a^2
 
-Or solving for :math:`c`:
+Or solving for :math:`f`:
 
 .. math::
 
-    c = \sqrt{a^2 - b^2}
+    f = \sqrt{a^2 - b^2}
 
-For example, if :math:`a=5` and :math:`b=3` then :math:`c=4`, so the foci are the two points :math:`(0,-c), (0,c)`.  (Some authors switch the labels :math:`a` and :math:`b` depending on which is the major axis, but I find it confusing).
+For example, if :math:`a=5` and :math:`b=3` then :math:`f=4`, so the foci are the two points :math:`(0,-f), (0,f)`.  (Some authors switch the labels :math:`a` and :math:`b` depending on which is the major axis, but I find it confusing).
+
+The **eccentricity** :math:`e` is equal to the ratio:
+
+.. math::
+
+    e = \frac{f}{a}
+
+Here is a table of planetary eccentricities I found on the web:
+
+.. image:: /figs/eplanets.png
+   :scale: 50 %
 
 ==========
 Derivation
@@ -61,29 +72,29 @@ If :math:`P` (:math:`x,y`) lies to the right of the :math:`y`-axis, (:math:`x > 
 
 .. math::
  
-    \sqrt{(x + c)^2 + y^2}
+    \sqrt{(x + f)^2 + y^2}
 
 and from :math:`F_2` it is
 
 .. math::
 
-    \sqrt{(x - c)^2 + y^2}
+    \sqrt{(x - f)^2 + y^2}
 
 This sum is a constant, and equal to :math:`2a` as seen from the point :math:`P=(a,0)`
 
 .. math::
 
-    PF_1 + PF_2 = a - c + a + c = 2a
+    PF_1 + PF_2 = a - f + a + f = 2a
 
 The relation to :math:`b` can be found from considering the point :math:`Q=(0,b)` where 
 
 .. math::
 
-    PF_1 + PF_2 = 2\sqrt{b^2 + c^2} = 2a
+    PF_1 + PF_2 = 2\sqrt{b^2 + f^2} = 2a
 
-    b^2 + c^2 = a^2
+    b^2 + f^2 = a^2
 
-Given :math:`a` and :math:`b` one can then find :math:`c` easily.
+Given :math:`a` and :math:`b` one can then find :math:`f` easily.
 
 ===================
 Additional comments
@@ -133,38 +144,38 @@ We have enough to derive the equation of the ellipse, with a moderate amount of 
 
 .. math::
 
-    2a = \sqrt{(x + c)^2 + y^2} + \sqrt{(x - c)^2 + y^2}
+    2a = \sqrt{(x + f)^2 + y^2} + \sqrt{(x - f)^2 + y^2}
 
-    \sqrt{(x - c)^2 + y^2} = 2a - \sqrt{(x + c)^2 + y^2}
+    \sqrt{(x - f)^2 + y^2} = 2a - \sqrt{(x + f)^2 + y^2}
 
 The main problem is the square roots.  We get rid of one:
 
 .. math::
 
-    (x - c)^2 + y^2 = 4a^2 - 4a \sqrt{(x + c)^2 + y^2} + (x+c)^2 + y^2
+    (x - f)^2 + y^2 = 4a^2 - 4a \sqrt{(x + f)^2 + y^2} + (x+f)^2 + y^2
 
-    (x - c)^2 = 4a^2 - 4a \sqrt{(x + c)^2 + y^2} + (x+c)^2
+    (x - f)^2 = 4a^2 - 4a \sqrt{(x + f)^2 + y^2} + (x+f)^2
 
 do some simplification:
 
 .. math::
 
-    (x - c)^2 - (x + c)^2 = 4a^2 - 4a \sqrt{(x + c)^2 + y^2}
+    (x - f)^2 - (x + f)^2 = 4a^2 - 4a \sqrt{(x + f)^2 + y^2}
     
-    - 4xc - 4a^2 = - 4a \sqrt{(x + c)^2 + y^2}
+    - 4xf - 4a^2 = - 4a \sqrt{(x + f)^2 + y^2}
         
-    \frac{xc}{a} + a = \sqrt{(x + c)^2 + y^2}
+    \frac{xf}{a} + a = \sqrt{(x + f)^2 + y^2}
 
 and then get rid of the other square root:
 
 .. math::
 
 
-    \frac{x^2c^2}{a^2} + 2xc + a^2 = (x + c)^2 + y^2
+    \frac{x^2f^2}{a^2} + 2xf + a^2 = (x + f)^2 + y^2
 
-    \frac{x^2c^2}{a^2} + a^2 = x^2 + c^2 + y^2
+    \frac{x^2f^2}{a^2} + a^2 = x^2 + f^2 + y^2
 
-Recall that :math:`c^2 = a^2 - b^2`:
+Recall that :math:`f^2 = a^2 - b^2`:
 
 .. math::
 

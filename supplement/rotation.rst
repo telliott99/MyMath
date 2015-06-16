@@ -1,39 +1,52 @@
 .. _rotation:
 
-########
-Rotation
-########
+###################
+Rotation of Vectors
+###################
 
-In this section we will take a brief look at some formulas for rotation of vectors or coordinate systems in two dimensions.
+In this section we will take a look at some formulas for rotation of vectors and coordinate systems in two dimensions.
+
+The first observation is that these two types of rotation are in a sense, opposites.
+
+.. image:: /figs/rotate_vec_coord.png
+   :scale: 50 %
+
+In the left panel, we have a vector :math:`\mathbf{A}` that is rotated *clockwise* by 30 degrees (:math:`\pi/6`) to give vector :math:`\mathbf{A}'`.  In the right hand panel, we have instead rotated the coordinate system *counter-clockwise* by 30 degrees to give new axes :math:`u` and :math:`v`.
+
+Both operations end up with the same relationship between vector and coordinate system.  The length of the projection of :math:`\mathbf{A}'` onto the :math:`x`-axis in the left panel is equal to the length of the projection of vector :math:`\mathbf{A}` onto the :math:`u`-axis in the left panel, and likewise for :math:`y` and :math:`v`.
+
+Opposite rotations (clockwise v. counter-clockwise) produced an equivalent result.  We will come back to this point below.
 
 Start with a vector
 
 .. math::
 
-    \mathbf{A} = \langle x,y \rangle
+    \mathbf{A} = \langle a_x, a_y \rangle
     
-where :math:`x` and :math:`y` are the number of units :math:`\mathbf{A}` extends in each direction.  An alternative notation would be to add the components in the standard coordinate system:
+where :math:`a_x` and :math:`a_y` are the number of units (feet, kilometers, or microns) :math:`\mathbf{A}` extends in each direction.  An alternative notation would be to add the components in the standard coordinate system:
 
 .. math::
 
-    \mathbf{A} = x \mathbf{\hat{i}} + y \mathbf{\hat{j}}
+    \mathbf{A} = a_x \mathbf{\hat{i}} + a_y \mathbf{\hat{j}}
     
 where :math:`\mathbf{\hat{i}}` is the unit vector in the :math:`x`-direction, and :math:`\mathbf{\hat{j}}` is the unit vector in the :math:`y`-direction.
 
 Now, let's think about how to rotate :math:`\mathbf{A}` by 90 degrees counter-clockwise to become :math:`\mathbf{A}'`.  
 
-Drawing a dotted rectangle helps to visualize the change.  Whatever length the :math:`x`-coordinate of :math:`\mathbf{A}`, that same value will be the length of the :math:`y`-coordinate of the rotated vector :math:`\mathbf{A}'`.
+Drawing a dotted rectangle helps in visualizing the change.  Whatever length the :math:`x`-coordinate of :math:`\mathbf{A}` has, that same value will be the length of the :math:`y`-coordinate of the rotated vector :math:`\mathbf{A}'`.
 
 .. image:: /figs/rotated_vec.png
    :scale: 50 %
 
-Similarly, **minus** the :math:`y`-coordinate of :math:`\mathbf{A}` will become the :math:`x`-coordinate of :math:`\mathbf{A}'`.
+On the other hand, **minus** the :math:`y`-coordinate of :math:`\mathbf{A}` will become the :math:`x`-coordinate of :math:`\mathbf{A}'`.
 
 The reason for the different sign of the second term should be apparent from consideration of the figure above.
 
 ===============
 Matrix notation
 ===============
+
+Let's look at a particular example for this 90 degree counter-clockwise rotation.  Suppose :math:`\mathbf{A} = \langle a_x, a_y \rangle = \langle 3, 1 \rangle`.  Then :math:`\mathbf{A'} = \langle a'_x, a'_y \rangle = \langle -1, 3 \rangle`.
 
 Matrix multiplication is particularly appropriate for this kind of transformation.  We write the rotation matrix :math:`T` for the previous transformation as
 
@@ -61,22 +74,54 @@ expanded:
     1 && \ \ 0
     \end{bmatrix}
     \begin{bmatrix}
-    x \\
-    y
+    a_x \\
+    a_y
     \end{bmatrix}
     =
+    \mathbf{A'}
+    =
     \begin{bmatrix}
-    -y \\
-    x
+    -a_y \\
+    a_x
     \end{bmatrix}
 
-using the standard rules for matrix multiplication
+
+    T \mathbf{A} = 
+    \begin{bmatrix}
+    0 && -1 \\
+    1 && \ \ 0
+    \end{bmatrix}
+    \begin{bmatrix}
+    3 \\
+    1
+    \end{bmatrix}
+    =
+    \mathbf{A'}
+    =
+    \begin{bmatrix}
+    -1 \\
+    3
+    \end{bmatrix}
+
+using the standard rules for matrix multiplication.
+
+To obtain the first component :math:`a_x'` of the result (which has the value :math:`-3`), we did this multiplication:
+
+.. math::
+
+    a_x' = 0 \times a_x + (-1) \times a_y = - 3
+    
+This can be understood as a multiplication component-wise of the first row of T times the column vector :math:`\langle a_x, a_y \rangle`.  In the same way, the second component :math:`a_y'` of the result (has the value :math:`1`), obtained by this multiplication:
+
+.. math::
+
+    a_y' = 1 \times a_x + 0 \times a_y = 1
 
 =====================
 Matrix multiplication
 =====================
 
-The rule is as follows.  The matrix multiplication
+The rule for matrix multiplication is as follows:
 
 .. math::
 
@@ -103,15 +148,11 @@ In this example, we have the top element of the result, which is equal to :math:
     x
     \end{bmatrix}
 
-    x' = 0 \times x + (-1) \times y = - y
-    
-    y' = 1 \times x + 0 \times y = x
-
 ============
 General case
 ============
 
-Rotation by 90 degrees is obviously a special case.  The general one involves some angle :math:`\theta`, and I bet you can guess that the formula will involve sine and cosine.  If we look again at the rotation matrix, I think we can also guess what the terms are in terms of the sine and cosine of :math:`\pi/2`:
+Rotation by 90 degrees is obviously a special case.  The general case involves some angle :math:`\theta`, and I bet you can guess that the formula will involve the sine and cosine of the angle :math:`\theta`.  If we look again at the rotation matrix, I think you might also guess what the formulas are in terms of the sine and cosine of :math:`\pi/2`:
 
 .. math::
 
@@ -169,7 +210,7 @@ If you look at the figure, I hope that you will be able to figure out that to tr
 
     v = v_2 - v_1 = x \sin t - y \cos t
 
-And if you are *really* paying attention, you will see that there is a change of sign from the first example.  For this one:
+And if you are paying particular attention, you will see that there is a change of sign from the first example.  For this one:
 
 .. math::
     

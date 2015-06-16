@@ -59,3 +59,41 @@ So
     = - \frac{x}{y}
     
 which is what we had.
+
++++++++
+Example
++++++++
+
+Here is a good example, but it requires knowledge of the exponential function (:ref:`here <exp-diff>`)
+
+.. math::
+
+    y = e^{xy}
+
+There is no way to solve for :math:`y`.  So
+
+.. math::
+
+    \frac{d}{dx} \ y = \frac{d}{dx} \ e^{xy}
+    
+The left-hand side is :math:`y'`.  For the right-hand side, let :math:`u = xy`, then
+
+.. math::
+
+    \frac{d}{dx} \ e^{u} = e^{u} \frac{du}{dx}
+
+    \frac{du}{dx} = \frac{d}{dx} xy = x'y + xy' = y + xy'
+
+So the right-hand side is:
+
+    (y + xy') \ e^{xy}
+
+Altogether, we have:
+
+.. math::
+
+    y' = (y + xy') \ e^{xy}
+
+    =  (e^{xy} + xy') \ e^{xy}
+    
+and we can solve for y'
