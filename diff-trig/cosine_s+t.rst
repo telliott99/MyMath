@@ -228,13 +228,13 @@ We have now
 
     \sin s + t  = \cos s \sin t + \sin s \cos t
 
-I find this formulation extremely hard to remember.
+I find this formulation hard to remember.
 
 ============
 Matrix proof
 ============
 
-I have another easy derivation for you, if you know something about multiplying a matrix times a vector.  
+I have another easy derivation for you, if you know something about multiplying a matrix times a vector.  If you want some review, there is a chapter in the supplementary material :ref:`here <rotation>`.
 
 Multiplication by the following matrix rotates any vector :math:`\mathbf{a} = \ \langle x,y \rangle` by :math:`\theta` degrees in the counter-clockwise direction to give vector :math:`\mathbf{b} = \ \langle u,v \rangle`
 
@@ -284,10 +284,10 @@ Following the rules for matrix multiplication (row :math:`\times` column)
 .. image:: /figs/mm1.png
        :scale: 25%
 
-From this we can deduce all four equations, as one example:
+From this we can deduce all four equations.
 
 .. math::
 
     \cos \theta \cos \phi - \sin \theta \sin \phi = \cos \theta + \phi
 
-
+This is the equation for calculating the entry that would go in row 1, column 1 of the matrix for :math:`\theta + \phi`.

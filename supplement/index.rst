@@ -15,5 +15,6 @@ Contents:
    combinations
    binomial-combo
    exp-binomial
+   rotation
    parabola-more
    ellipse-param
