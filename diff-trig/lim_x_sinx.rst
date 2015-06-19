@@ -43,13 +43,19 @@ Consider the right triangle with radius :math:`r` (the one that lies entirely in
     
     = \frac{1}{2} r^2 \sin t \cos t
 
-Consider next the sector of the circle (piece shaped like a slice of pie) containing the same angle, :math:`t`.  Its area is that fraction of the total angular measure of the circle, :math:`2 \pi`, times the total area of the circle.
+Consider next the sector of the circle (piece shaped like a slice of pie) containing the same angle, :math:`t`.  Recall that :math:`t` is the length of the portion of the circumference along this sector (if :math:`t` is measured in radians).  If the circle is not a unit circle, then multiply by the radius.
+
+The area of the sector could then be approximated as a triangle with base :math:`r \theta` and height :math:`r`. 
+
+Alternatively, consider that :math:`t` is some fraction of the total angular measure of the circle, namely :math:`t/2 \pi`, and we multiply by the total area of the circle to get the area of the sector:
 
 .. math::
 
     A = \frac{t}{2 \pi} \pi r^2 = \frac{1}{2} r^2 t
 
-Finally, consider the right triangle containing the dotted line, whose base has length :math:`r`.  Because it is a similar triangle with the previous one, its height (that dotted line) is in the same ratio to :math:`r`, the base of the triangle, as :math:`\sin t` is to :math:`\cos t`.  Thus, its length is :math:`r \tan t` and so the area of this triangle is
+It's the same answer.
+
+Finally, consider the right triangle containing the dotted line, whose base has length :math:`r`.  Because it is a similar triangle with the first one, its height (that dotted line) is in the same ratio to :math:`r`, the base of the triangle, as :math:`\sin t` is to :math:`\cos t`.  Thus, its length is :math:`r \tan t` and so the area of this triangle is
 
 .. math::
 

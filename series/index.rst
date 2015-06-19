@@ -11,7 +11,6 @@ Contents:
    series-tests
    taylor
    taylor-remainder
-   exp-irrational
    euler-eqn
 
 

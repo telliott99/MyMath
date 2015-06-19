@@ -11,3 +11,4 @@ Contents:
    continuity
    evt
    mvt
+   prove-Taylor-R

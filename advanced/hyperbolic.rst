@@ -72,15 +72,17 @@ The hyperbolic functions are defined similarly, but without i:
 .. image:: /figs/cosh_and_sinh.png
    :scale: 50 %
 
-The difference of squares has a simple value:
+If we define :math:`x = \cos t` and :math:`y = \sin t` and plot x^2 + x^2 we get a circle with radius :math:`1`.
+
+If we do the same thing with hyperbolic sine and cosine, the difference of squares has a simple value:
 
 .. math::
 
     \cosh^2 t - \sinh^2 t = 1
 
-Everything about the hyperbolic sine is reminiscent of the regular trig functions but with a sign change.
+So if we define :math:`x = \cosh t` and :math:`y = \sinh t` and plot x^2 - x^2 we get a hyperbola in the same way the :math:`y^2 - x^2 = 1` does.
 
-A plot of :math:`\sinh t` on the :math:`x`-axis and :math:`\cosh t` on the :math:`y`-axis yields a hyperbola in the same way the :math:`y^2 - x^2 = 1` does.
+Everything about the hyperbolic sine is reminiscent of the regular trig functions but with a sign change.
 
 ===========
 derivatives

@@ -9,6 +9,7 @@ Contents:
    
    sum_n^2
    induction
+   exp-irrational
    cosine_s+t
    rotation
    proof-product-rule
