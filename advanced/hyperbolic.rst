@@ -4,6 +4,10 @@
 Hyperbolic sine and cosine
 ##########################
 
+===============
+Sine and cosine
+===============
+
 Recalling Euler's formula (:ref:`here <euler-eqn>`):
 
 .. math::
@@ -16,23 +20,54 @@ we obtain a similar formula with :math:`- ix`:
 
 .. math::
 
-    e^{-ix} = \cos(-x) + i\ \sin(-x) = \cos x - i \ \sin x
+    e^{-ix} = \cos(-x) + i\ \sin(-x) 
+    
+    = \cos x - i \ \sin x
 
-Adding and subtracting
+Adding
 
 .. math::
 
     e^{ix} +  e^{-ix} = 2 \cos x
 
-    e^{ix} -  e^{-ix} = -2 \ i \sin x
+    \cos x = \frac{1}{2} (e^{ix} +  e^{-ix})
+
+and subtracting
+
+.. math::
+
+    e^{ix} -  e^{-ix} = 2 \ i \sin x
+     
+    \sin x =  \frac{1}{2i} (e^{ix} -  e^{-ix})
+
+The usual properties can be shown.  For example (since :math:`e^{\theta} e^{\theta} = e^{2 \theta}` and :math:`e^{\theta} e^{-\theta} = 1`):
+
+.. math::
+     
+    \sin^2 x = -\frac{1}{4} (e^{ix} -  e^{-ix})^2 = -\frac{1}{4} (e^{2ix} - 2 + e^{-2ix})
+    
+    \cos^2 x = \frac{1}{4} (e^{ix} +  e^{-ix})^2 = \frac{1}{4} (e^{2ix} +  2 +  e^{2-ix})
+    
+For :math:`\sin^2 x + \cos^2 x`, all the exponentials cancel, so we are left with
+
+.. math::
+
+    \sin^2 x + \cos^2 x = -\frac{1}{4}(-2) + \frac{1}{4}(2)
+    
+    = 1
+
+
+===================
+Hyperbolic versions
+===================
 
 The hyperbolic functions are defined similarly, but without i:
 
 .. math::
 
-    2 \cosh x = e^{x} +  e^{-x}
+    \cosh x = \frac{e^{x} +  e^{-x}}{2}
 
-    2 \sinh x = e^{x} -  e^{-x}
+    \sinh x = \frac{e^{x} -  e^{-x}}{2i}
 
 .. image:: /figs/cosh_and_sinh.png
    :scale: 50 %
@@ -81,7 +116,7 @@ The values of the functions at zero are
 
     \cosh 0 = 1
 
-So, for example, the expansion for :math:`\cosh` is 
+So, for example, the expansion for :math:`\sinh` is 
 
 .. math::
 

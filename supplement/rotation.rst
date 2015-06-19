@@ -278,6 +278,6 @@ and
 
 Notice the cancellation of :math:`2 x \cos t y \sin t` and the terms with :math:`\sin^2 t + \cos^2 t` give us exactly what we need.
 
-A second test is that if :math:`T` is the matrix for rotation by :math:`\theta` degrees clockwise, and :math:`T'` is for counter-clockwise, then :math:`T \times T' = I` (the identity matrix), always.  Also, two sequential applications of :math:`T_90` give :math:`-I`, and four give :math:`+I`.
+A second test is that if :math:`T` is the matrix for rotation by :math:`\theta` degrees clockwise, and :math:`T'` is for counter-clockwise, then :math:`T \times T' = I` (the identity matrix), always.  Also, two sequential applications of :math:`T_{90}` give :math:`-I`, and four give :math:`+I`.
 
 Finally, the formulas for sine and cosine of addition of angles follow from these, as well.

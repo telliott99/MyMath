@@ -4,6 +4,8 @@
 Implicit differentiation
 ########################
 
+Implicit differentiation is a very powerful technique, not only for problems but for derivations, as you will see.
+
 Suppose we have
 
 .. math::
@@ -28,7 +30,7 @@ Why not handle this quickly?  What I do is to imagine that :math:`x` is a functi
 
 .. math::
 
-    \frac{d}{dt} x^2 + y^2 = \frac{d}{dt} R^2 = 0
+    \frac{d}{dt} x^2 + \frac{d}{dt} y^2 = \frac{d}{dt} R^2 = 0
     
     2 x \frac{dx}{dt} + 2 y \frac{dy}{dt} = 0
     
@@ -44,7 +46,7 @@ Now multiply by :math:`1/2` *and* by :math:`dt`:
 
 The slope of the circle is directly proportional to :math:`-x` and inversely proportional to :math:`y`.
 
-Of course, this particular problem can be solved directly.  Like so:
+Of course, this particular problem can be solved directly:
 
 .. math::
 

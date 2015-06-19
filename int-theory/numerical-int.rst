@@ -109,7 +109,7 @@ We evaluate :math:`f(m)`, the function at the midpoint, and then multiply by the
 
     M = (b-a) \ f(m)
 
-A more sophisticated approach, *Simpson's rule* uses:
+*Simpson's rule* is a more sophisticated approach that uses:
 
 .. math::
 
@@ -123,6 +123,10 @@ The *trapezoidal rule* is
 
     T = \frac{b-a}{2} \ (f(a) + f(b))
 
-Simpson's rule is really just a combination of the other two rules, namely, it is equal to :math:`(2M + T) / 3`.  It weights the value at the midpoint as twice the combined values at the endpoints.
+Simpson's rule is really just a combination of the other two rules, namely, it is equal to :math:`(2M + T) / 3`.  It weights the value at each endpoint as :math:`1 \times` and then the midpoint as twice the combined values at the endpoints.
 
-Essentially, Simpson fits a parabola to the points :math:`a,m,b` and then computes the area.  This is really Archimede's technique (:ref:`quadrature <quadrature>`) in disguise.
+Essentially, Simpson fits a parabola to the points :math:`a,m,b` and then computes the area.  This is really Archimede's result (:ref:`quadrature <quadrature>`) in disguise.
+
+Consider the parabola :math:`y = -x^2 + 1` between :math:`x=-1 \rightarrow 1` (the points where it crosses the :math:`x`-axis on its way down).  Our task is to find the correct :math:`y`-value to use as the average height of the function in this region.  Inverting the standard result for the area under :math:`y=x^2`, the area under this parabola is :math:`2/3` of the area above it.  The result we seek is :math:`2/3`.
+
+So a quadratic approximation to the area samples four times at the vertex plus once each at :math:`x= \pm 1`.   We sample because we understand that the curve is probably not exactly quadratic.

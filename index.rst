@@ -24,6 +24,7 @@ Contents:
    series/index
    advanced/index
    supplement/index
+   theory/index
 
 
 Indices and tables

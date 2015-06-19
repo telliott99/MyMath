@@ -4,7 +4,7 @@
 Taylor Series
 #############
 
-Some functions that arise in applications (like physics) can be difficult to handle.  They may be hard to evaluate the value of :math:`f(x)` at :math:`x=a`, or they may be a pain to integrate.  Thus, we seek a way of constructing functions that approximate the value of a given function.  In particular, we seek polynomial functions of the form:
+Some functions that arise in applications (like physics) can be difficult to handle.  It may be hard to evaluate the value of :math:`f(x)` at :math:`x=a`, or they may be a pain to integrate.  Thus, we seek a way of constructing functions that approximate the value of a given function.  In particular, we seek polynomial functions of the form:
 
 .. math::
 
@@ -84,7 +84,7 @@ The equivalent series for cosine is:
 
 .. math::
 
-    \cos x = 1 - \frac{x^2}{2!} + \frac{x^2}{2!} - \frac{x^2}{2!}
+    \cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!}
 
 This approximation for :math:`x \approx 0` is called the Maclaurin series.
 

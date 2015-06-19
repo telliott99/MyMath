@@ -130,6 +130,15 @@ If we know a function :math:`f(x)` which produces the individual terms in the se
 
 both either converge or diverge.
 
+Here is a figure which shows the idea:
+
+.. image:: /figs/integral-test.png
+   :scale: 50 %
+
+Note that the series in question can be either the upper sum or the lower sum.  If the integral diverges, both series diverge and if the integral converges, both series converge.  The reason is that the upper and lower sums differ by an amount that 
+
+        is not more than the projected total on the column to the left, not more than the size of the first term we are considering.
+
 +++++++++++++++++++++++++++++
 Example (the harmonic series)
 +++++++++++++++++++++++++++++
