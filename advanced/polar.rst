@@ -149,6 +149,9 @@ The area of each little sector is
 
     \frac{1}{2} r^2 d \theta
 
+.. image:: /figs/polararea.png
+       :scale: 25%
+
 The total area is then
 
 .. math::
