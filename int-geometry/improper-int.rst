@@ -4,7 +4,71 @@
 Improper integrals
 ==================
 
-The log function provides a fun example of an improper integral with a very simple and finite result.  The example (and the figure) are from Hamming.
+Generally speaking, with an improper integral one of three conditions holds:  the upper bound is :math:`+ \infty`, the lower bound is :math:`- \infty`, or at either the upper or lower bound, the value of the function is undefined (:math:`\rightarrow \pm \infty`.  (If the value is undefined in the middle of a range, break the integral into pieces).
+
+We integrate the function anyway, and if, when we evaluate it at that bound, we get :math:`0`, then we can use the result.
+
+Here are some examples
+
++++++++
+Example
++++++++
+
+Compare:
+
+.. math::
+
+    \int_0^1 \frac{1}{x} \ dx
+
+    \int_0^1 \frac{1}{\sqrt{x}} \ dx
+
+For both of these, the value of :math:`f(x)` becomes infinitely large (the limit does not exist) as :math:`x \rightarrow 0`.  Nevertheless, the area under one of those curves can be computed.
+
+Informally, the way we roll here is to substitute another bound, like :math:`a`:
+
+.. math::
+
+    \int_a^1 \frac{1}{x} \ dx
+
+    = \ln x \ \bigg |_a^1 
+    
+and now we ask, what happens if we plug in :math:`0` for :math:`a`?  Since the integral "blows up" at the lower bound (:math:`\ln 0` doesn't exist), it can't be evaluated.
+
+On the other hand:
+
+.. math::
+
+    \int_a^1 \frac{1}{\sqrt{x}} \ dx
+
+    = 2 \sqrt{x} \ \bigg |_a^1
+
+Now, when we evaluate at the lower bound, with :math:`0` for :math:`a`, we get :math:`0`.  Therefore, the value of the integral is just:
+
+.. math::
+
+    = 2 \sqrt{1} - 0 = 2
+
++++++++
+Example
++++++++
+
+Here is another one:
+
+.. math::
+
+    \int_0^{\infty} e^{-x} \ dx
+
+    = - e^{-x} \ \bigg |_0^{\infty}
+
+    = (-0) - (-1) = 1
+
+So we could look at the negative exponential as a probability density function (that is already normalized).
+
++++++++
+Example
++++++++
+
+The inverse log function provides a fun example of an improper integral with a very simple and finite result.  The example (and the figure) are from Hamming.
 
 .. image:: /figs/log4.png
    :scale: 50 %
@@ -131,17 +195,3 @@ Since both numerator and the denominator go to :math:`\infty` as :math:`x \right
     \frac{1}{x} \ \frac{1}{-2/x^{-3}} = \frac{x^3}{x}(- \frac{1}{2}) = - \frac{x^2}{2}
 
 which in the limit as :math:`x \rightarrow 0`, also goes to :math:`0`.
-
-Generally speaking, with an improper integral one of three conditions holds:  the upper bound is :math:`+ \infty`, the lower bound is :math:`- \infty`, or at either the upper or lower bound, the value of the function is undefined (:math:`\rightarrow \pm \infty`.  (If the value is undefined in the middle of a range, break the integral into pieces).
-
-We integrate the function anyway, and if, when we evaluate it at that bound, we get :math:`0`, then we can use the result.  This example was a little more complicated, so let's look at a simpler one:
-
-.. math::
-
-    \int_0^{\infty} e^{-x} \ dx
-
-    = - e^{-x} \ \bigg |_0^{\infty}
-
-    = (-0) - (-1) = 1
-
-So we could look at the negative exponential as a probability density function.  Since the total area over the range :math:`[- \infty, \infty]` is twice this (i.e. :math:`2`), we should normalize the total probability to :math:`1` by dividing by :math:`2`.

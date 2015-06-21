@@ -65,3 +65,29 @@ The error for :math:`n > 8` is less than 1% and continues to get better, reachin
 Derivation
 ==========
 
+A full derivation is here:
+
+http://mathworld.wolfram.com/StirlingsApproximation.html
+
+A simple version that gets close is:
+
+.. math::
+
+    \ln n! = \ln 1 + \ln 2 + \dots \ln n
+    
+    = \sum_{k=1}^n \ln k
+    
+    \approx \int_1^n \ln x \ dx 
+    
+    = x \ln x - x 
+
+As can easily be confirmed by differentiation.  Now, to evaluate:
+
+.. math::
+
+    = x \ln x - x \ \bigg |_1^x
+    
+    = n \ln n - n + 1
+    
+    \approx n \ln n - n
+    
