@@ -1,8 +1,8 @@
 .. _exp-irrational:
 
-#################################
-Proof:  e is an irrational number
-#################################
+#########################
+e is an irrational number
+#########################
 
 I found a nice proof of the irrationality of :math:`e` in the calculus text by Courant and Robbins.  
 

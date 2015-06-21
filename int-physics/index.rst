@@ -10,7 +10,5 @@ Contents:
    gravity
    escape
    moments
+   hanging-chain
    shell_theorem
-
-
-

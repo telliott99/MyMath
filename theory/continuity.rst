@@ -1,34 +1,8 @@
 .. _continuity:
 
-#############################
-Differentiable and continuous
-#############################
-
-A function is differentiable at a point :math:`x=a` if the derivative is defined at that point, that is if this limit
-
-.. math::
-
-    f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
-
-is defined at :math:`x=a`, that is, if
-
-.. math::
-
-    \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
-
-exists.  So for example
-
-.. math::
-
-    f(x) = \ln x
-
-    f'(x) = \frac{1}{x}
-
-In the above example, :math:`f(x)` is differentiable everywhere, except at :math:`x=0`.
-
-==========
+##########
 Continuity
-==========
+##########
 
 Continuity has an intuitive definition:  we should be able to graph the function *without lifting the pencil from the paper*.  Basically, we require that for a function to be continuous at a point :math:`x=a`, if we move :math:`x` away from :math:`a` by a little bit, then :math:`f(x)` should not change from :math:`f(a)` by too much.  
 
@@ -44,7 +18,7 @@ A particularly easy way to answer the question "is my function continuous at :ma
 
     If a function is differentiable at :math:`x`, then it is continuous at :math:`x`.
 
-I'm going to prove this theorem.  A semi-official statement of continuity (with no delta or epsilon) is that if
+Here is the proof of this theorem from the *Lifesaver*.  A semi-official statement of continuity (with no delta or epsilon) is that if
 
 .. math::
 

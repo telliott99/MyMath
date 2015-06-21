@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    preliminary/index
+   coordinates/index
    conics/index
    diff-theory/index
    diff-trig/index

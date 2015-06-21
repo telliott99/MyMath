@@ -1,4 +1,4 @@
-.. _oscillator:
+.. _harmonic-oscillator:
 
 ###################
 Harmonic oscillator
@@ -53,7 +53,7 @@ so that
 
 Observe that :math:`A` can be anything we want.  It corresponds to the maximum amplitude of the oscillation, determined by how far we pull out the mass to start things off.
 
-In contrast, $\omega$ is determined by the characteristics of the spring, and is inversely proportional to the mass.  :math:`\omega` is also related to the frequency of oscillation.  If :math:`T` is the time period for one complete oscillation, then :math:`\omega T = 2 \pi`, or if :math:`f` is the frequency of oscillation, then :math:`\omega = 2 \pi f`.
+In contrast, :math:`\omega` is determined by the characteristics of the spring, and is inversely proportional to the mass.  :math:`\omega` is also related to the frequency of oscillation.  If :math:`T` is the time period for one complete oscillation, then :math:`\omega T = 2 \pi`, or if :math:`f` is the frequency of oscillation, then :math:`\omega = 2 \pi f`.
 
 Finally, this solution assumes that :math:`v_0 = 0`.
 
@@ -97,9 +97,11 @@ But :math:`\phi` is a constant so if :math:`-B = \sin \phi` and :math:`A = \cos 
 
 However, for now we will agree to set our clock to zero when the mass has just been released and has zero velocity, at the maximum amplitude of the oscillation.
 
-\subsection*{Conservation of Energy}
+======================
+Conservation of Energy
+======================
 
-At this point, Prof. Shankar does this calculation
+Here, Prof. Shankar does this calculation
 
 .. math::
 
@@ -136,7 +138,7 @@ A useful extension is to the problem of the pendulum.
 .. image:: /figs/pendulum1.png
    :scale: 50 %
 
-The *torque* on the mass is the component of the gravitational force perpendicular to the rod, which is :math:`-mg \sin \theta` (note that this vector is drawn a bit too long in the figure).
+The *torque* on the mass is the component of the gravitational force perpendicular to the rod, which is :math:`-mg \sin \theta` (this vector is drawn a bit too long in the figure).
 
 .. math::
 

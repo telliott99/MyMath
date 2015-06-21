@@ -32,6 +32,10 @@ the area of the original ellipse is bigger by a factor of :math:`a/b`
 
     A = \pi b^2 \ \frac{a}{b} = \pi ab
 
+=====
+Guess
+=====
+
 We might also argue as follows.  The area of the ellipse clearly depends on both :math:`a` and :math:`b`, so we write
 
 .. math::
@@ -56,6 +60,10 @@ Hence :math:`k = \pi` and :math:`A = \pi ab`.
 Single variable calculus
 ========================
 
+.. math::
+
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+
 Solve the equation of the ellipse for :math:`y`
 
 .. math::
@@ -68,7 +76,7 @@ We take the positive square root, and integrate from :math:`x = 0 \rightarrow a`
 
     A = 4 b \int \sqrt{1 - \frac{x^2}{a^2} }
 
-The first thing to do is to get rid of the :math:`a` by substitution.  Let :math:`u = x/a`, so :math:`au = x` and :math:`a \ du = dx`, then
+Get rid of the :math:`a` by substitution.  Let :math:`u = x/a`, so :math:`au = x` and :math:`a \ du = dx`, then
 
 .. math::
 
@@ -76,7 +84,7 @@ The first thing to do is to get rid of the :math:`a` by substitution.  Let :math
 
 The next step is to recognize that :math:`f(x) = \sqrt{1-u^2}` is the equation of a circle.  Since we are integrating over the first quadrant, the value of the area is just :math:`\pi/4`.  The whole thing is :math:`\pi` and we pick up the factor :math:`ab` from outside to give :math:`A = \pi ab`.
 
-If you cannot see this, do a trig substitution.  If :math:`u` is the side opposite angle :math:`\theta`, and :math:`1` is the hypotenuse, then 
+To actually compute this, do a trig substitution.  If :math:`u` is the side opposite angle :math:`\theta`, and :math:`1` is the hypotenuse, then 
 
 .. math::
 
@@ -106,9 +114,9 @@ we obtain :math:`u = 0 \rightarrow 1`.  Then, in changing to :math:`\theta` we h
 
     \theta = \sin^{-1} u
 
-and we have :math:`\theta = 0 \rightarrow 2\pi`.
+and we have :math:`\theta = 0 \rightarrow \pi/2` for the first quadrant.
 
-I'm not going to do the integral here, but just give the result
+I'm not going to do the integral (see :ref:`here <cosine_sq>`, but just give the result
 
 .. math::
 
@@ -135,44 +143,6 @@ Only one term is non-zero and that is :math:`\theta = \pi/2` at the upper limit.
 .. math::
 
     A = 4ab \ (\frac{1}{2}\ \frac{\pi}{2}) = \pi ab
-
-===============
-Green's Theorem
-===============
-
-(I'm leaving this here for now even though I haven't laid the groundwork for it)
-
-State the theorem:
-
-.. math::
-
-    \oint_C \mathbf{F} \cdot \mathbf{r} = \iint_R \nabla \times \mathbf{F} \ dA
-
-    \int_C M \ dx + N \ dy = \iint_R (N_x - M_y) \ dx \ dy
-
-The theorem equates the line integral around a closed path with an area over a region.
-
-To start with, if :math:`\mathbf{F}` is the gradient of some function, we call such a function the potential, and the integral of the work over a closed path is just zero.
-
-Of course, my favorite example is the area of the ellipse.  
-
-Suppose :math:`N_x - M_y = 1`.  Then the curl integral is the area of the region.  An example would be if :math:`\mathbf{F} = \ \langle M,N \rangle \ = \ \langle -y/2,x/2 \rangle`.  Parametrize the ellipse.
-
-.. math::
-
-    x = a \cos \theta
-
-    y = b \sin \theta
-
-So, for the left hand side we have
-
-.. math::
-
-    \int_C M \ dx + N \ dy = \int_C -\frac{1}{2}y \ dx + \frac{1}{2}x \ dy
-
-    = \int_0^{2\pi} (-\frac{1}{2})(b \sin \theta) \ (-a \sin \theta) \ d \theta \ + (\frac{1}{2})(a \cos \theta) \ (b \cos \theta) \ d\theta
-
-    = \int_0^{2\pi} (\frac{ab}{2}\sin^2 \theta + \frac{ab}{2}\cos^2 \theta) \ d \theta = \frac{ab}{2} \int_0^{2\pi} \ d \theta = \pi a b
 
 ======
 Volume
@@ -228,3 +198,41 @@ evaluated between :math:`x = -a \rightarrow x = a`
     V = \pi  b^2 [ (a - \frac{a}{3}) - (-a - \frac{-a}{3}  ) ] =  \frac{4}{3} \pi b^2 a
 
 This is quite beautiful.  We get a squared contribution for the :math:`b` component, which describes the "stretching" of the ellipse in the direction of the axis of rotation.  Rotation around the :math:`y`-axis would give a formula containing :math:`a^2`, and a bigger solid by a factor of :math:`a/b`.
+
+===============
+Green's Theorem
+===============
+
+(I'm leaving this here for now even though I haven't laid the groundwork for it)
+
+State the theorem:
+
+.. math::
+
+    \oint_C \mathbf{F} \cdot \mathbf{r} = \iint_R \nabla \times \mathbf{F} \ dA
+
+    \int_C M \ dx + N \ dy = \iint_R (N_x - M_y) \ dx \ dy
+
+The theorem equates the line integral around a closed path with an area over a region.
+
+To start with, if :math:`\mathbf{F}` is the gradient of some function, we call such a function the potential, and the integral of the work over a closed path is just zero.
+
+Of course, my favorite example is the area of the ellipse.  
+
+Suppose :math:`N_x - M_y = 1`.  Then the curl integral is the area of the region.  An example would be if :math:`\mathbf{F} = \ \langle M,N \rangle \ = \ \langle -y/2,x/2 \rangle`.  Parametrize the ellipse.
+
+.. math::
+
+    x = a \cos \theta
+
+    y = b \sin \theta
+
+So, for the left hand side we have
+
+.. math::
+
+    \int_C M \ dx + N \ dy = \int_C -\frac{1}{2}y \ dx + \frac{1}{2}x \ dy
+
+    = \int_0^{2\pi} (-\frac{1}{2})(b \sin \theta) \ (-a \sin \theta) \ d \theta \ + (\frac{1}{2})(a \cos \theta) \ (b \cos \theta) \ d\theta
+
+    = \int_0^{2\pi} (\frac{ab}{2}\sin^2 \theta + \frac{ab}{2}\cos^2 \theta) \ d \theta = \frac{ab}{2} \int_0^{2\pi} \ d \theta = \pi a b

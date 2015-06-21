@@ -1,129 +1,8 @@
-.. _polar:
+.. _polar-area:
 
-#################
-Polar Coordinates
-#################
-
-In standard polar coordinates points are plotted by distance from the origin, :math:`r`, as well as the angle that this ray makes with the positive :math:`x`-axis, :math:`\theta`.  Converting from :math:`x,y` to :math:`r, \theta` is pretty easy:
-
-.. math::
-
-    x = r \cos \theta
-
-    y = r \sin \theta
-
-To go the other way, use Pythagoras to write 
-
-.. math::
-
-    x^2 + y^2 = r^2
-    
-    r = \sqrt{x^2 + y^2}
-
-    \theta = \tan^{-1} (\frac{y}{x}), \ \ x \ne 0
-
-In polar coordinates, as in Cartesian (:math:`xy`) coordinates, the equation of a circle depends on whether it is at the origin or not.  If it is at the origin, then something like
-
-.. math::
-
-    r = 3
-
-defines the graph.  But if it's not, then the equations are of the form:
-
-.. math::
-
-    r = a \cos \theta + b \sin \theta
-
-For example, 
-
-.. math::
-
-    r = 3 \sin \theta
-
-is a circle centered at :math:`x = 0, y = 3/2`, with a radius of :math:`3/2` (it passes through the origin and the point :math:`(x=0,y=3)`.
-
-while
-
-.. math::
-
-    r = \sin \theta + \cos \theta
-
-is a circle centered at  :math:`x = 3/2, y = 3/2` which passes through the origin.
-
-Let's see if we can manipulate these equations to go back to Cartesian coordinates.
-
-+++++++
-Example
-+++++++
-
-.. math::
-
-    r = 3 \sin \theta
-
-    y = r \sin \theta
-
-    \sin \theta = \frac{y}{r}
-
-    r = \frac{3y}{r}
-
-    r^2 = 3y = x^2 + y^2
-
-complete the square:
-
-.. math::
-
-    x^2 + y^2 -3y + \frac{3}{2} =  \frac{3}{2}
-
-    x^2 + (y - \frac{3}{2})^2 = (\sqrt{\frac{3}{2}})^2
-
-+++++++
-Example
-+++++++
-
-.. math::
-
-    r = \sin \theta + \cos \theta
-
-    r = \frac{y}{r} + \frac{x}{r}
-
-    r^2 = x + y = x^2 + y^2
-
-    x^2 - x + \frac{1}{4} + y^2 - y + \frac{1}{4} = \frac{1}{2}
-
-    (x - \frac{1}{2})^2 + (y - \frac{1}{2})^2 = (\frac{1}{\sqrt{2}})^2
-
-One can also write the equations for other conic sections in polar coordinates.
-
-+++++++
-Example
-+++++++
-
-The following is a parabola:
-
-.. math::
-
-    r = \frac{2}{1 + \sin \theta}
-
-Plot it to see.  Or just do this:
-
-.. math::
-
-    r  + r \sin \theta) = 2
-
-    \frac{y}{r} = \sin \theta
-
-    r + y = 2
-
-    r^2 = (2-y)^2  = x^2 + y^2
-
-    4 - 4y + y^2 = x^2 + y^2
-
-    y - 1 = -\frac{1}{4} x^2
-
-This image has some examples from *The Calculus Lifesaver*.
-
-.. image:: /figs/polarex.png
-   :scale: 50 %
+##########
+Polar Area
+##########
 
 =========================
 Integration to find areas
@@ -156,11 +35,11 @@ The total area is then
 
 .. math::
 
-    \int_0^{2\pi}  \frac{1}{2} r^2 d \theta
+    \int_0^{2\pi}  \frac{1}{2} r^2 \ d \theta
 
-    = \int_0^{2\pi}  \frac{1}{2} (3 \sin \theta)^2 d \theta
+    = \int_0^{2\pi}  \frac{1}{2} (3 \sin \theta)^2 \ d \theta
 
-    = \frac{9}{2} \int_0^{2\pi}  \sin^2 \theta d \theta
+    = \frac{9}{2} \int_0^{2\pi}  \sin^2 \theta \ d \theta
 
 This looks hard but we've done it before.  One way is to recall that 
 

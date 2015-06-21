@@ -203,7 +203,7 @@ The sum for each group is at least :math:`1/2`, so the series is larger term by 
 
 .. math::
 
-    = \frac{1}{1} + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \frac{1}{2}
+    = \frac{1}{1} + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \dots
 
 But this series is clearly divergent, so the harmonic series, whose sum is larger term by term, also diverges.
 

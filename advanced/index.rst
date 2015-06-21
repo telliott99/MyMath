@@ -7,7 +7,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
-   polar
+   polar-coord
+   polar-area
    hyperbolic
    complex
-   cubics

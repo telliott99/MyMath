@@ -1,38 +1,8 @@
 .. _evt:
 
 #####################
-Extreme value theorem
-#####################
-
-===============
-Min-max theorem
-===============
-
-Before getting to the Extreme Value Theorem, we start with the Min-max theorem.  This one says that:
-
-    if :math:`f` is continuous on :math:`[a,b]` then :math:`f` has at least one maximum and one minimum on :math:`[a,b]`.
-    
-Seems fairly obvious.
-
-Here are some examples where the theorem applies:
-
-.. image:: /figs/min-max1.png
-   :scale: 50 %
-
-.. image:: /figs/min-max2.png
-  :scale: 50 %
-
-And here are some examples where the theorem does not apply:
-
-.. image:: /figs/min-max3.png
-   :scale: 50 %
-
-.. image:: /figs/min-max4.png
-  :scale: 50 %
-
-=====================
 Extreme Value Theorem
-=====================
+#####################
 
 The Extreme Value Theorem says that if :math:`x = c` is a local maximum or minimum for a function :math:`f`, then :math:`x = c` is a critical point for :math:`f`. This means that either :math:`f′(c)` doesn’t exist, or :math:`f′(c) = 0`.
     

@@ -137,7 +137,7 @@ Here is a figure which shows the idea:
 
 Note that the series in question can be either the upper sum or the lower sum.  If the integral diverges, both series diverge and if the integral converges, both series converge.  The reason is that the upper and lower sums differ by an amount that 
 
-        is not more than the projected total on the column to the left, not more than the size of the first term we are considering.
+    is not more than the projected total on the column to the left, not more than the size of the first term we are considering.
 
 +++++++++++++++++++++++++++++
 Example (the harmonic series)
@@ -217,25 +217,27 @@ Example
 
 .. math::
 
-    \sum_{n=1}^{\infty} \frac{1}{\ln{n}}
+    \sum_{n=2}^{\infty} \frac{1}{\ln{n}}
+
+(:math:`n` cannot equal :math:`1`).
     
 By the integral test
 
 .. math::
 
-    \int_{n=1}^{\infty} \frac{1}{\ln{x}} \ dx
+    \int_{n=2}^{\infty} \frac{1}{\ln{x}} \ dx
 
 That looks a bit difficult.  An easier way is the comparison test (below).  Since
 
 .. math::
 
-    \sum_{n=1}^{\infty} \frac{1}{\ln{n}}
+    \sum_{n=2}^{\infty} \frac{1}{\ln{n}}
 
 is larger term-by term than
 
 .. math::
 
-    \sum_{n=1}^{\infty} \frac{1}{n}
+    \sum_{n=2}^{\infty} \frac{1}{n}
 
 As the latter is the harmonic series, which diverges, the first series also diverges.
 

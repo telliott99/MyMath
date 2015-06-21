@@ -11,7 +11,7 @@ Contents:
    related_rates
    optimization
    shortest_path
-   oscillator
+   harmonic-oscillator
    linear_approx
    newton
    max_likelihood
