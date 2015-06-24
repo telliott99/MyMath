@@ -23,7 +23,7 @@ Also shown are two points, one has coordinates :math:`\cos s, \sin s` and the ot
     
     = 2 - 2 \cos s \cos t - 2 \sin s \sin t
 
-In the right panel, the triangle has been rotated, preserving the same relationship, but now we see that the point labeled :math:`x,y` is :math:`\cos (s-t), \sin (s-t)`.  And the distance :math:`d` is now the distance from that point to :math:`(1,0)`.  So 
+In the right panel, the triangle has been rotated, preserving the same relationships, but now we see that the point labeled :math:`x,y` is :math:`\cos (s-t), \sin (s-t)`.  And the distance :math:`d` is now the distance from that point to :math:`(1,0)`.  So 
 
 .. math::
 

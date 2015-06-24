@@ -193,4 +193,51 @@ This simplifies:
 
 If we choose :math:`n=5`, then :math:`1/6! = 1/720 \approx 0.001388` which is a bit too large.  Thus, we need :math:`n=6` with :math:`1/7! \approx 0.000198`.
 
++++++++
+Example
++++++++
 
+Find :math:`\sqrt{e}` to within an error of :math:`10^{-4}`.
+
+Take :math:`f(x)` to be :math:`e^x` and :math:`x=1/2`.  Take the series around :math:`c=0` (Maclaurin series).  The derivatives of :math:`e^x` are all just :math:`e^x`.
+
+So what is the upper bound for
+
+.. math::
+
+    M_n = e^x
+
+in the interval :math:`0 \le \mu \le 1/2`?  It is obviously :math:`e^{1/2}`.  In the book (Varberg), they let the interval be :math:`[0,1]` with upper bound :math:`e^1`, and then take :math:`M_n = 3` because it's "easy to deal with".
+
+So now for each value of :math:`n`, with :math:`M_n = 3` we calculate the value of
+
+.. math::
+
+    E_n < M_n \frac{(1/2)^n}{n!}
+
+    E_1 < 3 \frac{1}{2} = \frac{3}{2}
+    
+    E_2 < 3 \frac{(1/2)^2}{2!} = 
+
+    E_3 < 3 \frac{(1/2)^3}{3!} = 
+
+    \dots
+
+Sparing all the details, :math:`E_6` is the first error term within the prescribed bounds
+
+.. math::
+
+    E_6 < 3 \frac{(1/2)^6}{6!} = 3 \frac{1}{64} \frac{1}{720} = \frac{3}{46080} = 6.51 \times 10^{-5}
+
+so we need the series out to :math:`n=5`
+
+.. math::
+
+    \sqrt{e} = \sum_{n=0}^5 \frac{(1/2)^n}{n!}
+    
+    = 1 + 1/2 + 1/8 + 1/48 + 1/384 + 1/3840
+    
+    = 1.6487
+    
+    (1.6487)^2 = 2.7182
+    

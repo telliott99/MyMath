@@ -155,6 +155,26 @@ Or just do this:
     
     y = -\frac{1}{4} x^2  + 1
 
++++++++
+Example
++++++++
+
+.. math::
+
+    r = \frac{c}{(a \cos t + b \sin t)}
+
+is the equation of a line.  To see this, substitute :math:`x = r \cos t` and :math:`y = r \sin t`:
+
+.. math::
+
+    r = \frac{c}{(a(x/r) + b(y/r))}
+    
+    r = \frac{rc}{ax + by}
+
+    c = ax + by
+    
+    y = -\frac{a}{b} x + \frac{c}{b}
+
 This image has some examples from *The Calculus Lifesaver*.
 
 .. image:: /figs/polarex.png
@@ -204,3 +224,26 @@ The equation can be simplified by putting one focus of the ellipse at the origin
 .. math::
 
     r = \frac{b^2}{a - c \cos \theta}
+
+=========================
+General solution, Varberg
+=========================
+
+According to Varberg
+
+For a conic of eccentricity :math:`e`, with its focus at the origin and the directrix is the line :math:`x = -d`, then, the polar equation is:
+
+.. math::
+
+    r = \frac{ed}{1- e\cos t}
+
+and the graph of 
+
+.. math::
+
+    r = a \cos nt
+    
+    r = a \sin nt
+
+is a :math:`2n`-petaled rose if :math:`n` is even, or an :math:`n`-petaled rose if :math:`n` is odd (traversed twice)
+

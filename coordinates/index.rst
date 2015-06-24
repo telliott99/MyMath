@@ -13,3 +13,4 @@ Contents:
    euler-addition
    rotate-vectors
    matrix-proof
+   trig-functions

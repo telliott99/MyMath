@@ -4,15 +4,19 @@
 Rotation of Coordinates
 #######################
 
-Since we have established the formulas in the :ref:`previous section <cosine_s+t>`:
+Since we have established the sum of cosines formula in the :ref:`previous section <cosine_s+t>`:
 
 .. math::
 
     \cos s + t = \cos s \cos t - \sin s \sin t
 
+We could, at this point, directly extend that to yield the sum of sines formula as shown :ref:`here <cosine-to-sine-alt>`, but the extension is a little awkward.  I have nice proofs :ref:`here <euler-addition>` and :ref:`here <stacked-triangles>`, but I want to defer them for the moment and just state the result for now:
+
+.. math::
+
     \sin s + t = \sin s \cos t + \cos s \sin t
 
-we can proceed with a derivation of the formula for rotation of coordinates, as found in Stewart's *Calculus* (and Varberg, and others ..).
+Given this, we can proceed with a very nice derivation of the formula for rotation of coordinates, as found in Stewart's *Calculus* (and Varberg, and others ..).
 
 .. image:: /figs/min_rotation3.png
        :scale: 25%
@@ -27,28 +31,36 @@ Label the ray to the point :math:`P` as :math:`r`.  Notice that :math:`u` and :m
     
     v = r \sin \phi
 
-while :math:`x` and :math:`y` are naturally expressed in terms of the combined angle :math:`\theta + \phi`
-
-.. math::
-
-    x = r \cos (\theta + \phi)
-    
-    y = r \sin (\theta + \phi)
-    
-So, for :math:`x`, using the sum formula
+while :math:`x` and :math:`y` are naturally expressed in terms of the combined angle :math:`\theta + \phi`.  Here is
 
 .. math::
 
     x = r \cos (\theta + \phi)
 
-    = r \cos \theta \cos \phi - r \sin \theta \sin \phi
+Now, use the sum formula for cosine:
     
-    = u \cos \theta - v \sin \theta
+.. math::
 
-and for :math:`y`:
+    x = r \cos \theta \cos \phi - r \sin \theta \sin \phi
+
+But
 
 .. math::
 
+    u = r \cos \phi
+
+    v = r \sin \phi
+
+So
+
+.. math::
+
+    x = u \cos \theta - v \sin \theta
+
+In the same way:
+
+.. math::
+    
     y = r \sin (\theta + \phi)
     
     = r \sin \theta \cos \phi + r \cos \theta \sin \phi

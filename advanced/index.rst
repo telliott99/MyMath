@@ -11,3 +11,4 @@ Contents:
    polar-area
    hyperbolic
    complex
+   complex2
