@@ -23,7 +23,7 @@ Given this, we can proceed with a very nice derivation of the formula for rotati
 
 Here, we have the standard :math:`x,y`-coordinates in black.  The rotated :math:`u,v`-coordinate system is in red, with a rotation angle :math:`\theta` in the counter-clockwise direction.
 
-Label the ray to the point :math:`P` as :math:`r`.  Notice that :math:`u` and :math:`v` are naturally expressed in terms of :math:`\phi`:
+The ray to the point :math:`P` has length :math:`r`.  Notice that :math:`u` and :math:`v` are naturally expressed in terms of :math:`\phi`:
 
 .. math::
 

@@ -16,6 +16,10 @@ In addition to Kline, my other top calculus textbooks are Richard Hamming's *Met
 
 http://ocw.mit.edu/resources/res-18-001-calculus-online-textbook-spring-2005/textbook/
 
+I only wish his lectures in that course had been recorded, as the lectures on linear algebra were.  These highlights are very nice too:
+
+http://ocw.mit.edu/resources/res-18-005-highlights-of-calculus-spring-2010/
+
 I also highly recommend these online books:
 
 https://mooculus.osu.edu/textbook/mooculus.pdf
@@ -24,9 +28,11 @@ and
 
 http://www.whitman.edu/mathematics/calculus_online/
 
-The first three books share a world view which minimizes the formalism of limits.  Here, we will manipulate differentials algebraically, and do so without guilt.  The basic theory is covered, but the goal is to get to applications.
+The first three books share a world view which minimizes the formalism of limits.  Here, we will manipulate differentials algebraically, and do so without guilt.
 
-There are not many problems in this book, because I was a bit undisciplined and also because I wanted to minimize the length.  However, to learn this material, you must do lots of problems.  As the old saying goes, "mathematics is not a spectator sport".
+The basic theory is covered, but the goal is to get to applications.
+
+There are no problems in this book, because I was a bit undisciplined and also because I wanted to minimize the length.  However, to learn this material, you must do lots of problems.  As the old saying goes, "mathematics is not a spectator sport".
 
 Or as Hamming puts it:
 

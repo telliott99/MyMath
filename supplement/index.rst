@@ -13,7 +13,6 @@ Contents:
    rotate-alt
    cosine-to-sine-alt
    vectors-matrices
-   exp-irrational
    proof-product-rule
    exp-basics
    exp-interest

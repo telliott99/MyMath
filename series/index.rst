@@ -9,6 +9,7 @@ Contents:
    
    series-intro
    series-tests
+   exp-irrational
    taylor
    taylor-remainder
    euler-eqn

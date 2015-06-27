@@ -8,7 +8,5 @@ Contents:
    :maxdepth: 2
    
    parabola
-   quadrature
    ellipse
    hyperbola
-   sphere

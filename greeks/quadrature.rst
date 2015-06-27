@@ -56,7 +56,7 @@ And the slope at :math:`w` is (from calculus or trigonometry)
 
 .. math::
 
-    f'(w) = 2aw = = 2a \ \frac{u+v}{2} = a(u + v)
+    f'(w) = 2aw = 2a \ \frac{u+v}{2} = a(u + v)
 
 So the proposition is correct.
 
@@ -172,9 +172,9 @@ The reason for the whole preceding argument is the following.  We found that the
     
     = \frac{1}{8} a\ (u-v)^3 
     
-    = k(u-v)^3, \ \ k = const
+    = k(u-v)^3, \ \ k = \text{constant}w
 
-It is solely a function of :math:`u-v`.  So now let us we draw two new triangles (in light green).  
+It is solely a function of :math:`u-v`.  So now let us draw two new triangles (in light green).  
 
 .. image:: /figs/para_tri3.png
        :scale: 25%
@@ -229,8 +229,3 @@ Application to the problem of the area "under" the curve :math:`y=x^2` is as fol
 Therefore, the area "above" the parabola in this region is :math:`4/3`.
 
 Now consider half of the region, from :math:`x=0` \rightarrow :math:`x=1`.  This is the unit square.  The area above the parabola in this region is :math:`2/3`, therefore, the area below the parabola is :math:`1 - 2/3 = 1/3`.
-
-
-
-
-
