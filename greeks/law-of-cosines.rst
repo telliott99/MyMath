@@ -27,7 +27,7 @@ Substitute for :math:`h^2` using the small triangle on the left:
 
     a^2 = b^2 - d^2 + e^2
 
-since :math:`e = c - d` and :math:`e^2 = c^2 - 2cd + d^2`:
+since :math:`e = c - d` and so :math:`e^2 = c^2 - 2cd + d^2`:
 
 .. math::
 

@@ -1,8 +1,8 @@
 .. _strang-sum-angles:
 
-###########################
-Stand-alone geometric proof
-###########################
+###############
+Geometric proof
+###############
 
 Here is a proof from Strang's *Calculus*.
 
