@@ -19,7 +19,7 @@ We start by calculating the force due to a ring of mass covered inside the angul
 
     dA = 2 \pi R \sin \theta R \ d \theta
 
-The mass per unit area is the total mass divided by the surface area of the sphere :math:`M / \pi R^2` so the mass of the ring is
+The mass per unit area is the total mass divided by the surface area of the sphere :math:`M / 4 \pi R^2` so the mass of the ring is
 
 .. math::
 
@@ -55,7 +55,7 @@ We should integrate from :math:`\theta = 0 \rightarrow \pi` to get the whole thi
 Law of cosines
 ==============
 
-While the above equation sounds nice, the trouble is that it contains three variables:  :math:`s, \phi`, and :math:`\theta`.  However, the law of cosines comes to the rescue.  We write two formulas:
+While the above equation looks nice, the trouble is that it contains three variables:  :math:`s, \phi`, and :math:`\theta`.  However, the law of cosines comes to the rescue.  We use that to get two formulas.  The first is:
 
 .. math::
 
@@ -63,7 +63,10 @@ While the above equation sounds nice, the trouble is that it contains three vari
 
     \cos \phi = \frac{s^2 + r^2 - R^2}{2rs}
 
-and
+.. image:: /figs/shell_thm.png
+   :scale: 50 %
+
+and the second:
 
 .. math::
 
@@ -89,7 +92,7 @@ substitute for :math:`\theta`
 
 .. math::
 
-    dF_r = \frac{GmM}{2} \frac{\cos \phi s}{rRs^2} \ ds
+    dF_r = \frac{GmM}{2} \frac{\cos \phi \ s}{rRs^2} \ ds
 
 substitute for :math:`\cos \phi`
 
@@ -99,27 +102,27 @@ substitute for :math:`\cos \phi`
 
     =  \frac{GmM}{4R r^2} \ \frac{(s^2 + r^2 - R^2)}{s^2} \ ds
 
-    =  \frac{GmM}{4R r^2} \ (1 + \frac{(r^2 - R^2)}{s^2}) \ ds
+    =  \frac{GmM}{4R r^2} \ [ \ 1 + \frac{(r^2 - R^2)}{s^2} \ ] \ ds
 
 The integral is
 
 .. math::
 
-    F_r = \int dF_r = \int \frac{GmM}{4R r^2} \ (1 + \frac{(r^2 - R^2)}{s^2}) \ ds
+    F_r = \int dF_r = \int \frac{GmM}{4R r^2} \ [ \ 1 + \frac{(r^2 - R^2)}{s^2} \ ] \ ds
 
-    =  \frac{GmM}{4R r^2} \ [ \ s -  \frac{(r^2 - R^2)}{s}) \ ]
+    =  \frac{GmM}{4R r^2} \ [ \ s -  \frac{(r^2 - R^2)}{s} \ ]
 
 What about the limits on :math:`s`?  When :math:`\theta = 0`, :math:`s = r - R`, and when :math:`\theta = \pi`, :math:`s = r + R` so we have
 
 .. math::
 
-    F_r = \frac{GmM}{4R r^2} \ [ \ s -  \frac{(r^2 - R^2)}{s}) \ ] \ \bigg |_{r - R}^{r +R}
+    F_r = \frac{GmM}{4R r^2} \ [ \ s -  \frac{(r^2 - R^2)}{s} \ ] \ \bigg |_{r - R}^{r +R}
 
 Notice that we can factor :math:`r^2 - R^2`
 
 .. math::
 
-    F_r = \frac{GmM}{4R r^2} \ [ \ s -  \frac{(r+R)(r-R)}{s}) \ ] \ \bigg |_{r - R}^{r +R}
+    F_r = \frac{GmM}{4R r^2} \ [ \ s -  \frac{(r+R)(r-R)}{s} \ ] \ \bigg |_{r - R}^{r +R}
 
 So, just looking at the part in the brackets, at the upper limit we have
 

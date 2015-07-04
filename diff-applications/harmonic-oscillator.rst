@@ -53,7 +53,23 @@ so that
 
 Observe that :math:`A` can be anything we want.  It corresponds to the maximum amplitude of the oscillation, determined by how far we pull out the mass to start things off.
 
-In contrast, :math:`\omega` is determined by the characteristics of the spring, and is inversely proportional to the mass.  :math:`\omega` is also related to the frequency of oscillation.  If :math:`T` is the time period for one complete oscillation, then :math:`\omega T = 2 \pi`, or if :math:`f` is the frequency of oscillation, then :math:`\omega = 2 \pi f`.
+In contrast, :math:`\omega` is determined by the characteristics of the spring, and is inversely proportional to the mass.  :math:`\omega` is also related to the frequency of oscillation.  
+
+If :math:`T` is the time period for one complete oscillation, then 
+
+.. math::
+
+    \omega T = 2 \pi
+
+(radians per second times seconds for one revolution = :math:`2 \pi` radians).
+
+And if :math:`f` is the frequency of oscillation, then 
+
+.. math::
+
+    f = \frac{1}{T}
+
+    \omega = 2 \pi f
 
 Finally, this solution assumes that :math:`v_0 = 0`.
 

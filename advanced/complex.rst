@@ -116,6 +116,9 @@ With polar coordinates, to multiply two numbers together we multiply their respe
 
     z_1 z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)}
 
+.. image:: /figs/complex-mult.png
+   :scale: 50 %
+
 Conversely, for division, we divide the :math:`r` values and subtract the angles.
 
 .. math::
