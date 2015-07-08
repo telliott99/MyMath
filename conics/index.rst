@@ -10,3 +10,7 @@ Contents:
    parabola
    ellipse
    hyperbola
+   parabola-more
+   ellipse-parametric
+   ellipse-polar
+   

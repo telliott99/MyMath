@@ -25,6 +25,17 @@ Contents:
    int-physics/index
    series/index
    advanced/index
+   vectors/index
+   kepler/index
+   differentiation/index
+   integration/index
+   integration-apps/index
+   line-integrals/index
+   green-plane/index
+   surfaces/index
+   space/index
+   maxwell/index
+   
    supplement/index
    theory/index
 

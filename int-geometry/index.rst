@@ -10,7 +10,7 @@ Contents:
    disks-shells
    improper-int
    surface-area
-   line-integrals
+   simple-line-integrals
    cycloid
    ellipse-area-vol
    spherical-cap

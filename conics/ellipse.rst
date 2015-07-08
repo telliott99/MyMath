@@ -187,4 +187,4 @@ Recall that :math:`f^2 = a^2 - b^2`:
 
     \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
 
-Additional material about the ellipse is :ref:`here <ellipse-param>`.
+Additional material about the ellipse is :ref:`here <ellipse-parametric>`.

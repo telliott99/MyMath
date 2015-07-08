@@ -235,7 +235,7 @@ For a conic of eccentricity :math:`e`, with its focus at the origin and the dire
 
 .. math::
 
-    r = \frac{ed}{1- e\cos t}
+    r = \frac{ed}{1- e \cos t}
 
 and the graph of 
 

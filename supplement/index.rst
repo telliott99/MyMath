@@ -24,5 +24,3 @@ Contents:
    cubics
    poisson
    stirling
-   parabola-more
-   ellipse-param

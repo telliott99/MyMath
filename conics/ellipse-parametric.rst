@@ -1,4 +1,4 @@
-.. _ellipse-param:
+.. _ellipse-parametric:
 
 #######################
 Ellipse, parametrically
@@ -221,3 +221,145 @@ Now, the tangent to the ellipse is precisely the direction in which a particle a
     \mathbf{v} = \frac{d\mathbf{r}}{dt} = \ \langle \frac{dx}{dt}, \frac{dy}{dt} \rangle \ = \ \langle -a \sin t,b \cos t \rangle = \ \langle x',y' \rangle
 
 And that's the point.   :)
+
+===============
+Tangent algebra
+===============
+
+Consider the ellipse with equation:
+
+.. math::
+
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+
+and a point on the ellipse :math:`(x_0, y_0)`
+
+According to 
+
+http://www.algebra.com/algebra/homework/Quadratic-relations-and-conic-sections/Tangent-lines-to-an-ellipse.lesson
+
+The tangent to the ellipse has the equation:
+
+.. math::
+
+    \frac{x \ x_0}{a^2} + \frac{y \ y_0}{b^2} = 1
+
+This is the equation of a line in the unknowns :math:`x` and :math:`y`.
+
+To prove that this is the correct equation, first observe that when we plug in :math:`(x = x_0, y = y_0)` we obtain the equation of the ellipse.
+
+.. math::
+
+    \frac{x_0^2}{a^2} + \frac{y_0^2}{b^2} = 1
+
+This shows that :math:`(x = x_0, y = y_0)` is on the line.
+
+Second, we will show that *only* the point :math:`(x = x_0, y = y_0)` satisfies both equations.  We solve the equation of the tangent line for :math:`y`:
+
+.. math::
+
+    y = \frac{b^2}{y_0} (1 - \frac{x_0}{a^2} x)
+    
+square it:
+
+.. math::
+
+    y^2 = \frac{b^4}{y_0^2} (1 - 2\frac{x_0}{a^2} x + \frac{x_0^2}{a^4} x^2)
+
+and then substitute into the equation of the ellipse, obtaining:
+
+.. math::
+
+    \frac{x^2}{a^2} + \frac{1}{b^2}\ [ \ \frac{b^4}{y_0^2} (1 - 2\frac{x_0}{a^2} x + \frac{x_0^2}{a^4} x^2) \ ] \ = 1
+
+    \frac{x^2}{a^2} + \frac{b^2}{y_0^2} (1 - 2\frac{x_0}{a^2} x + \frac{x_0^2}{a^4} x^2) = 1
+
+Multiply by :math:`a^2y_0^2/b^2`:
+
+.. math::
+
+    \frac{y_0^2}{b^2}x^2 + a^2 - 2x_0 x + \frac{x_0^2}{a^2} x^2 = \frac{a^2 y_0^2}{b^2}
+
+But
+
+.. math::
+
+    \frac{x_0^2}{a^2} + \frac{y_0^2}{b^2} = 1
+    
+so the equation reduces to:
+
+.. math::
+
+    x^2 - 2 x_0 x + a^2 - \frac{a^2 y_0^2}{b^2} = 0
+
+Observe first that plugging into the **quadratic equation** and ignoring the determinant for the moment, we have
+
+.. math::
+
+    x = \frac{2 x_0}{2}
+
+    x = x_0
+
+and so 
+
+.. math::
+
+    x_0^2 - 2 x_0 x_0 + a^2 - \frac{a^2 y_0^2}{b^2} = 0
+    
+    - \frac{x_0^2}{a^2} + 1 - \frac{y_0^2}{b^2} = 0
+    
+    \frac{x_0^2}{a^2} + \frac{y_0^2}{b^2} = 1
+
+And then secondly, the discriminant squared is:
+
+.. math::
+
+    D^2 = 4 x_0^2 + 4a^2 (\frac{y_0^2}{b^2} - 1) 
+    
+    \frac{D^2}{4a^2} = \frac{x_0^2}{a^2} + (\frac{y_0^2}{b^2} - 1) 
+
+    \frac{D^2}{4a^2} = 0
+
+The only way this can be zero is if the discriminant :math:`D` is equal to zero.  Therefore :math:`(x_0,y_0)` is the *only* solution.
+
+Finally, consider the original equation of the line:
+
+.. math::
+
+    y = \frac{b^2}{y_0} (1 - \frac{x_0}{a^2} x)
+
+This line has slope:
+
+.. math::
+
+    m = - \frac{b^2}{y_0} \ \frac{x_0}{a^2}
+
+Now think about the point we had above as :math:`(x',y')` and relabel it as :math:`(x_0',y_0')` to be clear that we are talking about the points obtained using the same angle :math:`t`
+
+.. math::
+
+    x_0 = a \cos t
+    
+    y_0 = b \sin t
+    
+    x_0' = - a \sin t
+    
+    y_0' = b \cos t
+
+The slope of the line from the origin to :math:`(x_0',y_0')` is:
+
+.. math::
+
+    m = \frac{- y_0'}{- x_0'} 
+    
+    = -\frac{b \cos t}{a \sin t}
+
+Substitute for :math:`\cos t` and :math:`\sin t`:
+
+.. math::
+
+    m = - \frac{b}{a} \ \frac{x_0/a}{y_0/b}
+    
+    = - \frac{b^2}{y_0} \ \frac{x_0}{a^2}
+
+This matches what we have for the slope from the equation for the line tangent to the ellipse at :math:`(x_0,y_0)`.

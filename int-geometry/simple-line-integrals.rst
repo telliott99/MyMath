@@ -1,4 +1,4 @@
-.. _line-integrals:
+.. _simple-line-integrals:
 
 ##############
 Line Integrals
