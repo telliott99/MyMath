@@ -57,7 +57,7 @@ What about the included angle?  Both angle :math:`\angle BAC` and :math:`\angle 
 
 .. math::
 
-    \Delta ABC = \Delta EFG
+    \Delta ABC = \Delta AEF
 
 The next part of the proof is to see that triangle :math:`\Delta ABC` has base :math:`AB` and altitude :math:`AE` so its area is half that of the small square :math:`ABDE`.  On the other hand triangle :math:`\Delta AEF` has base :math:`AF` and altitude :math:`AH` (as well as :math:`FG`) so its area is half that of the rectangle :math:`AFGH`.
 

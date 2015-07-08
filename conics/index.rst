@@ -12,5 +12,4 @@ Contents:
    hyperbola
    parabola-more
    ellipse-parametric
-   ellipse-polar
    

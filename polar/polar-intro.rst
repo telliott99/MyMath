@@ -1,4 +1,4 @@
-.. _polar-coord:
+.. _polar-intro:
 
 #################
 Polar Coordinates

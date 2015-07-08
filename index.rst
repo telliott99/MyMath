@@ -24,7 +24,8 @@ Contents:
    int-geometry/index
    int-physics/index
    series/index
-   advanced/index
+   polar/index
+   complex/index
    vectors/index
    kepler/index
    differentiation/index

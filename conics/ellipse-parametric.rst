@@ -292,7 +292,7 @@ so the equation reduces to:
 
     x^2 - 2 x_0 x + a^2 - \frac{a^2 y_0^2}{b^2} = 0
 
-Observe first that plugging into the **quadratic equation** and ignoring the determinant for the moment, we have
+Observe first that plugging into the **quadratic equation** and ignoring for the moment the second term (:math:`\pm D`, where :math:`D` is the determinant), we have
 
 .. math::
 
@@ -310,9 +310,11 @@ and so
     
     \frac{x_0^2}{a^2} + \frac{y_0^2}{b^2} = 1
 
-And then secondly, the discriminant squared is:
+And now proceeding to look at the discriminant:
 
 .. math::
+
+    D = \sqrt{4 x_0^2 + 4a^2 (\frac{y_0^2}{b^2} - 1)}
 
     D^2 = 4 x_0^2 + 4a^2 (\frac{y_0^2}{b^2} - 1) 
     
@@ -320,7 +322,7 @@ And then secondly, the discriminant squared is:
 
     \frac{D^2}{4a^2} = 0
 
-The only way this can be zero is if the discriminant :math:`D` is equal to zero.  Therefore :math:`(x_0,y_0)` is the *only* solution.
+The only way this can be zero is if the discriminant :math:`D` itself is equal to zero.  And if that is true, then :math:`(x_0,y_0)` is the *only* solution.
 
 Finally, consider the original equation of the line:
 
@@ -346,11 +348,11 @@ Now think about the point we had above as :math:`(x',y')` and relabel it as :mat
     
     y_0' = b \cos t
 
-The slope of the line from the origin to :math:`(x_0',y_0')` is:
+The slope of the line from :math:`(x_0',y_0')` to the origin is:
 
 .. math::
 
-    m = \frac{- y_0'}{- x_0'} 
+    m = \frac{0 - y_0'}{0 - x_0'} 
     
     = -\frac{b \cos t}{a \sin t}
 
@@ -360,6 +362,6 @@ Substitute for :math:`\cos t` and :math:`\sin t`:
 
     m = - \frac{b}{a} \ \frac{x_0/a}{y_0/b}
     
-    = - \frac{b^2}{y_0} \ \frac{x_0}{a^2}
+    = - \frac{b^2}{a^2} \ \frac{x_0}{y_0}
 
 This matches what we have for the slope from the equation for the line tangent to the ellipse at :math:`(x_0,y_0)`.

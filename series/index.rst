@@ -13,5 +13,6 @@ Contents:
    taylor
    taylor-remainder
    euler-eqn
+   hyperbolic
 
 
