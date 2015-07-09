@@ -7,7 +7,6 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
-   half-life
    related_rates
    optimization
    shortest_path

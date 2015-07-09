@@ -55,7 +55,7 @@ A much simpler proof is to remember that the cross-product :math:`\mathbf{a} \ti
 
 Recall that the direction of :math:`\mathbf{a} \times \mathbf{b}` is perpendicular to both vectors.   If we are careful to write the cross-product in the correct order using the right-hand rule, the result of the dot product will always be positive, with the projection of :math:`\mathbf{c}` onto the cross-product equal to the height of the solid.  In particular, for this arrangement, we must write one of these three expressions:  :math:`\mathbf{a} \times \mathbf{b}`, :math:`\mathbf{b} \times \mathbf{c}`, or :math:`\mathbf{c} \times \mathbf{a}`.
 
-It doesn't matter which two vectors we choose as the base of our solid, the volume has to come out the same.
+It doesn't matter which two vectors we choose as the base of our solid, **the volume must come out the same**.
 
 .. math::
 

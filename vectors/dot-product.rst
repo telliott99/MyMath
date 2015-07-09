@@ -40,6 +40,23 @@ The dot product of two vectors is a number, in vector terminology it is a *scala
 
 Notice that the two vectors being multiplied (whose dot product is computed) must have the same dimension, the same :math:`n`.  Also, the fact that the result of the multiplication---the dot product---is a number is in contrast to the other form of vector multiplication (the cross-product) which yields a vector as the result.
 
+========
+Examples
+========
+
+.. math::
+
+    \mathbf{\hat{i}} = \langle 1, 0 \rangle
+
+    \mathbf{\hat{i}} \cdot \mathbf{\hat{i}} = (1)(1) + (0)(0) = 1
+
+    \mathbf{v} = \langle v_1, v_2 \rangle
+    
+    \mathbf{v} \cdot  \mathbf{\hat{i}} = (v_1)(1) + (v_2)(0) = v_1
+    
+    \mathbf{u} = \mathbf{\hat{i}} + \mathbf{\hat{j}} = \langle 1,1 \rangle
+    
+
 ===============
 Some properties
 ===============
@@ -115,67 +132,6 @@ Proof:
     = a_1^2 + a_2^2 + \dots + a_n^2 + b_1^2 + b_2^2 + \dots + b_n^2 - 2 (a_1 b_1 + a_2 b_2 + \dots + a_n b_n)
     
     = \mathbf{a} \cdot \mathbf{a} +  \mathbf{b} \cdot \mathbf{b}  - 2 \ \mathbf{a} \cdot \mathbf{b}
-
-==================
-Length of a vector
-==================
-
-The length of a vector :math:`\mathbf{a} = \ \langle a_1,a_2 \rangle`, designated :math:`|\mathbf{a}|`, is computed by a straightforward application of the Pythagorean Theorem:
-
-.. math::
-
-    |\mathbf{a}|^2 = a_1^2 + a_2^2
-
-Notice that
-
-.. math::
-
-    |\mathbf{a}|^2 = \mathbf{a} \cdot \mathbf{a}
-
-We often leave the result as the square for simplicity.  This is easily extended to more dimensions by sequential application of the same method.  In :math:`\mathbb{R}^3`:
-
-.. math::
-
-    |\mathbf{a}|^2 = a_1^2 + a_2^2 + a_3^2
-
-.. image:: /figs/pythagoras3d.png
-   :scale: 50 % 
-
-In :math:`\mathbb{R}^n`:
-
-.. math::
-
-    |\mathbf{a}|^2 = a_1^2 + a_2^2 + \dots + a_n^2
-
-============
-Unit vectors
-============
-
-A unit vector is a vector of length equal to :math:`1`.  For example the unit vectors in the :math:`x` and :math:`y` directions are usually named:
-
-.. math::
-
-    \mathbf{\hat{i}} = \langle 1, 0 \rangle
-    
-    \mathbf{\hat{j}} = \langle 0, 1 \rangle
-
-The length of :math:`\mathbf{\hat{i}}` is:
-
-.. math::
-
-    |\mathbf{\hat{i}}|^2 = \mathbf{\hat{i}} \cdot \mathbf{\hat{i}} = 1 \cdot 1 + 0 \cdot 0 = 1
-
-Any vector can be converted into a unit vector by dividing by its length:
-
-.. math::
-
-    \frac{1}{|\mathbf{a}|} \ \mathbf{a} =  \frac{\mathbf{a}}{\sqrt{\mathbf{a} \cdot \mathbf{a}}}
-    
-To simplify the notation, I often write :math:`a` for :math:`|\mathbf{a}|`.  Thus:
-
-.. math::
-
-    a^2 = |\mathbf{a}|^2 = \mathbf{a} \cdot \mathbf{a}
 
 =====================
 Relation to the angle
@@ -254,9 +210,9 @@ How can I find a vector :math:`\mathbf{v}` perpendicular to :math:`\mathbf{u}`? 
 
 .. math::
 
-    \mathbf{u} \cdot \mathbf{v} = pq + -q)p = 0
+    \mathbf{u} \cdot \mathbf{v} = pq + -qp = 0
 
-In disguise, this is the rule from Algebra I that a perpendicular line has slope that is the negative inverse of m:  :math:`\frac{1}{4}` has negative inverse :math:`-4`.  If we have the equations for two lines
+In disguise, this is the rule from Algebra I that a perpendicular line has slope which is the negative inverse of m:  :math:`\frac{1}{4}` has negative inverse :math:`-4`.  If we have the equations for two lines
 
 .. math::
 
@@ -270,88 +226,29 @@ How to find a vector in :math:`\mathbb{R}^5` perpendicular to :math:`\langle 1,1
 
 Any vector of the form :math:`\langle 0,0,0,0,k \rangle` will do, where :math:`k` is some real number.
 
-==========
-Projection
-==========
-
-If :math:`|\mathbf{a}| = a = 1` we say that :math:`\mathbf{a}` is a *unit* vector.  In that case
+For more about the angle, go back to elementary geometry:
 
 .. math::
-
-    \mathbf{b} \cdot \mathbf{a} = b \cos \theta
-
-Looking at the figure, :math:`b \cos \theta` is the length of the *projection* of :math:`\mathbf{b}` on :math:`\mathbf{a}`.  (Recall that the dot product is a scalar---a number---and not a vector).
-
-.. image:: /figs/dot3.png
-   :scale: 50 % 
-
-The result, :math:`\mathbf{b} \cdot \mathbf{a} = b \cos \theta`, is the length of the part of :math:`\mathbf{b}` that extends in the same direction as :math:`\mathbf{a}`.  The corresponding vector is 
-
-.. math::
-
-    \mathbf{p} = (\mathbf{b} \cdot \mathbf{a}) \ \mathbf{a}
     
-if :math:`\mathbf{a}` is a unit vector.
-
-The other component of :math:`\mathbf{b}` is the *error*, :math:`\mathbf{e}`.  It is the part of :math:`\mathbf{b}` that is perpendicular to the projection :math:`\mathbf{p}`.
-
-.. math::
-
-    \mathbf{b} = \mathbf{p} + \mathbf{e}
-
-We compute :math:`\mathbf{e}` as the difference :math:`\mathbf{b} -  \mathbf{p}`.
-
-The formula given here is a simplification for the situation in which :math:`\mathbf{a}` is a unit vector.  If not, the complete formula is:
-
-.. math::
-
-    \mathbf{p} = \frac{\mathbf{b} \cdot \mathbf{a}}{\mathbf{a} \cdot \mathbf{a}} \ \mathbf{a}
+    \mathbf{u} = \mathbf{\hat{i}} + \mathbf{\hat{j}} = \langle 1,1 \rangle
     
-The result is the measure of how much :math:`\mathbf{b}` goes in the same direction as :math:`\mathbf{a}` times the unit vector in the :math:`\mathbf{a}` direction.
-
-(Sometimes I look at the :math:`\mathbf{a} \cdot \mathbf{a} = a^2` in the denominator and think there must be a mistake, since we need only one :math:`a` to convert :math:`\mathbf{a}` into a unit vector.  But it's not a mistake as the derivation will show).
-
-=====
-Proof
-=====
-
-We are given vectors :math:`\mathbf{a}` and :math:`\mathbf{b}` and our task is to find the projection of :math:`\mathbf{b}` onto :math:`\mathbf{a}`, which amounts to finding a scalar :math:`t` that when multiplied by :math:`\mathbf{a}` produces :math:`\mathbf{p}` such that
-
-.. math::
-
-    t \ \mathbf{a} = \mathbf{p}
-
-As we said, :math:`\mathbf{b}` can be decomposed into two vectors, one parallel to :math:`\mathbf{a}` and one perpendicular:
-
-.. math::
-  
-    \mathbf{p} + \mathbf{e} = \mathbf{b}
-
-    t \ \mathbf{a} + \mathbf{e} = \mathbf{b}
-
-We will use the fact that :math:`\mathbf{a}` and :math:`\mathbf{e}` are *orthogonal*, perpendicular to each other, so their dot product is zero.  Form the dot product of :math:`\mathbf{a}` with both sides of the equation above:
-
-.. math::
-
-    \mathbf{a} \cdot (t \ \mathbf{a} + \mathbf{e} ) = \mathbf{a} \cdot \mathbf{b}
-
-We showed above that the dot product is distributive over addition so this is equal to 
-
-.. math::
-
-    \mathbf{a} \cdot t \ \mathbf{a} + \mathbf{a} \cdot  \mathbf{e} = \mathbf{a} \cdot \mathbf{b}
-
-but :math:`\mathbf{a} \cdot  \mathbf{e} = 0` so
-
-.. math::
-
-    \mathbf{a} \cdot t \ \mathbf{a} = \mathbf{a} \cdot \mathbf{b}
+    u = | \mathbf{u} | = \sqrt{2}
     
-    t \mathbf{a} \cdot  \mathbf{a} = \mathbf{a} \cdot \mathbf{b}
+    \mathbf{u} \cdot \mathbf{i} = 1 = u \cos \theta
     
-    t = \frac{\mathbf{a} \cdot \mathbf{b}}{\mathbf{a} \cdot \mathbf{a}}
+    \cos \theta = \frac{1}{\sqrt{2}}
     
-If :math:`\mathbf{a}` is a unit vector, then :math:`\mathbf{a} \cdot  \mathbf{a} = 1` and we obtain the formula above.
+similarly
+
+.. math::
+    
+    \mathbf{w} = \langle 1, \sqrt{3} \rangle
+    
+    w = | \mathbf{w} | = \sqrt{4} = 2
+    
+    \mathbf{w} \cdot \mathbf{i} = 1 = w \cos \theta
+    
+    \cos \theta = \frac{1}{2}
 
 =======================================
 Alternate derivation of the dot product

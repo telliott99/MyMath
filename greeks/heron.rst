@@ -15,7 +15,11 @@ If :math:`s` is the semi-perimeter
 
 .. math::
 
-    s = \frac{1}{2}(a + b + c) 
+    s = \frac{1}{2}(a + b + c)
+
+Heron's formula says that
+
+.. math::
 
     A = \sqrt{s + (s-a) + (s-b) + (s-c)} 
 
@@ -23,7 +27,7 @@ Start with the well-known formula for area
 
 .. math::
 
-    A = \frac{1}{2} \ \text{base} \times \text{height} = \frac{1}{2} \ c \ h = \frac{1}{2} \ c b \sinA 
+    A = \frac{1}{2} \ \text{base} \times \text{height} = \frac{1}{2} \ c \ h = \frac{1}{2} \ c b \sin A 
 
 We will come back to this and substitute for the sine of A.  But first, rearrange the equation for the law of cosines
 
@@ -31,9 +35,9 @@ We will come back to this and substitute for the sine of A.  But first, rearrang
 
     a^2 = c^2 + b^2 - 2bc \cos A 
 
-    \cosA = \frac{(c^2 + b^2 - a^2)}{2bc} 
+    \cos A = \frac{(c^2 + b^2 - a^2)}{2bc} 
 
-    \sinA = \sqrt{1 - \cos^2 A} = \sqrt{ 1 - \frac{(c^2 + b^2 - a^2)^2}{(2bc)^2}} 
+    \sin A = \sqrt{1 - \cos^2 A} = \sqrt{ 1 - \frac{(c^2 + b^2 - a^2)^2}{(2bc)^2}} 
 
 So finally we have
 
@@ -45,7 +49,7 @@ So finally we have
 
 Now we just need to work on what is under the square root.  It looks like a mess but will simplify quite a bit.
 
-For the next part, we won't write :math:` A = \frac{1}{4} \sqrt { \ldots }`, but we'll recall that it's there near the end, when we will write it as  :math:` A = \sqrt {\frac{1}{16} \ldots }`
+For the next part, we won't write :math:`A = \frac{1}{4} \sqrt { \ldots }`, but we'll recall that it's there near the end, when we will write it as  :math:`A = \sqrt {\frac{1}{16} \ldots }`
 
 Look at what's inside
 
@@ -57,7 +61,7 @@ This looks familiar, it is a difference of squares
 
 .. math::
 
-    (2bc + (c^2 + b^2 - a^2))(2bc - (c^2 + b^2 - a^2)) 
+    [ \ 2bc + (c^2 + b^2 - a^2) \ ] \ [ \ (2bc - (c^2 + b^2 - a^2) \ ] 
 
 In the first term, we can rearrange
 
@@ -65,7 +69,11 @@ In the first term, we can rearrange
 
     2bc + c^2 + b^2 - a^2 
 
-    (c+b)^2 - a^2) 
+    (c+b)^2 - a^2
+
+another difference of squares:
+
+.. math::
 
     (c+b+a) (c+b-a) 
 
@@ -75,11 +83,11 @@ Similarly in the second term
 
     -(c^2 - 2bc + b^2 - a^2) 
 
-    -((c-b)^2 - a^2) 
+    -((c - b)^2 - a^2) 
 
-    -((c-b+a) (c - b - a)) 
+    -(c - b + a) (c - b - a)
 
-    (c-b+a) (a + b - c) 
+    (c - b + a) (a + b - c) 
 
 Putting it all together, we have
 

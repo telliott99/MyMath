@@ -9,6 +9,7 @@ Contents:
    
    vector-intro
    dot-product
+   vector-projection
    dot-product2
    cross-product
    cross-product2

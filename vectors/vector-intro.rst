@@ -100,11 +100,73 @@ and
 
     \mathbf{u} = \mathbf{v} - \mathbf{w}
 
+==================
+Length of a vector
+==================
+
+The length of a vector :math:`\mathbf{a} = \ \langle a_1,a_2 \rangle`, designated :math:`|\mathbf{a}|`, is computed by a straightforward application of the Pythagorean Theorem:
+
+.. math::
+
+    |\mathbf{a}|^2 = a_1^2 + a_2^2
+
+Notice that
+
+.. math::
+
+    |\mathbf{a}|^2 = \mathbf{a} \cdot \mathbf{a}
+
+We often leave the result as the square for simplicity.  This is easily extended to more dimensions by sequential application of the same method.  In :math:`\mathbb{R}^3`:
+
+.. math::
+
+    |\mathbf{a}|^2 = a_1^2 + a_2^2 + a_3^2
+
+.. image:: /figs/pythagoras3d.png
+   :scale: 50 % 
+
+In :math:`\mathbb{R}^n`:
+
+.. math::
+
+    |\mathbf{a}|^2 = a_1^2 + a_2^2 + \dots + a_n^2
+    
 ============
 Unit vectors
 ============
 
-As I've suggested, the vector :math:`\mathbf{v}` can be thought of as an arrow that goes from the origin to the point :math:`(v_1,v_2)`.  It has both length and direction.  Its length is given (from the Pythagorean Theorem) by
+A unit vector is a vector of length equal to :math:`1`.  For example the unit vectors in the :math:`x` and :math:`y` directions are usually named:
+
+The standard unit vectors (sometimes called a *basis*) are 
+
+.. math::
+
+    \mathbf{\hat{i}} = \langle 1,0 \rangle
+    
+    \mathbf{\hat{j}} = \langle 0,1 \rangle
+    
+The "hat" symbol indicates a unit vector:  :math:`\mathbf{\hat{v}}`.
+
+The length of :math:`\mathbf{\hat{i}}` is:
+
+.. math::
+
+    |\mathbf{\hat{i}}|^2 = \mathbf{\hat{i}} \cdot \mathbf{\hat{i}} = 1 \cdot 1 + 0 \cdot 0 = 1
+
+Any vector can be converted into a unit vector by dividing by its length:
+
+.. math::
+
+    \frac{1}{|\mathbf{a}|} \ \mathbf{a} =  \frac{\mathbf{a}}{\sqrt{\mathbf{a} \cdot \mathbf{a}}}
+    
+To simplify the notation, I often write :math:`a` for :math:`|\mathbf{a}|`.  Thus:
+
+.. math::
+
+    a^2 = |\mathbf{a}|^2 = \mathbf{a} \cdot \mathbf{a}
+    
+
+As I've suggested, the vector :math:`\mathbf{v}` can be thought of as an arrow that goes from the origin to the point :math:`(v_1,v_2)`.  It has both length and direction.  Its length is given by the Pythagorean Theorem, as we've said
 
 .. math::
 
@@ -121,7 +183,8 @@ Its direction is
     \frac{v_2}{v_1} = tan \ \theta, \ \ \ \  \theta = tan^{-1}(\frac{v_2}{v_1})
 
 where :math:`\theta` is the angle the vector makes (going counter-clockwise) with the positive :math:`x`-axis.
-Any vector can be converted into a *unit vector*, a vector of length one, by dividing by its length.  For example if :math:`\mathbf{v} = \langle 1,2\rangle` then 
+
+To convert :math:`\mathbf{v}` into a unit vector, just divide by its length.  For example if :math:`\mathbf{v} = \langle 1,2\rangle` then 
 
 .. math::
 
@@ -129,15 +192,7 @@ Any vector can be converted into a *unit vector*, a vector of length one, by div
 
     \mathbf{\hat{v}} =  \frac{1}{v}\ \mathbf{v} = \ \langle\frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}}\rangle
 
-is a unit vector pointing in the same direction as :math:`\mathbf{v}`.  The "hat" symbol indicates a unit vector:  :math:`\mathbf{\hat{v}}`.
-
-The standard unit vectors (sometimes called a *basis*) are 
-
-.. math::
-
-    \mathbf{\hat{i}} = \langle 1,0 \rangle
-    
-    \mathbf{\hat{j}} = \langle 0,1 \rangle
+is a unit vector pointing in the same direction as :math:`\mathbf{v}`. 
 
 The line through the origin with slope :math:`m = v_2/v_1` and equation
 

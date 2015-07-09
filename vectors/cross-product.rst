@@ -105,11 +105,19 @@ Test that by forming the dot product with :math:`\mathbf{u}`.
 
     \mathbf{u} \cdot (\mathbf{u} \times \mathbf{v})  =  p(qz - ry) + q(rx - pz)   + r(py - qx)
 
-The first and fourth terms cancel, the second and fifth terms cancel, and the third and sixth terms also cancel.  
+The first and fourth terms cancel, the second and fifth terms cancel, and the third and sixth terms also cancel.
+
+Test with :math:`\mathbf{v}`:
+
+.. math::
+
+    \mathbf{v} \cdot (\mathbf{u} \times \mathbf{v})  =  x(qz - ry) + y(rx - pz)   + z(py - qx)
+
+The first and sixth, second and third, and fourth and fifth terms all cancel.
 
 So :math:`\mathbf{u} \cdot (\mathbf{u} \times \mathbf{v}) = 0`, and :math:`\mathbf{v} \cdot (\mathbf{u} \times \mathbf{v}) = 0` as well.  
 
-In fact, we use the cross-product to find the normal vector a plane in vector calculus.
+We use the cross-product to find the normal vector a plane in vector calculus.
 
 As an aside, we could have skipped this calculation.  The following rule holds for vectors:
 
@@ -117,7 +125,7 @@ As an aside, we could have skipped this calculation.  The following rule holds f
 
     \mathbf{a} \cdot ( \mathbf{b} \times \mathbf{c} ) = ( \mathbf{a} \times \mathbf{b} ) \cdot \mathbf{c}
 
-(we will explore triple products :ref:`here <cross-product2>`).
+(we will explore triple products in another section :ref:`here <cross-product2>`).
 
 So
 

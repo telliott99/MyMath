@@ -285,6 +285,46 @@ Integrate
 
 This series converges pretty slowly.
 
+This example is in Strang but I have a problem with it (not solved yet).  The problem is that the series only converges for :math:`|x| < 1`, not :math:`|x| \le 1`.  So what I did was to use the original series with :math:`x = 1/2`.  Then
+
+.. math::
+
+    -\ln |1-x| = x + \frac{x^2}{2} + \frac{x^3}{3} + \frac{x^4}{4} + \dots
+    
+    - \ln |1 - \frac{1}{2}| = \ln 2
+    
+    = \frac{1}{2} + \frac{1}{2(2^2)} + \frac{1}{3(2^3)} + \dots
+
+
+>>> s = 0
+>>> f = 0.5
+>>> for i in range(1,20):
+...     s += f**i/i
+...     print i, s
+... 
+1 0.5
+2 0.625
+3 0.666666666667
+4 0.682291666667
+5 0.688541666667
+6 0.691145833333
+7 0.692261904762
+8 0.692750186012
+9 0.692967199901
+10 0.693064856151
+11 0.693109245355
+12 0.693129590407
+13 0.693138980431
+14 0.693143340085
+15 0.693145374591
+16 0.693146328265
+17 0.693146777053
+18 0.693146988981
+19 0.693147089367
+>>>
+
+Also fairly slow convergence.
+
 The same series with all terms positive is the harmonic series we just looked at.
 
 .. math::
