@@ -1,4 +1,4 @@
-.. _kepler7:
+.. _kepler-hartig:
 
 ######
 Hartig

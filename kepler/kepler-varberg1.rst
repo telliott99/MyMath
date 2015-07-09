@@ -1,4 +1,4 @@
-.. _kepler5:
+.. _kepler-varberg1:
 
 #########
 Varberg 1
@@ -140,7 +140,7 @@ Putting it all together
 
     \frac{h^2}{GM} =  \mathbf{r} \cdot ( \mathbf{u_r}+ \mathbf{E}) 
 
-Recall that :math:` \mathbf{u_r}` is the unit vector in the same direction as :math:`\mathbf{r}` so that :math:`\mathbf{r} \cdot  \mathbf{u_r} = r`.
+Recall that :math:`\mathbf{u_r}` is the unit vector in the same direction as :math:`\mathbf{r}` so that :math:`\mathbf{r} \cdot  \mathbf{u_r} = r`.
 
 We can take :math:`\mathbf{E}` to be in the direction of :math:`\mathbf{r}` at time-zero so :math:`\mathbf{r} \cdot \mathbf{E}` is equal to :math:`r` times :math:`e` times the cosine of the angle between them at some later time.  (Since :math:`\mathbf{E}` is a constant vector of integration, its magnitude :math:`e` can be anything we want).
 
@@ -166,6 +166,8 @@ The curve above is an ellipse with the formula
 .. math::
 
     e^2 +  \frac{b^2}{a^2} = 1 
+    
+(see :ref:`here <ellipse-polar>`, we show that :math:`a^2 (1 - e^2) = b^2` toward the end).
 
 In the figure
 

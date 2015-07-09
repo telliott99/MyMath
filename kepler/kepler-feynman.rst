@@ -1,20 +1,20 @@
-.. _kepler2:
+.. _kepler-feynman:
 
 #######
 Feynman
 #######
 
-Richard Feynman gave a famous series of talks at Cornell in 1964 that were videotaped and transcribed into a book.  Bill Gates later purchased them and put them on the web, unfortunately with some Microsoft DRM.  Still, I have the book, called *The Character of Physical Law*.  This argument is from Chapter 2, *The Relation of Mathematics to Physics*.
+Richard Feynman gave a famous series of talks at Cornell in 1964 that were videotaped and transcribed into a book.  Bill Gates later purchased them and they are now available on the web on YouTube.  I still have the book, called *The Character of Physical Law*.  This argument is from Chapter 2, *The Relation of Mathematics to Physics*.
 
-It depends on a tiny bit of calculus---specifically, the product rule for differentiation.  It also uses the fact that the product rule is valid for vector cross products.  (See my short write-up on the cross-product for a proof).
+It depends on a tiny bit of calculus---specifically, the product rule for differentiation.  It also uses the fact that the product rule is valid for vector cross products.  (See :ref:`here <cross-product2>` for a proof and :ref:`here <cross-product>` for a general introduction to the cross-product).
 
-The rule is that if we have two vectors :math:`\mathbf{a}` and :math:`\mathbf{b}` which are changing (i.e. their individual components are functions of time), then
+The rule is that if we have two vectors :math:`\mathbf{a}` and :math:`\mathbf{b}` which are changing (i.e. some or all of their individual components are functions of time), then
 
 .. math::
 
     \frac{d}{dt} \ (\mathbf{a} \times \mathbf{b}) = \frac{d\mathbf{a}}{dt} \times \mathbf{b} + \mathbf{a}  \times \frac{d\mathbf{b}}{dt}    
 
-In our application the two vectors are the position vector of the planet with respect to the sun, :math:`\mathbf{r}`, and the time-derivative of that vector.
+In our application the two vectors are the position vector of the planet with respect to the sun, :math:`\mathbf{r}`, and the time-derivative of that vector, which is just the velocity vector.
 
 .. math::
 
@@ -24,7 +24,7 @@ Or, as the physicists would write it, using Newton's dot notation for the time-d
 
 .. math::
 
-    \dot{\mathbf{r}} = \mathbf{v}
+    \frac{d\mathbf{r}}{dt} = \mathbf{v} = \dot{\mathbf{r}}
 
 We are interested in the area of the triangle formed by the vectors :math:`\mathbf{r}` and :math:`\dot{\mathbf{r}}` over a small interval of time.  The area swept out is constant, as Newton showed, and we will prove again here.
 
@@ -86,4 +86,4 @@ We have shown that the area is constant, which is Kepler's second law.  By the w
 
     \mathbf{r} \times \mathbf{v} = \mathbf{r} \times \dot{\mathbf{r}} 
 
-(times the mass) is the angular momentum, and the lack of change is the principle of the conservation of angular momentum.
+(times the mass) is twice the angular momentum, and the lack of change is the principle of the conservation of angular momentum.

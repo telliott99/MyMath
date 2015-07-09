@@ -1,8 +1,8 @@
 .. _parabola-polar:
 
-#############################
-Parabola in polar coordinates
-#############################
+#################################
+Other conics in polar coordinates
+#################################
 
 When converting between polar coordinates and Cartesian coordinates, we will use the familiar identities:
 
@@ -15,6 +15,62 @@ When converting between polar coordinates and Cartesian coordinates, we will use
     r = x^2 + y^2
     
     t = \tan^{-1}(\frac{y}{x})
+    
+======
+Circle
+======
+
+A circle with vertex at :math:`(a,0)` and radius :math:`a`:
+
+.. math::
+
+    (x-a)^2 + y^2 = a^2
+    
+    x^2 + y^2 - 2ax = 0
+
+    r^2 - 2ar \cos t = 0
+        
+    r = 2a \cos t
+
+either that, or :math:`r = 0` is also a solution for any angle :math:`t`.
+
+A circle of radius :math:`a` centered at :math:`(0,a)` is
+
+.. math::
+
+    r = 2a \sin t
+    
+and the combination
+
+.. math::
+
+    r = 2 (\sin t + \cos t)
+    
+is a circle of radius :math:`1` centered at :math:`(\sqrt{2}, \sqrt{2})` since the maximum value for :math:`r` occurs when :math:`t = \pi/4` and :math:`r = 2 \sqrt{2}`.  The radius of the *circle* is half that.
+    
+=============
+Straight line
+=============
+
+These are straight lines:
+
+.. math::
+
+    r = \frac{a}{\cos t}
+    
+is the vertical line :math:`x = a`, and
+
+.. math::
+
+    r = \frac{a}{\sin t + \cos t}
+
+is the line with equation
+
+.. math::
+
+    x + y = a
+    
+    y = -x + a
 
 ========
 Parabola

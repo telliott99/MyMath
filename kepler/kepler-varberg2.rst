@@ -1,4 +1,4 @@
-.. _kepler6:
+.. _kepler-varberg2:
 
 #########
 Varberg 2

@@ -1,4 +1,4 @@
-.. _kepler1:
+.. _kepler-newton:
 
 #################
 Kepler and Newton
@@ -13,16 +13,16 @@ We diagram the sun :math:`S` and a planet at :math:`A`.  Imagine that the force 
 
 For a small interval :math:`\Delta t`, the planet travels from :math:`A` to :math:`B` at constant velocity and if undisturbed, would travel to :math:`C` in the next unit of time.
 
-In the absence of a force, the velocity would be constant and so the length of :math:`AB` is the same as that of :math:`BC`, and since :math:`AB` is on the same line as :math:`BC`, the area of :math:`\triangle ABS` is equal to the area of :math:`\triangle BCS`.
+In the absence of a force, the velocity would be constant and so the length of :math:`AB` is the same as that of :math:`BC`, and since :math:`ABC` is a straight line, the area of :math:`\triangle ABS` is equal to the area of :math:`\triangle BCS`.
 
 Proof:  draw the vertical line from :math:`S` to the line containing :math:`ABC`.  The area of either triangle is one-half the length of that altitude times the distance, either :math:`AB` or :math:`BC`.  The principle is illustrated in the next figure.
 
 .. image:: /figs/triangles_parallel.png
    :scale: 50 %
 
-Given two parallel lines separated by a distance :math:`h`, pick two points on one line separated by a distance :math:`d` and \emph{any} point on the other line.  The triangles drawn using those points will all have equal area, namely :math:`(1/2)dh`.
+Given two parallel lines separated by a distance :math:`h`, pick two points on one line separated by a distance :math:`d` and *any* point on the other line.  The triangles drawn using those points will all have equal area, namely :math:`(1/2)dh`.
 
-Now, suppose the force is applied at :math:`B` along the path :math:`EBS`, directly *toward the sun*.  As a result, the trajectory :math:`BC` is modified by the change in velocity resulting from application of the force. The new path is the additional velocity times :math:`\Delta t`.  Call the length :math:`CD` and add it to :math:`BC` to give the actual trajectory, :math:`BD`.
+Now, suppose the force is applied at :math:`B` along the path :math:`EBS`, a "central force" directed *toward the sun*.  As a result, the trajectory :math:`BC` is modified by the change in velocity resulting from application of the force. The new path is the additional velocity times :math:`\Delta t`.  Call the length :math:`CD` and add it to :math:`BC` to give the actual trajectory, :math:`BD`.
 
 :math:`CD` is parallel to :math:`SBE`.  Therefore, every point on :math:`CD` has an altitude with respect to :math:`SBE` of the same length.  So any point on :math:`CD` can be used to draw a triangle with the same base :math:`SB` and the result will have the equal area no matter which point is chosen.
 

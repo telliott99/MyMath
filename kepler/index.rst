@@ -7,15 +7,15 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
-   kepler0
-   kepler1
-   kepler2
-   kepler3
-   kepler4
-   kepler5
-   kepler6
-   kepler7
-   kepler8
+   kepler-intro
+   kepler-newton
+   kepler-feynman
+   kepler-vectors
+   kepler-area
    kepler-strang
-   kepler9
-   kepler10
+   kepler-ellipses-more
+   kepler-summary
+   kepler-varberg1
+   kepler-varberg2
+   kepler-hartig
+   kepler-fitzpatrick

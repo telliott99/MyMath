@@ -1,4 +1,4 @@
-.. _kepler9:
+.. _kepler-ellipses-more:
 
 ########
 Ellipses
@@ -8,7 +8,7 @@ Now, a bit about ellipses.  We will not assume this for the derivations, since w
 
 This whole problem of the orbits would be trivial if they were circular.  Then, the velocity vector :math:`\mathbf{v} = \dot{\mathbf{r}}` would be perpendicular to the position vector :math:`\mathbf{r}`.  On an ellipse, that isn't true.  Newton's diagram is drawn above with :math:`AB` not perpendicular to :math:`AS`.
 
-But in an elliptical orbit, the planet's velocity is in the same direction as the tangent vector to the ellipse at that position.  And the tangent vector has a nice relationship to the radial vector.  We can get to the point more quickly by writing the parametrization
+But in an elliptical orbit, the planet's velocity is in the same direction as the tangent vector to the ellipse at that position.  And the tangent vector has a nice relationship to the radial vector.  We can get to the point more quickly by writing the :ref:`parametrization <ellipse-parametric>`:
 
 .. math::
 
@@ -92,7 +92,7 @@ The standard parametrization of the ellipse is
 
     y = b \sin t 
 
-which I had trouble visualizing, until I drew the picture.  The point is that the parameter :math:`t` is \emph{not} the angle that a ray to :math:`P` makes with the :math:`x`-axis, as it is for the circle.  Instead, to find the :math:`x` value of :math:`P` corresponding to :math:`t`, we extend the ray with angle :math:`t` to the larger circle, with radius :math:`a`, where we read off the :math:`x`-value as
+which I had trouble visualizing, until I drew the picture.  The point is that the parameter :math:`t` is *not* the angle that a ray to :math:`P` makes with the :math:`x`-axis, as it is for the circle.  Instead, to find the :math:`x` value of :math:`P` corresponding to :math:`t`, we extend the ray with angle :math:`t` to the larger circle, with radius :math:`a`, where we read off the :math:`x`-value as
 
 .. math::
 
@@ -122,9 +122,9 @@ Rotation
 
 Let's return to the diagram of the ellipse with two bounding circles of radius :math:`a` and radius :math:`b`.  I have a new diagram on the next page.
 
-Consider the coordinates of the point :math:`P=(x,y)` (the red dot in the first quadrant) as functions of the angle :math:`t`.  As we said, :math:`t` is \emph{not} the angle of a ray from the origin to :math:`P`.
+Consider the coordinates of the point :math:`P=(x,y)` (the red dot in the first quadrant) as functions of the angle :math:`t`.  As we said, :math:`t` is *not* the angle of a ray from the origin to :math:`P`.
 
-Let's draw a ray (blue dotted line) from the origin that does have angle :math:`t` with the :math:`x`-axis.  How to find :math:`x` and :math:`y` from the diagram.  For :math:`x`, extend the ray to the outer circle.  The radius is :math:`a`, the angle is :math:`t`, and
+Draw a ray (blue dotted line) from the origin that does have angle :math:`t` with the :math:`x`-axis.  How to find :math:`x` and :math:`y` from the diagram.  For :math:`x`, extend the ray to the outer circle.  The radius is :math:`a`, the angle is :math:`t`, and
 
 .. math::
 
@@ -165,7 +165,7 @@ as expected.  Reading off the intercepts for the ray with angle :math:`t` (dotte
 
 Looking again at the figure, we want to consider what happens for the angle :math:`u = t + \pi/2`.  This is the dotted blue ray in the second quadrant.
 
-We might calculate the values of sine and cosine for :math:`u`, but notice that if we view :math:`u` as a vector, its \emph{dot product} with :math:`t` must be equal to zero.  The coordinates of the intercept of the rotated vector with the outer circle are :math:`(-1.6,1.2)`, so the cosine of the angle :math:`u` is
+We might calculate the values of sine and cosine for :math:`u`, but notice that if we view :math:`u` as a vector, its dot product with :math:`t` must be equal to zero.  The coordinates of the intercept of the rotated vector with the outer circle are :math:`(-1.6,1.2)`, so the cosine of the angle :math:`u` is
 
 .. math::
 
@@ -234,14 +234,18 @@ So what, you say.  Well, let's look at the position vector, which can be written
 
 .. math::
 
-    \mathbf{r} = \langle x,y \rangle \ 
+    \mathbf{r} = \langle x,y \rangle
     
     = \langle a \cos t,b \sin t \rangle
 
-Now, the tangent to the ellipse is precisely the direction in which a particle at :math:`(x,y)` is currently moving on the ellipse.  The tangent vector points in the same direction as the velocity vector, but :math:`\mathbf{v}` is just the time-derivative of the position vector.
+Now, the tangent to the ellipse is precisely the direction in which a particle at :math:`(x,y)` is currently moving on the ellipse.  The tangent vector points in the same direction as the velocity vector, but :math:`\mathbf{v}` is the time-derivative of the position vector.
 
 .. math::
 
-    \mathbf{v} = \frac{d\mathbf{r}}{dt} = \ \langle \frac{dx}{dt}, \frac{dy}{dt} \rangle \ = \ \langle -a \sin t,b \cos t \rangle = \ \langle x',y' \rangle 
+    \mathbf{v} = \frac{d\mathbf{r}}{dt} = \ \langle \frac{dx}{dt}, \frac{dy}{dt} \rangle \ 
+    
+    = \ \langle -a \sin t,b \cos t \rangle 
+    
+    = \ \langle x',y' \rangle 
 
 And that's the point.   :)

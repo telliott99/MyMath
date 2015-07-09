@@ -82,7 +82,7 @@ Something else we've seen before is to compute the acceleration:
 
     \mathbf{a} = \frac{d}{dt} \ \mathbf{v} =  \frac{d}{dt} \ ( r \frac{d \theta}{dt} \ \mathbf{u_{\theta}} + \frac{dr}{dt} \mathbf{u_{r}} )
 
-See :ref:`here <kepler3>`.
+See :ref:`here <kepler-vectors>`.
 
 We get two terms, one in the :math:`\mathbf{u_{\theta}}` direction, which is equal to zero by the central force hypothesis and gives us the same result as above about the area "being swept out" is constant.
 
@@ -90,7 +90,7 @@ The other one is:
 
 .. math::
 
-    \ [ \ \frac{d^2r}{dt^2} + r (\frac{d\theta}{dt})^2 \ ] \ \mathbf{u_r}
+    \ [ \ \frac{d^2r}{dt^2} - r (\frac{d\theta}{dt})^2 \ ] \ \mathbf{u_r}
 
 We will need this below.
 
@@ -98,7 +98,13 @@ We will need this below.
 Ellipse
 =======
 
-At this point, Strang reminds us that we are heading for the equation of an ellipse.  In polar coordinates, an ellipse has the general equation:
+At this point, Strang reminds us that we are heading for the equation of an ellipse.  In polar coordinates, an ellipse has the :ref:`general equation <ellipse-polar>`:
+
+.. math::
+
+    r = \frac{p}{1 - e \cos t}
+    
+which Strang gives as
 
 .. math::
 
@@ -124,13 +130,13 @@ and that
 
 is a solution of that equation (which is trivial to verify).
 
-We have
+So now to face up to the problem.  We have
 
 .. math::
 
     h = r^2 \frac{d \theta}{dt} = \frac{1}{q^2} \ \frac{d \theta}{dt}
 
-but we want :math:`dq/d\theta`.  How to get there?
+but we want :math:`dq/d\theta` (for our differential equation).  How to get there?
 
 Use the chain rule to write:
 
@@ -142,7 +148,7 @@ Use the chain rule to write:
     
     = - h \ \frac{dq}{d\theta}
 
-(the last step follows from :math:`hq^2 = d\theta/dt` above).
+(the last step follows from what we had just above).
 
 The second derivative is:
 
@@ -193,7 +199,7 @@ and then recalling the recent results regarding time-derivatives:
 
     \frac{d^2 r}{dt^2} = - h^2q^2 \ \frac{d^2q}{d\theta^2}
      
-so
+so performing the substitution:
 
 .. math::
 
@@ -220,6 +226,4 @@ In the parametric equation of the ellipse:
     \frac{1}{r} = C - D \cos\theta
 
     C = \frac{GM}{h^2} = \frac{GM}{r^2 \omega}
-
-the constant :math:`C` controls..
 

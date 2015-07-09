@@ -1,4 +1,4 @@
-.. _kepler10:
+.. _kepler-summary:
 
 ####################
 Kepler Quick Summary
@@ -114,7 +114,7 @@ the first term is zero so
 Key step
 ========
 
-With these preliminary steps we come to the key part of the derivation.  I like Varberg's version best.  The radial acceleration is
+With these preliminary steps we come to the key part of the derivation.  Here is Varberg's version.  The radial acceleration is
 
 .. math::
 
@@ -138,13 +138,13 @@ Now we just integrate with respect to time and get
 
 .. math::
 
-    \int \mathbf{a} \times \hat{\mathbf{k}} = \int \frac{GM}{h} \dot{\mathbf{u}}_\mathbf{r}  
+    \int \mathbf{a} \times \hat{\mathbf{k}} \ dt = \int \frac{GM}{h} \dot{\mathbf{u}}_\mathbf{r} \ dt 
 
     \mathbf{v} \times \hat{\mathbf{k}} = \frac{GM}{h} \mathbf{u}_\mathbf{r} + \mathbf{d} 
 
-where :math:`\mathbf{d}` is a constant \emph{vector} of integration.
+where :math:`\mathbf{d}` is a constant *vector* of integration.
 
-One last trick, we dot with :math:`\mathbf{r}` and simplify the left-hand side dramatically
+One last trick, we compute the dot product with :math:`\mathbf{r}` and simplify the left-hand side dramatically
 
 .. math::
 

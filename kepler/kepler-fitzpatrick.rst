@@ -1,4 +1,4 @@
-.. _kepler8:
+.. _kepler-fitzpatrick:
 
 ###########
 Fitzpatrick
@@ -6,7 +6,7 @@ Fitzpatrick
 
 This is a derivation of Kepler's laws from a book I found on the web for Fitzpatrick's course on Mechanics.
 
-He starts by establishing unit vectors in polar coordinates as :math:`\mathbf{e_r}` and :math:`\mathbf{e_{\theta}}` and then parametrically (see :ref:`here <kepler3>`)
+He starts by establishing unit vectors in polar coordinates as :math:`\mathbf{e_r}` and :math:`\mathbf{e_{\theta}}` and then parametrically (see :ref:`here <kepler-vectors>`)
 
 .. math::
 

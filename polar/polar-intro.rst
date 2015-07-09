@@ -4,7 +4,7 @@
 Polar Coordinates
 #################
 
-In standard polar coordinates points are plotted by distance from the origin, :math:`r`, as well as the angle :math:`\theta` that this ray makes with the positive :math:`x`-axis.  Converting from :math:`x,y` to :math:`r, \theta` is pretty easy:
+In standard polar coordinates points are plotted by distance from the origin, :math:`r`, as well as the angle :math:`\theta` that this ray makes with the positive :math:`x`-axis.  Converting from :math:`x,y` to :math:`r, \theta` is straightforward:
 
 .. math::
 

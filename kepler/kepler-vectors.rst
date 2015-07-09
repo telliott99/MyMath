@@ -1,18 +1,20 @@
-.. _kepler3:
+.. _kepler-vectors:
 
 #######
 Vectors
 #######
 
-Here is a sketch of the situation.
+Here is an outline of the situation.
 
 :math:`\mathbf{r}` is the position vector, extending radially out from the sun to the planet.  :math:`\mathbf{u_r}` is a unit vector in the :math:`\mathbf{r}` direction, so that
 
 .. math::
 
-    \mathbf{r} = r \mathbf{u_r} 
+    \mathbf{r} = r \ \mathbf{u_r} 
 
-By the central force hypothesis, the acceleration :math:`\mathbf{a} = \dot{\mathbf{v}} = \ddot{\mathbf{r}}` is in the :math:`- \mathbf{u_r}` direction.  The source of all our complexity is that the velocity :math:`\mathbf{v} = \dot{\mathbf{r}}` is not perpendicular to :math:`\mathbf{u_r}` but makes an angle :math:`\theta` with it.
+By the central force hypothesis, the acceleration :math:`\mathbf{a} = \dot{\mathbf{v}} = \ddot{\mathbf{r}}` is in the :math:`- \mathbf{u_r}` direction.  
+
+The source of all our complexity is that the velocity :math:`\mathbf{v} = \dot{\mathbf{r}}` is not perpendicular to :math:`\mathbf{u_r}` but makes an angle :math:`\theta` with it.  This is the same thing as saying that the orbits of the planets are ellipses, if they were circles it would be easy.
 
 Earlier we proved that
 
@@ -20,7 +22,7 @@ Earlier we proved that
 
     \mathbf{r} \times \mathbf{v} = \mathbf{r} \times \dot{\mathbf{r}} = \mathbf{c} 
 
-is a constant.  Here we give that vector the label :math:`\mathbf{c}` and a direction.  We align :math:`\mathbf{c}` with :math:`\hat{\mathbf{k}}`.  All the motion takes place in the :math:`xy`-plane.  Finally, we define :math:`\mathbf{u_{\theta}}` as orthogonal to :math:`\mathbf{u_{r}}` (and to :math:`\hat{\mathbf{k}}`).  :math:`\mathbf{u_{\theta}}` is aligned with :math:`\hat{\mathbf{j}}`.
+is a constant.  Here we give that vector the label :math:`\mathbf{c}` and a direction.  We align :math:`\mathbf{c}` with :math:`\hat{\mathbf{k}}`.  Since it's a constant, that means that all the motion takes place in the :math:`xy`-plane.  Finally, we define :math:`\mathbf{u_{\theta}}` as perpendicular (orthogonal) to :math:`\mathbf{u_{r}}` and :math:`\hat{\mathbf{k}}`.
 
 As a result of these definitions:
 
@@ -44,15 +46,15 @@ At any given time, :math:`\mathbf{r}` makes an angle :math:`\theta` with the :ma
 
     \mathbf{u_{\theta}} =  \ \langle -\sin \theta, \cos \theta \rangle 
 
-We verify that the cross-product is zero and that both vectors are unit length.
+We verify that the dot-product (:math:`\mathbf{u_r} \cdot \mathbf{u_{\theta}}`)  is zero and that both vectors are unit length.
 
-Now, differentiate :math:`\mathbf{u_r}` and :math:`\mathbf{u_{\theta}}` (recalling that :math:`\theta` is a function of time as well):
+Now, differentiate :math:`\mathbf{u_r}` and :math:`\mathbf{u_{\theta}}` (remember that :math:`\theta` is a function of time as well):
 
 .. math::
 
-    \frac{d}{dt} \ \mathbf{u_r} = \dot{\mathbf{u}}_\mathbf{r} = \frac{d\theta}{dt} \ \langle -\sin \theta, \cos \theta \rangle =  - \frac{d\theta}{dt} \ \mathbf{u_{\theta}} 
+    \frac{d}{dt} \ \mathbf{u_r} = \dot{\mathbf{u}}_\mathbf{r} = \frac{d\theta}{dt} \ \langle -\sin \theta, \cos \theta \rangle = \frac{d\theta}{dt} \ \mathbf{u_{\theta}} 
 
-    \frac{d}{dt} \ \mathbf{u_{\theta}} = \dot{\mathbf{u}}_\mathbf{\theta} =  \frac{d\theta}{dt} \ \langle -\cos \theta, -\sin \theta \rangle =  \frac{d\theta}{dt} \ \mathbf{u_r} 
+    \frac{d}{dt} \ \mathbf{u_{\theta}} = \dot{\mathbf{u}}_\mathbf{\theta} =  \frac{d\theta}{dt} \ \langle -\cos \theta, -\sin \theta \rangle = - \frac{d\theta}{dt} \ \mathbf{u_r} 
 
 With this preparation, we can get an expressions for the velocity
 
@@ -62,7 +64,7 @@ With this preparation, we can get an expressions for the velocity
     
     = \frac{dr}{dt} \mathbf{u_r} + r \frac{d \theta}{dt}  \mathbf{u_{\theta}} 
 
-and (with a little work) we can get the acceleration
+We used the product rule.  With a little more work, we can get the acceleration
 
 .. math::
 
@@ -72,17 +74,17 @@ and (with a little work) we can get the acceleration
 
     = \frac{d^2r}{dt^2} \mathbf{u_r} + \frac{dr}{dt} \dot{\mathbf{u}}_\mathbf{r} + \frac{dr}{dt} \frac{d \theta}{dt}  \mathbf{u_{\theta}} + r \frac{d^2\theta}{dt^2} \mathbf{u_{\theta}} + r \frac{d\theta}{dt} \dot{\mathbf{u}}_\mathbf{\theta}  
 
-We get three terms from differentiating the triple product :math:`r \ d\theta/dt  \ \mathbf{u_{\theta}}`, by a variation on the product rule.  Substitute for the dotted terms from above
+We get three terms from differentiating the triple product :math:`r \ d\theta/dt  \ \mathbf{u_{\theta}}`, by a variation on the product rule.  Now, substitute for the dotted terms from above
 
 .. math::
 
-    = \frac{d^2r}{dt^2} \mathbf{u_r} + \frac{dr}{dt} \frac{d\theta}{dt} \ \mathbf{u_{\theta}} + \frac{dr}{dt} \frac{d \theta}{dt}  \mathbf{u_{\theta}} + r \frac{d^2\theta}{dt^2} \mathbf{u_{\theta}} + r \frac{d\theta}{dt} \frac{d\theta}{dt} \ \mathbf{u_r}  
+    = \frac{d^2r}{dt^2} \mathbf{u_r} + \frac{dr}{dt} \frac{d\theta}{dt} \ \mathbf{u_{\theta}} + \frac{dr}{dt} \frac{d \theta}{dt}  \mathbf{u_{\theta}} + r \frac{d^2\theta}{dt^2} \mathbf{u_{\theta}} - r \frac{d\theta}{dt} \frac{d\theta}{dt} \ \mathbf{u_r}  
 
 Group common terms together
 
 .. math::
 
-    = \ [ \ \frac{d^2r}{dt^2} + r (\frac{d\theta}{dt})^2 \ ] \ \mathbf{u_r}  + \ [ \ 2 \ \frac{dr}{dt} \frac{d\theta}{dt} + r \frac{d^2\theta}{dt^2} \ ] \ \mathbf{u_{\theta}}  
+    = \ [ \ \frac{d^2r}{dt^2} - r (\frac{d\theta}{dt})^2 \ ] \ \mathbf{u_r}  + \ [ \ 2 \ \frac{dr}{dt} \frac{d\theta}{dt} + r \frac{d^2\theta}{dt^2} \ ] \ \mathbf{u_{\theta}}  
 
 Now for a trick, look at the factors multiplying :math:`\mathbf{u_{\theta}}` and recognize that
 
