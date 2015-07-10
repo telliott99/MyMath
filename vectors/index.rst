@@ -18,5 +18,4 @@ Contents:
    matrix-multiplication
    matrix-inverse
    kepler
-   projections
    matrix-projections

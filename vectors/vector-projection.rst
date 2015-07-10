@@ -1,4 +1,4 @@
-.. _projections:
+.. _vector-projection:
 
 ##################
 Vector projections

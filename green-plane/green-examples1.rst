@@ -1,7 +1,7 @@
-.. _green-area:
+.. _green-examples:
 
 ##############
-Green for area
+Green Examples
 ##############
 
 State the theorem:

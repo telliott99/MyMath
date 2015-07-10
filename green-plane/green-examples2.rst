@@ -122,7 +122,9 @@ The total area is just 1.
 Marsden
 +++++++
 
-Another example is from Marsden.  The region is the area in the first quadrant lying between :math:`y=x` and :math:`y=x^2` (from :math:`(0,0) \rightarrow (1,1)`).  The field is :math:`\mathbf{F} = \langle xy^2, y+x \rangle`.
+Two more examples are from Marsden.
+
+For the first, the region is the area in the first quadrant lying between :math:`y=x` and :math:`y=x^2` (from :math:`(0,0) \rightarrow (1,1)`).  The field is :math:`\mathbf{F} = \langle xy^2, y+x \rangle`.
 
 Green's Theorem for work is:
 
@@ -207,5 +209,86 @@ Putting them together we obtain (remembering to subtract the second path):
 .. math::
 
     \frac{8}{6} - \frac{5}{4} = \frac{16}{12} - \frac{15}{12} = \frac{1}{12}
+
++++++++
+Example
++++++++
+
+.. math::
+
+    \mathbf{F} = \langle 2x^3 - y^3, x^3 + y^3 \rangle
+    
+This looks unnecessarily complex, but if you compute the curl you will see where we are headed.  We do the line integral first:
+
+.. math::
+
+    \int M \ dx + N \ dy
+    
+    = \int 2x^3 - y^3 \ dx + x^3 + y^3  \ dy
+
+Our curve is just the unit circle.  So the parametrization is
+
+.. math::
+
+    x = \cos t
+    
+    y = \sin t
+    
+    dx = - \sin t \ dt
+    
+    dy = \cos t \ dt
+    
+The integral is:
+
+.. math::
+
+    \int 2x^3 - y^3 \ dx + x^3 + y^3  \ dy
+    
+    = \int 2 \cos^3 t (-\sin t) \ dt + \int \sin^4 t \ dt + \int \cos^4 t \ dt + \int \sin^3 t \cos t \ dt
+    
+The first and fourth terms are easy.  I re-combine them to give:
+
+.. math::
+
+    \frac{\cos^4 t}{2} + \frac{\sin^4 t}{4} \ \bigg |_0^{2 \pi} = \frac{1}{2} - \frac{1}{2} = 0
+
+The rest is:
+
+.. math::
+
+    \int \sin^4 t \ dt + \int \cos^4 t \ dt
+
+Referring back to my cheat sheet (:ref:`here <cos^n>`):
+
+.. math::
+
+    \int \cos^4 t \ dt = \frac{1}{4} \sin t \cos^3 t + \frac{3}{8} (t + \sin t \cos t)
+    
+    \int \sin^4 t \ dt = -\frac{1}{4} \sin^3 t \cos t + \frac{3}{8} (t -\sin t \cos t)
+
+All the mixed terms go away at any integer multiple of :math:`\pi/2` so we just have:
+
+.. math::
+
+    \frac{3}{4} t \ \bigg |_0^{2 \pi} = \frac{3 \pi}{2}
+
+Doing it the other way:
+
+.. math::
+
+    \mathbf{F} = \langle 2x^3 - y^3, x^3 + y^3 \rangle
+
+    N_x = 3x^2
+    
+    M_y = -3y^2
+    
+The area integral is:
+
+.. math::
+
+    \iint\limits_{R} (N_x - M_y) \ dA = 3 \iint x^2 + y^2 \ dy \ dx = 3 \pi
+
+Missing a factor of :math:`2` somewhere..
+
 
    

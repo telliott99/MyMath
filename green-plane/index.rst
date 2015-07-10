@@ -9,8 +9,8 @@ Contents:
    
    Auroux22
    Auroux23
-   2D-curl-example
-   green-area
+   green-examples1
+   green-examples2
    plane-summary
    potential
    
