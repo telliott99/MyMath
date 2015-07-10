@@ -1,8 +1,8 @@
 .. _2D-curl-example:
 
-############
-Curl example
-############
+#############
+Curl examples
+#############
 
 Green's Theorem is
 
@@ -118,3 +118,94 @@ is actually complicated because there are three segments of the curve:
 
 The total area is just 1.
 
++++++++
+Marsden
++++++++
+
+Another example is from Marsden.  The region is the area in the first quadrant lying between :math:`y=x` and :math:`y=x^2` (from :math:`(0,0) \rightarrow (1,1)`).  The field is :math:`\mathbf{F} = \langle xy^2, y+x \rangle`.
+
+Green's Theorem for work is:
+
+.. math::
+
+    \oint_C M \ dx + N \ dy = \iint\limits_{R} (N_x - M_y) \ dA
+
+Do the right-hand side first.  We have
+
+.. math::
+
+    \iint\limits_{R} (N_x - M_y) \ dA = \iint 1 - 2xy \ dy \ dx
+
+The inner integral is
+
+.. math::
+
+    \int_{x^2}^x 1 - 2xy \ dy
+    
+    = y - xy^2 \ \bigg |_{x^2}^x
+
+    = x - x^3 - x^2 + x^5
+
+The outer integral is
+
+.. math::
+
+    \int_0^1 x - x^3 - x^2 + x^5 \ dx = \frac{x^2}{2} - \frac{x^4}{4} - \frac{x^3}{3} + \frac{x^6}{6} \ \bigg |_0^1
+    
+    = \frac{1}{2} - \frac{1}{4} - \frac{1}{3} + \frac{1}{6} = \frac{1}{12}
+
+The path integral is
+
+.. math::
+
+    \int_C M \ dx + N \ dy = \int_C xy^2 \ dx + (x + y) \ dy
+    
+We have two parts to the curve and two different parametrizations.  The lower one is:
+
+.. math::
+
+    x = t \ \ \ t = 0 \rightarrow 1
+    
+    dx = dt
+    
+    y = t^2
+    
+    dy = 2 t \ dt
+    
+so the integral is
+
+.. math::
+
+    \int xy^2 \ dx + (x + y) \ dy
+    
+    = \int t^5 \ dt + \int (t + t^2) \ 2t \ dt
+    
+    = \int_0^1 t^5 + 2t^2 + 2t^3 \ dt
+    
+    = \frac{1}{6} + \frac{2}{3} + \frac{1}{2} = \frac{8}{6}
+
+(Backward) the upper curve is 
+
+.. math::
+
+    x = t \ \ \ t = 0 \rightarrow 1
+    
+    y = t
+    
+    dx = dy = dt
+    
+so the integral is
+
+.. math::
+
+    \int_0^1 t^3 + 2t \ dt = \int_0^1 t^3 + 2t \ dt
+    
+    = \frac{1}{4} + 1 = \frac{5}{4}
+
+Putting them together we obtain (remembering to subtract the second path):
+
+.. math::
+
+    \frac{8}{6} - \frac{5}{4} = \frac{16}{12} - \frac{15}{12} = \frac{1}{12}
+
+   

@@ -4,7 +4,7 @@
 Summary 1
 #########
 
-This short write-up will summarize the first two of the four fundamental theorems of vector calculus.  I hope this will help me to remember them.
+This short write-up will summarize the first two of the four fundamental theorems of vector calculus.
 
 First, though, a word about curl.  Curl measures the rotation of a vector field (its absolute value is twice the angular momentum).  As an example, if a two dimensional field :math:`\mathbf{F}` has components :math:`<M,N>`, then
 
