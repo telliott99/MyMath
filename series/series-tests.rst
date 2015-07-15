@@ -16,6 +16,40 @@ According to the *Calculus Lifesaver*, in order to solve problems with infinite 
 
 We dealt with the geometric series in the :ref:`previous section <series-intro>`.
 
+.. math::
+
+    1 + x + x^2 + \dots
+    
+This series converges for :math:`|x| < 1`.
+
+Proof:  take the nth partial sum to be :math:`S_n`.
+
+.. math::
+
+    S_n = 1 + x + x^2 + \dots x^n
+
+Multiply by :math:`1-x`:
+
+.. math::
+
+    (1-x) S_n = 1 + x + x^2 + \dots - x - x^2 - x^3 - \dots - x^{n+1}
+    
+    (1-x) S_n = 1 - x^{n+1}
+    
+    S_n = \frac{1}{1-x} - \frac{x^{n+1}}{1-x}
+
+If :math:`|x| < 1`, then as :math:`n \rightarrow \infty`:
+
+.. math::
+
+    \lim_{n \rightarrow \infty} \ \frac{x^{n+1}}{1-x} = 0
+    
+So 
+
+.. math::
+
+    S = \lim_{n \rightarrow \infty} \ S_n = \frac{1}{1-x}
+    
 =============
 nth Term Test
 =============
@@ -52,7 +86,7 @@ The limit of the nth term is :math:`1/4`;  therefore the series diverges.
 Negative Terms
 ==============
 
-If there are negative terms you can use the absolute convergence test or the alternating series test.  See below 
+If there are negative terms you can use the absolute convergence test or the alternating series test.  See below.
 
 ==========
 Ratio Test
@@ -86,7 +120,11 @@ Here
     
     = \frac{1}{2}
 
-(the limit of :math:`n+1/n` is :math:`1`)
+because
+
+.. math::
+
+    \lim_{n \rightarrow \infty} \frac{n+1}{n} = \lim_{n \rightarrow \infty} \frac{1+1/n}{1} = 1
 
 +++++++
 Example
@@ -112,7 +150,7 @@ This one is also easily checked by the comparison test (below) since
     
     k! > k^2, \ \ \ k > 3
     
-:math:`1/k^2` converges, so :math:`1/k!` also converges.
+:math:`\Sigma \ 1/k^2` converges, so :math:`\Sigma \ 1/k!` also converges.
 
 =============
 Integral Test
@@ -120,7 +158,7 @@ Integral Test
 
 Use the integral test when the series involves both :math:`1/n` and :math:`\ln(n)`.
 
-If we know a function :math:`f(x)` which produces the individual terms in the series and we can integrate it:
+If the individual terms in the series :math:`a_n` are decreasing, and we know a function :math:`f(x)` which produces those terms in the series at :math:`f(n)`, and we can integrate it:
 
 .. math::
 
@@ -161,6 +199,8 @@ but the upper bound has the limit
 
 so the integral diverges.  By the test, so does the series.
 
+For another proof, see our look at the harmonic series in the :ref:`previous section <series-intro>`.
+
 In general, for
 
 .. math::
@@ -191,7 +231,7 @@ Example
 
     \int_1^{\infty} \frac{1}{n^2} \ dn = - \frac{1}{n} \ \bigg |_1^{\infty} = 0 - - 1 = 1
 
-so :math:`\sum 1/n^2` converges.
+so :math:`\sum 1/n^2` converges.  But of course we knew that :)
 
 +++++++
 Example
@@ -209,7 +249,7 @@ By the p-test, this diverges.  Or by the integral test
     
     = 2 x^{1/2} \ \bigg |_{x=1}^{\infty}
     
-:math:`\rightarrow \infty` at the upper bound, so it diverges.
+:math:`x \rightarrow \infty` at the upper bound, it diverges.
 
 +++++++
 Example
@@ -227,7 +267,35 @@ By the integral test
 
     \int_{n=2}^{\infty} \frac{1}{\ln{x}} \ dx
 
-That looks a bit difficult.  An easier way is the comparison test (below).  Since
+That looks a bit difficult.  I didn't know how to do this so I searched online.  
+
+http://monkeyraptor.johanpaul.net/2013/07/integral-calculus-ln-x-1ln-x-1xln-x-and.html
+
+Since we're doing series, I'm going to show how it works.  We use the substitution:  :math:`u = \ln x` so :math:`du = dx/x` and we have
+
+.. math::
+
+    = \int \frac{1}{u} x \ du
+
+but :math:`x = e^u` so
+
+.. math::
+
+    = \int \frac{e^u}{u} \ du
+    
+I'm not positive I know what to do with the bounds for :math:`u`:  what is :math:`\ln \infty`?  As :math:`n \rightarrow \infty`, then :math:`\ln n \rightarrow \infty` as well.  Now we tackle the integral using the *series for the exponential*:
+
+.. math::
+
+    = \int_0 \frac{1}{u} + 1 + \frac{u}{2!} + \frac{u^2}{3!} + \dots
+
+    = \ln u + u + \Sigma_2^{\infty} \frac{u^n}{n \cdot n!}
+
+    = \ln (\ln x) + \ln x + \dots
+
+And if the bounds are right this clearly diverges because :math:`\ln x \rightarrow \infty` as :math:`x \rightarrow \infty`.
+
+An easier way is the comparison test (below).  Since
 
 .. math::
 
@@ -239,7 +307,7 @@ is larger term-by term than
 
     \sum_{n=2}^{\infty} \frac{1}{n}
 
-As the latter is the harmonic series, which diverges, the first series also diverges.
+The latter is the harmonic series, which diverges, so the first series also diverges.
 
 +++++++
 Example
@@ -261,7 +329,19 @@ Substitute :math:`t = \ln x` and this becomes
 
     \int_{\ln N}^{\infty}  \frac{1}{t} \ dt
 
-which diverges.
+which diverges. On the other hand
+
+.. math::
+
+    \sum_{n=N}^{\infty} \frac{1}{n (\ln n)^2} 
+
+Also substitute :math:`t = \ln x` and this becomes
+
+.. math::
+
+    \int_{\ln N}^{\infty}  \frac{1}{t^2} \ dt
+
+which *converges*.
 
 =========
 Root Test
@@ -378,6 +458,3 @@ So this series qualifies by all three tests and is therefore convergent.  Howeve
     = 1 + \frac{1}{2} + \frac{1}{3} + \dots
 
 is the harmonic series, which is divergent.
-
-    
-

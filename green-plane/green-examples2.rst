@@ -250,7 +250,7 @@ The first and fourth terms are easy.  I re-combine them to give:
 
 .. math::
 
-    \frac{\cos^4 t}{2} + \frac{\sin^4 t}{4} \ \bigg |_0^{2 \pi} = \frac{1}{2} - \frac{1}{2} = 0
+    \frac{\cos^4 t}{2} + \frac{\sin^4 t}{4} \ \bigg |_0^{2 \pi} = \frac{1}{2} + 0 - \frac{1}{2} - 0 = 0
 
 The rest is:
 
@@ -286,9 +286,13 @@ The area integral is:
 
 .. math::
 
-    \iint\limits_{R} (N_x - M_y) \ dA = 3 \iint x^2 + y^2 \ dy \ dx = 3 \pi
+    \iint\limits_{R} (N_x - M_y) \ dA 
+    
+    = 3 \iint x^2 + y^2 \ dy \ dx
 
-Missing a factor of :math:`2` somewhere..
+    = 3 \iint r^2 \ r \ dr \ d \theta
+    
+    = 3 \ 2 \pi \ \frac{r^4}{4} \ \bigg |_0^1 = \frac{3 \pi}{2}
 
 
    

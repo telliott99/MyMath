@@ -16,7 +16,7 @@ To compute the projection of a vector :math:`\mathbf{b}` onto a plane which is d
 
     \mathbf{p} = P \mathbf{b}
     
-It seems like quite a bit, but if you look at the vector version from :ref:`before <projections>`
+It seems like quite a bit, but if you look at the vector version from :ref:`before <vector-projection>`
 
 .. math::
 

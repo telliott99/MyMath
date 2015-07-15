@@ -13,11 +13,15 @@ Extend the radius through :math:`P` to :math:`Q`, and then draw the vertical con
 
 The drawing contains three similar triangles.  The first is the triangle contained within the circle, with sides :math:`x,y,r`.
 
-Next is the triangle with sides :math:`r,a,OP`, third is the triangle with sides :math:`b,r,OQ`.
+Next is the triangle with sides :math:`r,a,OP`, and the third is the triangle with sides :math:`b,r,OQ`.  So we have that:
 
 .. math::
 
-    x,y,r \sim r,a,OP, \sim b,r,OQ 
+    x,y,r 
+    
+    \sim r,a,OP
+    
+    \sim b,r,OQ 
 
 By similar :math:`\triangle`
 
@@ -29,11 +33,11 @@ For the unit circle :math:`r=1` so
 
 .. math::
 
-    a = tan \theta 
+    a = \tan \theta 
 
 This will become important in determining the derivative of the sine function (:ref:`here <lim_x_sinx>`).
 
-If you imagine a point moving around the circle :math:`a` gets very large as :math:`\theta \to \pi/2`, and in fact, becomes :math:`\infty` there.
+If you imagine a point moving around the circle :math:`a` gets very large as :math:`\theta \to \pi/2`, and in fact, goes to :math:`\infty` there.
 
 The segment :math:`OP` is (by similar :math:`\triangle`) to :math:`r` as
 

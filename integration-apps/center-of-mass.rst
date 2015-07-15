@@ -4,17 +4,23 @@
 Center of mass
 ##############
 
-As you know, in single variable calculus we can interpret
+As you know, in single variable calculus we interpret the integral of :math:`f(x)` over a closed interval :math:`[a,b]`
 
 .. math::
 
     \int_a^b f(x) dx 
 
-as the area underneath the curve :math:`y=f(x)` between the lines :math:`x=a` and :math:`x=b` (our limits).  In multi-variable calculus we compute the double integral over the same region as follows
+as the area underneath the curve :math:`y=f(x)` between the lines :math:`x=a` and :math:`x=b` (our limits).  
+
+In multi-variable calculus we compute the double integral over the same region as follows
 
 .. math::
 
-    \int_{x=a}^{x=b} \int_{y=0}^{y=f(x)} dy \ dx =  \int_{x=a}^b y \bigg |_0^{f(x)}  \ dx = \int_a^b f(x) \ dx 
+    \int_{x=a}^{x=b} \int_{y=0}^{y=f(x)} dy \ dx 
+    
+    =  \int_{x=a}^b y \bigg |_0^{f(x)}  \ dx 
+    
+    = \int_a^b f(x) \ dx 
 
 To be more general, we'd just say that we compute the double integral over the region :math:`R`
 
@@ -24,13 +30,19 @@ To be more general, we'd just say that we compute the double integral over the r
 
 with the understanding that we can compute the inner integral with respect to either :math:`x` or :math:`y`, whichever is more convenient.
 
-Another difference from the single-variable approach is that we can extend this approach by computing
+==============
+Center of mass
+==============
+
+We can extend this approach by computing
 
 .. math::
 
     \iint\limits_{R} g(x,y) \ dx \ dy  
 
-Suppose, for example, that :math:`g(x,y)` is a function that gives the density of a flat object for each coordinate :math:`x,y`.  In this case we usually use the label :math:`\rho (x,y)`.  This integral gives the total mass of the object:
+Suppose, for example, that :math:`g(x,y)` is a function that gives the density of a flat object for each coordinate :math:`x,y`.  In this case we usually use the label :math:`\rho (x,y)`.
+
+This integral gives the total mass of the object:
 
 .. math::
 
@@ -48,13 +60,17 @@ And then finally
 
 .. math::
 
-    \bar{x} = \frac{M_x}{M} 
+    \bar{x} = \frac{M_y}{M} 
 
-    \bar{y} = \frac{M_y}{M} 
+    \bar{y} = \frac{M_x}{M} 
 
-\vspace{5 mm}
++++++++
+Example
++++++++
 
-Let's do a simple example.  Suppose our region is a rectangle with the origin as one corner and the point :math:`(1,2)` as the opposite corner.  It's just a 2D box of width :math:`1` and height :math:`2`.  And let's say our density function is :math:`\rho (x,y) = xy`.  Then
+Let's do a simple example.  Suppose the region is a rectangle with the origin at one corner and the point :math:`(1,2)` as the opposite corner.  
+
+It's just a 2D box of width :math:`1` and height :math:`2`.  If the density function is :math:`\rho (x,y) = xy`, then
 
 .. math::
 
@@ -111,3 +127,82 @@ and the rest is
 Thus our center of mass is at the point :math:`2/3,4/3`.  If it had made our lives easier, either integral could be computed with respect to :math:`y` before :math:`x`.
 
 The answer makes sense.  The density increases as we go to the right and up, so the center of mass is offset from the geometric center in the same direction.
+
++++++++
+Example
++++++++
+
+If the density is constant, then we can leave it out of the calculation.
+
+This integral gives the total area of the object:
+
+.. math::
+
+    A = \iint\limits_{R} \ dx \ dy  
+
+To find the center of mass we compute
+
+.. math::
+
+    M_x = \iint\limits_{R}  y \ dx \ dy  
+
+    M_y = \iint\limits_{R}  x \ dx \ dy 
+
+And then finally
+
+.. math::
+
+    \bar{x} = \frac{M_y}{A} 
+
+    \bar{y} = \frac{M_x}{A}
+
+Let's do the calculation for a right triangle with sides :math:`p` (on the :math:`x`-axis) and :math:`q` (on the :math:`y` axis).
+
+The equation for the line connecting :math:`(0,q)` and :math:`(p,0)` is
+
+.. math::
+
+    y = -\frac{q}{p}x + q
+
+The double integral is
+
+.. math::
+
+    M_y = \int_0^p \int_0^{-\frac{q}{p}x + q} x \ dy \ dx
+    
+    = \int_0^p -\frac{q}{p}x^2 + qx \ dx
+    
+    = -\frac{q}{p} \ \frac{x^3}{3} + q \frac{x^2}{2} \ \bigg |_0^p
+    
+    = -\frac{1}{3}p^2q + \frac{1}{2}p^2q = \frac{1}{6} p^2 q
+    
+Then
+
+.. math::
+
+    \bar{x} = \frac{1/6 \ p^2 q}{A}
+    
+    = \frac{1/6 \ p^2 q}{1/2 \ p q} = \frac{1}{3} p
+
+Similarly
+
+.. math::
+
+    \bar{y} = \frac{1/6 \ p^2 q}{1/2 \ p q} = \frac{1}{3} q
+
+and the centroid of the triangle is at
+
+.. math::
+
+    (\bar{x},\bar{y}) = (p/3, p/3)
+
+If you draw this point inside the triangle, and draw the ray through that point and extending to the hypotenuse at :math:`M`
+
+.. image:: /figs/CM-centroid.png
+   :scale: 50 %
+
+it is easy to see that not only is the inset triangle similar to the large one, but that both of the two medium-sized triangles including the ray :math:`OM` are isosceles (because they have two angles the same), and therefore, :math:`M` lies at the midpoint of the hypotenuse.
+
+Thus, the center of mass is at the centroid of this triangle.  This makes a lot of sense, since each midpoint bisector divides the triangle into two regions of equal area.
+
+Since we can turn any acute triangle into two adjacent right triangles by dropping an altitude, the resulting centers of mass can be averaged, so can the centroids.

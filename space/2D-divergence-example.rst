@@ -57,7 +57,7 @@ which is pretty easy!.  Now, integrate
 Well, the volume is :math:`\frac{2}{3} \pi a^3` so we obtain :math:`2 \pi a^3`.
 
 ===========
-Osu example
+OSU example
 ===========
 
 A problem from OSU asks us to verify the divergence theorem for
