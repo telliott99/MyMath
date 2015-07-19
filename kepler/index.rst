@@ -11,10 +11,10 @@ Contents:
    kepler-newton
    kepler-feynman
    kepler-vectors
-   kepler-area
    kepler-strang
    kepler-ellipses-more
    kepler-summary
+   kepler-area
    kepler-varberg1
    kepler-varberg2
    kepler-hartig

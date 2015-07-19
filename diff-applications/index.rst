@@ -15,4 +15,3 @@ Contents:
    newton
    max_likelihood
    least-squares
-   gauss

@@ -4,7 +4,7 @@
 Feynman
 #######
 
-Richard Feynman gave a famous series of talks at Cornell in 1964 that were videotaped and transcribed into a book.  Bill Gates later purchased them and they are now available on the web on YouTube.  I still have the book, called *The Character of Physical Law*.  This argument is from Chapter 2, *The Relation of Mathematics to Physics*.
+Richard Feynman gave a famous series of talks at Cornell in 1964 that were videotaped and transcribed into a book.  Bill Gates later purchased the tapes and they are now available on the web on YouTube.  I still have the book, called *The Character of Physical Law*.  This argument is from Chapter 2, *The Relation of Mathematics to Physics*.
 
 It depends on a tiny bit of calculus---specifically, the product rule for differentiation.  It also uses the fact that the product rule is valid for vector cross products.  (See :ref:`here <cross-product2>` for a proof and :ref:`here <cross-product>` for a general introduction to the cross-product).
 
@@ -28,23 +28,23 @@ Or, as the physicists would write it, using Newton's dot notation for the time-d
 
 We are interested in the area of the triangle formed by the vectors :math:`\mathbf{r}` and :math:`\dot{\mathbf{r}}` over a small interval of time.  The area swept out is constant, as Newton showed, and we will prove again here.
 
-A nice feature of the vector cross-product is that it provides (twice) this area.  Namely
+A nice feature of the vector cross-product is that it provides this area.  Namely
 
 .. math::
 
-    A =  | \mathbf{r} \times \dot{\mathbf{r}} | = |\mathbf{r}| |\dot{\mathbf{r}}| \sin \theta   
+    2A =  | \mathbf{r} \times \dot{\mathbf{r}} | = |\mathbf{r}| |\dot{\mathbf{r}}| \sin \theta   
 
-where :math:`\theta` is the angle between :math:`\mathbf{r}` and :math:`\dot{\mathbf{r}}`, and :math:`A` is the little bit of additional area.
+where :math:`\theta` is the angle between :math:`\mathbf{r}` and :math:`\dot{\mathbf{r}}`, and :math:`A` is the little bit of additional area.  We will ignore the factor of :math:`2` in what follows (it would not alter the result).
 
-(The direction of the cross-product is perpendicular to the directions of the two input vectors:  in this case straight-up.  Since the force acts along :math:`r`, that doesn't change during the motion.)
+The direction of the cross-product is perpendicular to both of the two input vectors:  in this case straight-up.  Since the force acts along :math:`\mathbf{r}`, the direction of the cross-product doesn't change during the motion.
 
-Our hypothesis is that :math:`A` is the same no matter where the planet is in its orbit.  Another way to say the same thing is that A doesn't change with time
+Our hypothesis is that :math:`A` (the magnitude of the cross-product) is the same no matter where the planet is in its orbit.  Another way to say the same thing is that A doesn't change with time
 
 .. math::
 
     \frac{d}{dt} \ A = \dot A = 0 
 
-Now
+Now, as we said:
 
 .. math::
 
@@ -58,9 +58,9 @@ and we want to compute :math:`\dot A`.  Using the product rule it's easy.
 
     \dot A = \dot{\mathbf{r}} \times \dot{\mathbf{r}} \ + \ \mathbf{r} \times \ddot{\mathbf{r}} 
 
-As Feynman says: it's just playing with dots.  So let's look at those two terms.  Another nice fact about the cross-product is that if the two vectors point in the same direction, then the cross-product is zero.
+As Feynman says: it's just playing with dots!  So let's look at those two terms.  Another nice fact about the cross-product is that if the two vectors point in the same direction, then their cross-product is zero.
 
-Any vector points in the same direction as itself, so the first term is certainly zero.
+Any vector certainly points in the same direction as itself, so the first term is zero.
 
 .. math::
 

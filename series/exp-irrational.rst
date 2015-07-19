@@ -28,7 +28,7 @@ Here is a simple argument:  the series above after the first two terms is:
 
     \frac{1}{2} + \frac{1}{6} + \frac{1}{24} + \dots
 
-This series is smaller, term by term, than the geometric series with :math:`r=1/1`, which sums to :math:`1`.  Therefore, this sum must be less than :math:`1` and so :math:`e < 3`.
+This series is smaller, term by term, than the geometric series with :math:`r=1/2`, which sums to :math:`1`.  Therefore, this sum must be less than :math:`1` and so :math:`e < 3`.
     
 Now, if :math:`e = p / q` with :math:`p` and :math:`q` integers, and 
 
@@ -36,7 +36,7 @@ Now, if :math:`e = p / q` with :math:`p` and :math:`q` integers, and
 
     2 < e < 3
     
-then :math:`p \notin {1,2,3}`, so :math:`p >= 4`, and therefore :math:`q > 1`,  so :math:`q >= 2`.
+then :math:`p \notin \{1,2,3\}`, so :math:`p >= 4`, and therefore :math:`q > 1`,  so :math:`q >= 2`.
 
 Having established this point, equate the series representation to the rational fraction :math:`p/q`:
 

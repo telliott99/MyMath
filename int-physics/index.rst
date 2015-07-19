@@ -14,3 +14,4 @@ Contents:
    moments
    hanging-chain
    shell_theorem
+   gauss

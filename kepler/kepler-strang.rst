@@ -163,6 +163,8 @@ since we can take the derivatives in either order
     \frac{d^2 r}{dt^2} =  - h  \frac{d}{d\theta} \ ( \frac{dq}{dt})
     
     = - h \frac{d}{d\theta} \ (\frac{dq}{d\theta} \ \frac{d \theta}{dt})
+    
+    = -h \frac{d^2 q}{d \theta^2} \ \frac{d \theta}{dt}
 
 and using :math:`hq^2 = d\theta/dt` again (and that it doesn't depend on :math:`\theta`):
 

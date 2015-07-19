@@ -22,7 +22,9 @@ We could use the product, quotient and chain rules for this (and we can be sure 
 
     \ln y = \ln(x^5) - \ln(1-10x) - \ln(\sqrt{x^2+2})
 
-Now, when we differentiate, it is really implicit differentiation.  Imagine that both :math:`y` and :math:`x` are functions of :math:`t` (e.g. :math:`x=t`).  Then the one term from the left and three from the right are
+Now, when we differentiate, it is really implicit differentiation.
+
+The way I do this is to imagine that both :math:`y` and :math:`x` are functions of :math:`t` (e.g. :math:`x=t`).  Then the one term from the left and three from the right are
 
 .. math::
 
@@ -48,7 +50,9 @@ Every term has :math:`dt` in the denominator, so that just cancels.  Bring the :
 
     \frac{1}{y} \frac{dy}{dx} = \frac{y'}{y}
 
-for the rest we have
+When working problems of this type, in the future we will start here:  with the above on the left-hand side, and then differentiate the log of the right-hand side. 
+
+In this case, for the rest we have
 
 .. math::
 
@@ -72,15 +76,11 @@ Besides these (painful and rather silly) algebraic manipulations, the main thing
 
     y = x^x = \ ?
 
-Take the logarithm of both sides
+Take the log and differentiate
 
 .. math::
 
-    \ln y = \ln (x^x) = x \ \ln x
-
-Now, we can differentiate
-
-.. math::
+    \frac{dy}{y} = \frac{d}{dx} \ x \ln x
 
     \frac{y'}{y} = x (\frac{1}{x}) + \ln x (1) = 1 + \ln x
     
@@ -96,29 +96,33 @@ Another useful result is to prove the power rule.  We want
 
     \frac{d}{dx} x^n
 
-where :math:`n` is not just a positive or negative integer (:math:`\ne -1`), but can be a real number, like :math:`\pi` or :math:`e` or :math:`\sqrt{2}`.
+where :math:`n` is not just a positive or negative integer (:math:`\ne -1`), but can be any real number, like :math:`\pi` or :math:`e` or :math:`\sqrt{2}`.
 
-Take the logarithm
-
-.. math::
-
-    \ln x^n = n \ln x
-
-    \frac{d}{dx} f(x) = \frac{f'(x)}{f(x)}
-
-    = \frac{d}{dx} n \ln x = n \frac{1}{x}
-
-So
+As we did above, for logarithmic differentiation on the left-hand side we have :math:`y'/y`:
 
 .. math::
 
-    f'(x) = \frac{d}{dx} x^n =   n \ \frac{1}{x} \ x^n = n x^{n-1}
+    \frac{dy}{y} = \frac{d}{dx} n \ln x
+    
+    \frac{dy}{y} = n \ \frac{1}{x} \ dx
+    
+    \frac{y'}{y} = n \ \frac{1}{x}
+
+So 
+
+.. math::
+
+    y' = n \ \frac{1}{x} x^n
+    
+    = n x^{n-1}
+
+which is the power rule.
 
 +++++++
 Example
 +++++++
 
-Logarithmic differentiation can be used to solve problems that would otherwise be quite unwieldy
+Another unwieldy problem that can be solved by logarithmic differentiation:
 
 .. math::
 

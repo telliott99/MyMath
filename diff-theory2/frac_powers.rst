@@ -62,7 +62,7 @@ Very nice.
 Using implicit differentiation
 ==============================
 
-Yet another way is the following trick that is also a special piece of mathematics.  It relies on implicit differentiation.  I saw this in David Jerison's Calculus lectures.
+Yet another way is the following trick that is also a special piece of mathematics.  I saw this in David Jerison's Calculus lectures.
 
 .. math::
 
@@ -70,30 +70,30 @@ Yet another way is the following trick that is also a special piece of mathemati
 
     y^n = x^m
 
-    \frac{d}{dx} y^n = \frac{d}{dy} y^n \frac{dy}{dx} = \frac{d}{dx} x^m
-
-    ny^{n-1} \frac{dy}{dx} = mx^{m-1}
-
-    \frac{dy}{dx} = \frac{m}{n} \ \frac{ x^{m-1}}{y^{n-1}}
-
-Now 
-
-.. math::
-    
-    y^{n-1} = [\ x^{m/n}\ ]^{(n-1)} 
-    
-    = x^{m/n(n-1)}
-    
-    = x^{m - m/n}
-
-If we write all the powers of x in the numerator we have
+Differentiate implicitly
 
 .. math::
 
-    \frac{dy}{dx} = \frac{m}{n} \ ( x^{m-1} \ x^{m/n - m} ) 
+    ny^{n-1} \ dy = mx^{m-1} \ dx
+
+    \frac{dy}{dx} = \frac{m}{n} \ x^{m-1} \ \frac{1}{y^{n-1}}
+
+Looking at the right-hand side and ignoring the factor of :math:`m/n` for the moment, we have:
+
+.. math::
+
+    x^{m-1} \ \frac{1}{y^{n-1}} = x^{m-1} \ y^{1-n}
+
+    = x^{m-1} \ x^{m/n(1-n)}
     
-    \frac{dy}{dx} = \frac{m}{n} \ x^{m-1 + m/n - m}
-    
+    = x^{m-1} \ x^{m/n-m)}
+
+Adding up the exponents of :math:`x` on the right-hand side:
+
+.. math::
+
+    m - 1 + \frac{m}{n} - m = \frac{m}{n} - 1
+
 which gives finally
 
 .. math::

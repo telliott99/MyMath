@@ -137,7 +137,9 @@ We can apply what we've learned to the following problem.  In the Gaussian distr
 
     I = \int_{-\infty}^{\infty} e^{-x^2} \ dx 
 
-There is a great solution to this.  Write
+There is a great solution to this.  
+
+Write
 
 .. math::
 
@@ -145,11 +147,11 @@ There is a great solution to this.  Write
 
     = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty}  e^{-(x^2 + y^2)} \ dx \ dy 
 
-But we can change this to polar coordinates
+But we can change this to polar coordinates (remember that we are in the first quadrant only)
 
 .. math::
 
-    = \int_0^{2 \pi} \int_{0}^{\infty} e^{-r^2} \ r \ dr \ d \theta 
+    = \int_0^{\pi/2} \int_{0}^{\infty} e^{-r^2} \ r \ dr \ d \theta 
 
 The inner integral is just
 
@@ -161,12 +163,17 @@ So then we have
 
 .. math::
 
-    I^2 = \int_0^{2 \pi} \frac{1}{2} \ d \theta = \pi  
+    I^2 = \int_0^{\pi/2} \frac{1}{2} \ d \theta = \frac{\pi}{4}
 
 To put this another way
 
 .. math::
 
-    I = \sqrt{\pi} 
+    I = \frac{\sqrt{\pi}}{2}
 
-    I = \int_{-\infty}^{\infty} e^{-x^2} \ dx = \sqrt{\pi} 
+    \int_{-\infty}^{\infty} e^{-x^2} \ dx = \frac{\sqrt{\pi}}{2}
+
+Now, there are two changes to make for the actual normal distribution.  First, that expression has a factor of :math:`1/2 \sigma^2` in the exponent that ends up in the answer.
+
+    I^2 = \frac{2 \sigma^2 \pi}{4}
+

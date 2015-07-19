@@ -242,10 +242,10 @@ Now, the tangent to the ellipse is precisely the direction in which a particle a
 
 .. math::
 
-    \mathbf{v} = \frac{d\mathbf{r}}{dt} = \ \langle \frac{dx}{dt}, \frac{dy}{dt} \rangle \ 
+    \mathbf{v} = \frac{d\mathbf{r}}{dt} = \ \langle \frac{dx}{dt}, \frac{dy}{dt} \rangle
     
-    = \ \langle -a \sin t,b \cos t \rangle 
+    = \langle -a \sin t,b \cos t \rangle 
     
-    = \ \langle x',y' \rangle 
+    = \langle x',y' \rangle 
 
 And that's the point.   :)
