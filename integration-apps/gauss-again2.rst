@@ -1,4 +1,4 @@
-.. _gauss-again:
+.. _gauss-again2:
 
 ###########################
 Gaussian distribution: more
@@ -34,7 +34,9 @@ which is not a familiar number.  Nevertheless
 
     \sqrt{2 \pi} = 2.50662827463
 
-There is also a way to find the area under the curve using calculus.  Let
+There is also a way to find the area under the curve using calculus.  (This part repeats what we did before :ref:`here <gauss-again>`, but we will extend it below).  
+
+Let
 
 .. math::
 
@@ -114,7 +116,7 @@ Here is another way of thinking about it that justifies what we did above by doi
 
 http://www.math.uconn.edu/~kconrad/blurbs/analysis/gaussianintegral.pdf
 
-Consider the "bell surface" or Gaussian surface formed by
+Consider the "bell surface" or Gaussian surface formed by the (unnormalized) function:
 
 .. math::
 
@@ -125,37 +127,75 @@ It looks like this:
 .. image:: /figs/gaussian-surface.png
    :scale: 50 %
 
-We will compute the volume under the surface in two ways.  The first way is by horizontal slices perpendicular to the z-axis
+It looks like a real bell!
+
+We will compute the volume under the surface in two ways.  The first way is by horizontal slices perpendicular to the :math:`z`-axis.
+
+==========
+Horizontal
+==========
 
 .. math::
 
-    \int_0^1 A(z) \ dz
+    \int_0^b A(z) \ dz
 
-We need to find :math:`r^2(z)` which is also :math:`x^2(z)`.  At height :math:`z` (and with :math:`y = 0`), then
+We need to find area of horizontal slices *as a function of the height* :math:`z`.  What we have is the inverse function:
 
 .. math::
 
-    z = e^{-x^2/2}
+    z = e^{-(x^2 + y^2)/2}
 
-    x^2 = -2 \ ln z
+    x^2 + y^2 = -2 \ \ln z
+
+The cross-sections are circles of radius :math:`r`: where
+
+.. math::
+
+    r^2 = x^2 + y^2 = -2 \ \ln z
+
+We find the upper bound as follows:  the maximum value of :math:`z` occurs when :math:`x=y=0` so we have that 
+
+.. math::
+
+    z = e^{-(x^2 + y^2)/2} = e^0 = 1
 
 So
 
 .. math::
 
-    A(z) = \pi (-2) \ ln z
+    A(z) = \pi (-2) \ \ln z
 
-    V = \int_0^1 (-2) \pi \ln z = - 2 \pi (z \ln z - z)
-
-    = 2 \pi
-  
-There is one other term.  What is
+    V = -2 \pi \int_0^1 \ln z \ dz
+    
+Now the integral is:
 
 .. math::
 
-    \lim_{z -> 0+}  z \ \ln z 
+    \int \ln z \ dz = z \ln z - z
 
-By L'Hopital's rule it is zero so we have just :math:`2 \pi`.
+which is easily verified by differentiating the result.  Remembering the extra factor, we have:
+
+.. math::
+
+    = - 2 \pi (z \ln z - z)
+
+We need to evaluate this between the bounds (:math:`z=0 \rightarrow 1`).
+
+At the lower bound of :math:`z=0`, clearly the second term is zero.
+  
+The first term is :math:`z \ \ln z`.  To evaluate:
+
+.. math::
+
+    \lim_{z \rightarrow 0+}  z \ \ln z 
+
+we use L'Hopital's :ref:`rule <LHopital>`.  The result is zero so we have just zero for the whole thing at the lower bound.
+
+At the upper bound, the first term is zero and the second is equal to :math:`-1` so we have finally just :math:`(-2 \pi)(-1) = 2 \pi`.
+
+========
+Vertical
+========
 
 The other way is vertical slices.  First, define
 
@@ -169,7 +209,7 @@ The other way is vertical slices.  First, define
 
     z = e^{-(x^2 + y^2)/2}
 
-The area of each slice is (with :math:`x =` const)
+If we take slices perpendicular to the :math:`x`-axis (with :math:`x =` const), the area of each slice is
 
 .. math::
 
@@ -179,13 +219,7 @@ since :math:`x` is a constant we have
 
 .. math::
 
-    = e^{-x^2/2} \ \int_{-\infty}^{\infty} e^{-y^2/2} \ dy
-
-the integral is
-
-.. math::
-
-    A(x) = I e^{-x^2/2}
+    = e^{-x^2/2} \ \int_{-\infty}^{\infty} e^{-y^2/2} \ dy = I e^{-x^2/2}
 
 Now we need the volume, which is
 

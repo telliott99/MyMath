@@ -1,17 +1,27 @@
 .. _gauss:
 
-#####################
-Gaussian distribution
-#####################
+###################
+Normal distribution
+###################
 
-I'm going show a derivation of the Gaussian distribution from first principles.  The argument is originally due to Sir John F. W. Herschel.
+I want to follow a derivation of the Gaussian distribution from first principles.  
 
-Imagine that you are throwing darts at the origin of the :math:`x,y`- plane. Under perfect conditions, you would hit the center dead on every time. However, conditions aren't perfect. The wind is gusting from all directions, the music is loud, there are other distractions. As a result, small random errors creep in and the pattern over time looks like so:
+http://www.ncssm.edu/courses/math/Talks/PDFS/normal.pdf
+
+The argument is originally due to Sir John F. W. Herschel.
+
+https://en.wikipedia.org/wiki/Normal_distribution
+
+Imagine that you are throwing darts at the origin of the :math:`x,y`- plane. Under perfect conditions, you would probably hit target dead  every time. 
+
+However, conditions aren't perfect. The wind is gusting from all directions, the music is loud, there are other distractions. As a result, small random errors creep in and the pattern over time looks like this:
 
 .. image:: /figs/gauss1.png
    :scale: 50 %
 
-Now, there is some function for the probability that a dart will land in the interval between :math:`x` and :math:`x + \Delta x`, presently that function is unknown and what we seek. Obviously, the probability depends on :math:`x`, with a maximum at :math:`x = 0` and then finally decreasing to zero as :math:`x` gets large. We designate the function as a probability density function :math:`p(x)` and evaluate the density over the interval to get the probability that the dart lands in the interval:
+Now, we assume that there is some *function* for the probability that a dart will land in the interval between :math:`x` and :math:`x + \Delta x`, presently that function is unknown and what we seek. Obviously, the probability depends on :math:`x`, with a maximum at :math:`x = 0` and then finally decreasing to zero as :math:`x` gets large. 
+
+We designate the function as a probability density function :math:`p(x)` and evaluate the density over the interval to get the probability that the dart lands in the interval:
 
 .. math::
 
@@ -20,13 +30,19 @@ Now, there is some function for the probability that a dart will land in the int
 .. image:: /figs/gauss2.png
    :scale: 50 %
 
-Now consider a small rectangular area of size :math:`\Delta x \Delta y`. If the errors in perpendicular directions are independent, then we expect that :math:`p(x) = p(y)` and we can get the probability that a dart lands in the small rectangle bounded by :math:`x`, :math:`y` and :math:`x + \Delta x`, :math:`y + \Delta y` as:
+Now consider a small rectangular area of size :math:`\Delta x \Delta y`. If the errors in perpendicular directions are independent, then we expect that
+
+.. math::
+
+    p(x) = p(y)
+
+and we can obtain the probability that a dart will land in the small rectangle bounded by :math:`x`, :math:`y` and :math:`x + \Delta x`, :math:`y + \Delta y` as:
 
 .. math::
 
     P = p(x) \Delta x \ p(y) \Delta y
 
-In fact, if we assume that the errors do not depend on the orientation of the coordinate system, then the probability is a function only of :math:`r`, the radial distance from the origin, so we can write
+Furthermore, if we assume that the errors do not depend on the orientation of the coordinate system, then the probability is a function only of :math:`r`, the radial distance from the origin, so we can write
 
 .. math::
 
@@ -42,9 +58,11 @@ This assumption of rotational independence leads directly to the answer, as you 
 
 .. math::
 
-    \frac{\partial g(r)}{\partial \theta} = 0 = p(x) \frac{\partial p(y)}{\partial \theta}  + p(y) \frac{\partial p(x)}{\partial \theta}
+    \frac{\partial g(r)}{\partial \theta} = p(x) \frac{\partial p(y)}{\partial \theta}  + p(y) \frac{\partial p(x)}{\partial \theta} = 0
     
 We used the chain rule here, as well.
+
+If partial derivatives are new, there is a brief introduction :ref:`here <partial-diff>`.
 
 What are these derivatives?  As usual
 
@@ -76,27 +94,31 @@ And
     
 To be clear, the last statement is :math:`p'(y)(x)`:  we multiply the derivative of :math:`p` with respect to :math:`y` times the value of :math:`x`...
     
-Putting that all together, we get
+Putting it all together, we get
 
 .. math::
 
-    \frac{\partial g(r)}{\partial \theta} = 0 = p(x) \frac{\partial p(y)}{\partial \theta}  + p(y) \frac{\partial p(x)}{\partial \theta}
+    \frac{\partial g(r)}{\partial \theta} = p(x) \frac{\partial p(y)}{\partial \theta}  + p(y) \frac{\partial p(x)}{\partial \theta} = 0
 
     p(x)p'(y)(x) + p(y)p'(x)(-y) = 0
-
-    \frac{p'(x)}{p(x)(x)} = \frac{p'(y)}{p(y)(y)} = k
-
-What function do we know that has itself as the derivative (with an extra factor of :math:`x`) since :math:`p'(x) = k p(x) (x)`?
+    
+Rearranging:
 
 .. math::
 
-    p(x) = A e^{Kx^2/2}
+    \frac{p'(x)}{p(x)(x)} = \frac{p'(y)}{p(y)(y)} = k
+    
+    p'(x) = k p(x) (x)
 
-    p'(x) = AKx e^{Kx^2/2} = Kx p(x)
+What function do we know that has itself as the derivative (with an extra factor of :math:`x`)?
 
-(Leaving off the parentheses around :math:`x` that we had above).
+.. math::
 
-Since we assume that large errors are less likely than small ones, :math:`K < 0`, so we can define another constant :math:`V = - 1/K` and
+    p(x) = A e^{kx^2/2}
+
+    p'(x) = Akx e^{kx^2/2} = kx p(x)
+
+Since we assume that large errors are less likely than small ones, :math:`k < 0`, so we can define another constant :math:`V = - 1/k` and
 
 .. math::
 
@@ -131,9 +153,9 @@ At the end of the last section we wrote:
 
     p(x) = A e^{-x^2/2V}
 
-Now we will call the Gaussian :math:`G(x)`.  The exponential has some additional terms which are the mean (:math:`\mu`) and the standard deviation (:math:`\sigma`), where the latter can be expressed equivalently in terms of the variance (:math:`\sigma^2`).  
+Now we will call the Gaussian :math:`G(x)`.  The complete form of this exponential function has two additional terms which are the mean (:math:`\mu`) and the standard deviation (:math:`\sigma`), where the latter can be expressed equivalently in terms of the variance (:math:`\sigma^2 = V`).  
 
-Also, the constant in front is a normalizing constant that makes the total area under the curve equal to :math:`1`.  The area under the un-normalized function is that same constant:  :math:`\sqrt{2 \pi \sigma^2}`.  So now we have:
+The constant in front is a normalizing constant that makes the total area under the curve equal to :math:`1`.  We will determine that constant by calculating the area under the un-normalized function.  Its value will turn out to be:  :math:`\sqrt{2 \pi} \sigma`.  So now we have:
     
 .. math::
 
@@ -193,7 +215,7 @@ There is a fancy "analytical" argument by which it can be shown that the integra
 
 .. math::
 
-    \int_{-\infty}^{+\infty} \ e^{-x^2} \ dx = \sqrt{2 \pi}
+    \int_{-\infty}^{+\infty} \ e^{-x^2/2} \ dx = \sqrt{2 \pi}
 
 but it requires a double integral and some other tricks and so is beyond us for the moment.
 

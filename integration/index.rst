@@ -8,6 +8,7 @@ Contents:
    :maxdepth: 2
    
    double-integrals
+   gauss-again
    change-vars
    sphere-volume
    parametrize-sphere

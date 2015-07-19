@@ -1,10 +1,10 @@
-.. _gauss again:
+.. _gauss-again:
 
 ###########
 Gauss again
 ###########
 
-In this short write-up I want to take a very quick look at double integrals.  The basic principle of calculus of several variables is that we look at the effect of small changes in *one variable at a time*.  So we write
+In this section I want to take a very quick look at double integrals.  The basic principle of calculus of several variables is that we look at the effect of small changes in *one variable at a time*.  So we write
 
 .. math::
 
@@ -82,7 +82,9 @@ I've done this before.  The answer is
 
     = R^2 \ \frac{1}{2} ( \theta + \sin \theta \cos \theta) 
 
-The really tricky part is the limits.  We could switch back to :math:`x` or we can recognize that when :math:`x=R`, :math:`\sin \theta = 1` and when :math:`x=0`, :math:`\sin \theta = 0` so we evaluate between :math:`\theta = 0 \rightarrow \pi/2`.  That makes :math:`\sin \theta \cos \theta` go away.  The result is just
+The really tricky part is the limits.  We could switch back to :math:`x` or we can recognize that when :math:`x=R`, :math:`\sin \theta = 1` and when :math:`x=0`, :math:`\sin \theta = 0` so we evaluate between :math:`\theta = 0 \rightarrow \pi/2`.  That makes :math:`\sin \theta \cos \theta` go away.  (It will disappear for any integral multiple of :math:`\pi/2`).
+
+The result is just
 
 .. math::
 
@@ -131,11 +133,11 @@ The outer integral is
 Application
 ===========
 
-We can apply what we've learned to the following problem.  In the Gaussian distribution and also in the physics of molecular velocities we run into an integral like
+We can apply what we've learned to the Gaussian distribution :ref:`where <gauss>` we had an integral like
 
 .. math::
 
-    I = \int_{-\infty}^{\infty} e^{-x^2} \ dx 
+    I = \int_{-\infty}^{\infty} e^{-x^2/2} \ dx 
 
 There is a great solution to this.  
 
@@ -143,37 +145,45 @@ Write
 
 .. math::
 
-    I^2 = \int_{-\infty}^{\infty} e^{-x^2} \ dx \int_{-\infty}^{\infty} e^{-y^2} \ dy 
+    I^2 = \int_{-\infty}^{\infty} e^{-x^2/2} \ dx \int_{-\infty}^{\infty} e^{-y^2/2} \ dy
 
-    = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty}  e^{-(x^2 + y^2)} \ dx \ dy 
-
-But we can change this to polar coordinates (remember that we are in the first quadrant only)
+You can think of this as an area in the :math:`x,y`-plane, or just as two variables that are independent of one another.  Because of independence:
 
 .. math::
 
-    = \int_0^{\pi/2} \int_{0}^{\infty} e^{-r^2} \ r \ dr \ d \theta 
+    I^2 = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty}  e^{-(x^2 + y^2)/2} \ dx \ dy 
+
+We can use a change of variables to rewrite this in polar coordinates:
+
+.. math::
+
+    = \int_0^{2\pi} \int_{0}^{\infty} e^{-r^2/2} \ r \ dr \ d \theta 
 
 The inner integral is just
 
 .. math::
 
-    \int_{0}^{\infty} e^{-r^2} \ r \ dr = -\frac{1}{2}e^{-r^2} \ \bigg |_0^{\infty} = \frac{1}{2}  
+    \int_{0}^{\infty} e^{-r^2/2} \ r \ dr = -e^{-r^2/2} \ \bigg |_0^{\infty} = 1 
 
-So then we have
+So then we have the outer integral
 
 .. math::
 
-    I^2 = \int_0^{\pi/2} \frac{1}{2} \ d \theta = \frac{\pi}{4}
+    I^2 = \int_0^{2 \pi} \frac{1}{2} \ d \theta = 2 \pi
 
 To put this another way
 
 .. math::
 
-    I = \frac{\sqrt{\pi}}{2}
+    I = \sqrt{2 \pi}
 
-    \int_{-\infty}^{\infty} e^{-x^2} \ dx = \frac{\sqrt{\pi}}{2}
+    \int_{-\infty}^{\infty} e^{-x^2} \ dx = \sqrt{2 \pi}
 
-Now, there are two changes to make for the actual normal distribution.  First, that expression has a factor of :math:`1/2 \sigma^2` in the exponent that ends up in the answer.
+Now, there is one change to make for the actual normal distribution.  That expression has a factor of :math:`1/\sigma^2` in the exponent that ends up in the answer.
 
-    I^2 = \frac{2 \sigma^2 \pi}{4}
+.. math::
+
+    I^2 = 2 \pi \sigma^2
+
+    I = \sqrt{2 \pi \sigma^2} = \sqrt{2 \pi} \sigma
 

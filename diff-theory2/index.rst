@@ -10,4 +10,5 @@ Contents:
    frac_powers
    logarithmic_diff
    LHopital
-   partial
+   partial-diff
+
