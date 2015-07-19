@@ -22,17 +22,18 @@ There isn't a way to evaluate this integral analytically to find :math:`F(x)` su
 
 Nevertheless, we can proceed in two ways.  One way is to perform :ref:`numerical integration <numerical-int>`.
 
-If you do this you will find that:
+If you do this (with :math:`V=1`) you will find that:
 
 .. math:: 
 
     \int_{-10}^{10} e^{-x^2/2} = 2.50662827463
 
-which is not a familiar number.  Nevertheless
+which is not a familiar number.  Nevertheless (using Python):
 
-.. math::
-
-    \sqrt{2 \pi} = 2.50662827463
+>>> from math import pi, sqrt
+>>> sqrt(2*pi)
+2.5066282746310002
+>>>
 
 There is also a way to find the area under the curve using calculus.  (This part repeats what we did before :ref:`here <gauss-again>`, but we will extend it below).  
 
@@ -116,7 +117,7 @@ Here is another way of thinking about it that justifies what we did above by doi
 
 http://www.math.uconn.edu/~kconrad/blurbs/analysis/gaussianintegral.pdf
 
-Consider the "bell surface" or Gaussian surface formed by the (unnormalized) function:
+Consider the "bell surface" or Gaussian surface formed by the (unnormalized) function.  For this section we will take :math:`V=1`.
 
 .. math::
 
@@ -127,9 +128,9 @@ It looks like this:
 .. image:: /figs/gaussian-surface.png
    :scale: 50 %
 
-It looks like a real bell!
+It's a real bell!
 
-We will compute the volume under the surface in two ways.  The first way is by horizontal slices perpendicular to the :math:`z`-axis.
+We compute the volume under the surface in two ways.  The first way is by horizontal slices perpendicular to the :math:`z`-axis.
 
 ==========
 Horizontal
@@ -203,7 +204,7 @@ The other way is vertical slices.  First, define
 
     I = \int_{-\infty}^{\infty} e^{-x^2/2} \ dx
 
-(:math:`I` is what we're looking for).  So again
+(:math:`I` is what we're looking for.  It is *just a number*).  So again
 
 .. math::
 
@@ -221,13 +222,13 @@ since :math:`x` is a constant we have
 
     = e^{-x^2/2} \ \int_{-\infty}^{\infty} e^{-y^2/2} \ dy = I e^{-x^2/2}
 
-Now we need the volume, which is
+Now we add up all the little slices to find the volume, which is
 
 .. math::
 
     V =  \int_{-\infty}^{\infty} I e^{-x^2/2} \ dx
 
-but :math:`I` is a constant, so
+but :math:`I` is just a number, so
 
 .. math::
 
