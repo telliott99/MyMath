@@ -194,3 +194,48 @@ everything can be exactly as before, just grouping all :math:`f(x)` and those fr
 .. math::
 
     [f(x) + g(x)]' = f'(x) + g'(x)
+
+++++
+Note
+++++
+
+We showed above by computing the difference quotient directly that
+
+.. math::
+
+    f(x) = \sqrt{x}
+    
+    f'(x) = \frac{1}{2\sqrt{x}}
+
+Here is another approach to the same problem:
+
+.. math::
+
+    \frac{dy}{dx} \ \frac{dx}{dy} = 1
+    
+Write:
+
+.. math::
+    
+    y = x^2
+    
+    \frac{dy}{dx} = 2x
+    
+Write:
+
+.. math::
+
+    x = \sqrt{y}
+    
+    \frac{dy}{dx} \ \frac{dx}{dy} = 1
+    
+    2 x \ \frac{dx}{dy} = 1
+    
+    \frac{dx}{dy} = \frac{1}{2x} =\frac{1}{2 \sqrt{y}}
+
+Here, just remember that in the last part, :math:`y` is the *independent* variable, so if we switch back to our usual notation we have:
+
+.. math::
+
+    \frac{dy}{dx} =\frac{1}{2 \sqrt{x}}
+

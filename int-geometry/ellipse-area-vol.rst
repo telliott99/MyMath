@@ -82,7 +82,9 @@ Get rid of the :math:`a` by substitution.  Let :math:`u = x/a`, so :math:`au = x
 
     A = 4 ab \int \sqrt{1 - u^2} \ du
 
-The next step is to recognize that :math:`f(x) = \sqrt{1-u^2}` is the equation of a circle.  Since we are integrating over the first quadrant, the value of the area is just :math:`\pi/4`.  The whole thing is :math:`\pi` and we pick up the factor :math:`ab` from outside to give :math:`A = \pi ab`.
+The next step is to recognize that :math:`f(x) = \sqrt{1-u^2}` is the equation of a circle.  We need to be careful with the bounds.  Originally, we had :math:`x = 0 \rightarrow a`.  Since :math:`u = x/a`, now we have :math:`u = 0 \rightarrow 1`.  Thus, we have a unit circle.
+
+Since we are integrating over the first quadrant, the value of the area is just :math:`\pi/4`.  The whole thing is :math:`\pi` and we pick up the factor :math:`ab` from outside to give :math:`A = \pi ab`.
 
 To actually compute this, do a trig substitution.  If :math:`u` is the side opposite angle :math:`\theta`, and :math:`1` is the hypotenuse, then 
 
@@ -143,6 +145,68 @@ Only one term is non-zero and that is :math:`\theta = \pi/2` at the upper limit.
 .. math::
 
     A = 4ab \ (\frac{1}{2}\ \frac{\pi}{2}) = \pi ab
+
+Finally, suppose you think it's not politically correct to re-scale or do a U-substitution.  We have solved the equation of the ellipse for :math:`y` 
+
+.. math::
+
+     y^2 = -\frac{b^2}{a^2}x^2 + b^2 
+     
+     = b^2 (1 - \frac{x^2}{a^2}) 
+     
+     = \frac{b^2}{a^2} (a^2 - x^2)
+     
+     y = \frac{b}{a} \sqrt{a^2 - x^2}
+    
+and we insist on finding the integral directly (in the first quadrant):
+
+.. math::
+
+    A = \int_0^a \frac{b}{a} \sqrt{a^2 - x^2}
+
+Use a trig substitution:
+
+.. math::
+
+    x = a \sin \theta
+    
+    dx = a \cos \theta
+    
+    \sqrt{a^2 - x^2} = a \cos \theta
+
+See :ref:`here <trig_sub>` for a diagram.  Then we have
+
+.. math::
+
+    A = \int \frac{b}{a} a^2 \cos^2 \theta \ d \theta
+    
+The bounds on :math:`\theta` are :math:`0 \rightarrow \pi/2`.  But we are going to switch back to :math:`x` so we don't actually need that.
+
+We know the integral of cosine-squared (:ref:`here <cosine_sq>`).
+
+.. math::
+
+    \int \cos^2 \theta \ d \theta = \frac{1}{2} (\theta + \sin \theta \cos \theta)
+    
+    A = \frac{1}{2} (\sin^{-1} \frac{x}{a} + \frac{x}{a^2} \sqrt{a^2-x^2} )
+
+so
+
+.. math::
+
+    A = \frac{b}{2a} a^2 (\sin^{-1} \frac{x}{a} + \frac{x}{a^2} \sqrt{a^2-x^2} )
+
+    = \frac{b}{2a} (a^2 \sin^{-1} \frac{x}{a} + x \sqrt{a^2-x^2} )
+
+Evaluate between :math:`x = 0 \rightarrow a`.  The second term is zero at both bounds.
+
+.. math::
+
+    = \frac{b}{2a} (a^2 (\frac{\pi}{2}-0) + (0-0) )
+    
+    = \frac{\pi a b}{4}
+
+but this is just the first quadrant so the final answer is the familiar :math:`\pi a b`.
 
 ======
 Volume

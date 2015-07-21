@@ -4,7 +4,7 @@
 L'Hopital's rule
 ################
 
-Suppose we have two functions :math:`f(x)` and :math:`g(x)`, and we are interested in what value their ratio takes on is in some limit
+Suppose we have two functions :math:`f(x)` and :math:`g(x)`, and we are interested in what value their ratio takes on in some limit (as :math:`x \rightarrow a`):
 
 .. math::
 
@@ -18,7 +18,7 @@ l'Hopital's Rule says that *if* the limits for the individual functions are both
 
 if the limit exists.  Sometimes it happens that the rule must be applied a second time (or even a third) and that is OK.
 
-Note:  the rule can also be applied when both limits approach :math:`\infty`.  That's works because:
+Note:  the rule can also be applied when both limits approach :math:`\infty`.  That works because:
 
 .. math::
 

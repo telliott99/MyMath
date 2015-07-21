@@ -26,11 +26,12 @@ Contents:
    series/index
    polar/index
    complex/index
+   int-advanced/index
    vectors/index
    kepler/index
-   differentiation/index
-   integration/index
-   integration-apps/index
+   diff2+/index
+   int2+/index
+   int2+-apps/index
    line-integrals/index
    green-plane/index
    surfaces/index

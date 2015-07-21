@@ -6,13 +6,19 @@ Continuity
 
 Continuity has an intuitive definition:  we should be able to graph the function *without lifting the pencil from the paper*.  Basically, we require that for a function to be continuous at a point :math:`x=a`, if we move :math:`x` away from :math:`a` by a little bit, then :math:`f(x)` should not change from :math:`f(a)` by too much.  
 
-A formal definition uses the apparatus of limits:  epsilons and deltas.  We implement this backwards (as usual) by specifying how little the change in :math:`f(x)` can be, call it (:math:`\epsilon`).  Then if we can find :math:`\delta`, a change in :math:`x`, such that 
+A formal definition uses the apparatus of limits:  epsilons and deltas.  We implement this backwards (as usual) by specifying how small a change in :math:`f(x)` we will allow, call it (:math:`\epsilon`).
 
+A function :math:`f(x)` is continuous at :math:`x = a` if, for any :math:`\epsilon > 0`, however small, we can find a :math:`\delta` such that:
+    
 .. math::
 
-    | f(x \pm \delta) - f(x) | < \epsilon
+    |f(x) - f(a)| < \epsilon \text{ for } |x - a| < \delta
 
-for *any* :math:`\epsilon`, we are good.
+Not only must the function approach the same limit as :math:`x \rightarrow a` from either side, but that limit must be equal to :math:`f(a)`.
+
+=================
+Differentiability
+=================
 
 A particularly easy way to answer the question "is my function continuous at :math:`x=a`" is to ask whether it is differentiable at :math:`x=a`.  The reason is the following theorem:
 
