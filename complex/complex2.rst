@@ -4,6 +4,66 @@
 Computation
 ###########
 
+Apparently, it is common in physics to write the position vector as a complex number :math:`z = x + iy`.  Then calculate the velocity as :math:`|z|`.  Boas gives this example:
+
+.. math::
+
+    z = x + iy = \frac{i + 2t}{t - i}
+
+Now, we could solve for x and y and differentiate separately, but the idea is to do this:
+
+.. math::
+
+    \frac{dz}{dt} = \frac{2(t-i) - (i + 2t)}{(t-i)^2}
+    
+    = \frac{-3i}{(t-i)^2}
+    
+    v = |\frac{dz}{dt}|
+    
+    = \sqrt{\frac{-3i}{(t-i)^2} \ \frac{+3i}{(t+i)^2}}
+    
+    = \frac{3}{(t+i)(t-i)} = \frac{3}{(t+1)^2} 
+
+as for the acceleration:
+
+.. math::
+
+    \frac{d^2z}{dt^2} = \frac{-3i(2)(t+i)}{(t+i)^4}
+    
+    = \frac{-6i}{(t+i)^3}
+
+and
+
+.. math::
+
+    a = | \frac{d^2z}{dt^2} | = \sqrt{\frac{-6i}{(t+i)^3} \ \frac{+6i}{(t-i)^3}}
+
+    = \frac{6}{(t+1)^{3/2}}
+
+Alternatively, we could solve for :math:`x` and :math:`y`
+
+.. math::
+
+    \sqrt{\frac{i + 2t}{t - i} \ \frac{t + i}{t + i} } = \frac{2 t^2 - 1 + i3t}{t^2 + 1}
+    
+So
+
+.. math::
+
+    x = \frac{2 t^2 - 1}{t^2 + 1}
+    
+    y = \frac{3t}{t^2 + 1}
+    
+Differentiate both separately with respect to :math:`t` and then calculate 
+
+.. math::
+
+    v = \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2}
+
++++++++
+Example
++++++++
+
 Fitzpatrick's book on Mechanics (Chapter 7) uses complex numbers in differentiation of the position vector :math:`\mathbf{r}` for a particle.  Define a unit vector :math:`\mathbf{e}_r` in the direction of :math:`\mathbf{r}`
 
 .. math::

@@ -9,4 +9,5 @@ Contents:
    
    euler-factorial
    gamma
+   beta
    diffunderint

@@ -11,7 +11,6 @@ Contents:
    gravity
    ucm
    escape
-   moments
    hanging-chain
    shell_theorem
    gauss

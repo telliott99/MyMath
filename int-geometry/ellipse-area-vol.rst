@@ -1,8 +1,8 @@
 .. _ellipse-area-vol:
 
-###########
-The ellipse
-###########
+#######
+Ellipse
+#######
 
 The area of an ellipse can be computed in several different ways, all interesting.  The simplest way is rescaling.  In :math:`xy`-coordinates, the formula is
 

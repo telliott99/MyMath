@@ -1,8 +1,8 @@
 .. _cycloid:
 
-###########
-The cycloid
-###########
+#######
+Cycloid
+#######
 
 We imagine a bicycle with one tire marked at a particular point on the rim, say with fluorescent paint or a small light.  We start at time :math:`t = 0` with that point :math:`P` in contact with the :math:`x` axis at :math:`(0,0)`.  Then we start rolling the bike.  As the tire rotates our fixed point :math:`P` on the rim traces a curve
 

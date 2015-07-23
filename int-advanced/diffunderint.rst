@@ -30,13 +30,13 @@ http://math.hawaii.edu/~rharron/teaching/MAT203/LeibnizRule.pdf
 Example
 +++++++
 
-Let's start with Euler's formula for the base case (:math:`n = 0`) substituting :math:`x` for :math:`t` as the variable:
+Let's start with Euler's formula for the base case (:math:`n = 0`) changing notation to substitute :math:`x` for :math:`t` as the variable:
 
 .. math::
 
     \int_0^{\infty} e^{-x} \ dx = 1
 
-We do this because we want to introduce :math:`t` as a *parameter*.  Let
+We do this because we want to introduce the symbol :math:`t` as a *parameter*.  Let
 
 .. math::
 
@@ -88,4 +88,112 @@ References:
 
 http://ocw.mit.edu/courses/mathematics/18-304-undergraduate-seminar-in-discrete-mathematics-spring-2006/projects/integratnfeynman.pdf
 
-   
++++++++
+Example
++++++++
+
+Shankar uses as an example a series of functions related to the Gaussian (see :ref:`here <gauss-again2>`)
+
+.. math::
+
+    I_0(a) = \int_0^{\infty} e^{-ax^2} \ dx
+    
+    I_1(a) = \int_0^{\infty} e^{-ax^2} \ x \ dx
+
+and so on.  The notation :math:`I(a)` indicates that we will (eventually) view these guys as a function of the parameter :math:`a`.
+
+The first one is (one-half) the Gaussian integral and we will just assume the answer here:
+
+.. math::
+
+    I_0(a) = \int_0^{\infty} e^{-ax^2} \ dx = \frac{1}{2} \ \sqrt{\frac{\pi}{a}}
+
+The second one is straightforward to evaluate since we have the derivative of what's in the exponent:
+
+.. math::
+
+    I_1(a) = \int_0^{\infty} e^{-ax^2} \ x \ dx = -\frac{1}{2a} \ [ e^{-ax^2} \  ] \ \bigg |_0^{\infty}
+
+    = -\frac{1}{2a} \ (-1) = \frac{1}{2a}
+
+What we're going to do is start from :math:`I_0(a)` and differentiate with respect to :math:`a`.  (Recall the rule from above).  We will have:
+
+.. math::
+
+    \int_0^{\infty} \frac{\partial}{\partial a} \ e^{-ax^2} \ dx = \frac{d}{da} \ \frac{1}{2} \ \sqrt{\frac{\pi}{a}}
+
+    \int_0^{\infty} \ e^{-ax^2} \ (-x^2) \ dx = -\frac{1}{4} \ \sqrt{\pi} a^{-3/2}
+
+    I_2(a) = \int_0^{\infty} \ e^{-ax^2} \ x^2 \ dx = \frac{1}{4} \ \sqrt{\pi} a^{-3/2}
+    
+    I_4(a) = \int_0^{\infty} \ e^{-ax^2} \ x^4 \ dx = \frac{3}{8} \ \sqrt{\pi} a^{-5/2}
+
+and so on.  For the odd functions do this:
+
+.. math::
+
+    I_1(a) = \int_0^{\infty} e^{-ax^2} \ x \ dx = \frac{1}{2a}
+
+    \int_0^{\infty} \frac{\partial}{\partial a} \ e^{-ax^2} \ x \ dx = \frac{d}{da} \ \frac{1}{2a}
+
+    - \int_0^{\infty} \ e^{-ax^2} \ x^3 \ dx = - \frac{1}{2a^2}
+
+    I_3(a) = \int_0^{\infty} \ e^{-ax^2} \ x^3 \ dx = \frac{1}{2a^2}
+    
++++++++
+Example
++++++++
+
+Another one is the integral which yields the inverse tangent:
+
+.. math::
+
+    \int_0^{\infty} \frac{1}{1 + x^2} \ dx 
+    
+    = \tan^{-1} x \ bigg |_0^{\infty} = \frac{\pi}{2}
+
+It's easy to solve this with a trig substitution (see :ref:`here <inverse_trig>`):
+
+.. math::
+
+    x = \tan \theta
+    
+    dx = \sec^2 \theta \ d \theta
+    
+    \frac{1}{1 + x^2} = \cos^2 \theta
+    
+The integral is just :math:`\int d \theta = \theta = \tan^{-1} x`.
+
+Suppose we have
+
+.. math::
+
+    \int_0^{\infty} \frac{1}{a^2 + x^2} \ dx
+
+One way to solve this is to scale :math:`x`:
+
+.. math::
+
+    x = au
+    
+    dx = a \ du
+    
+    \int_0^{\infty} \frac{1}{a^2 + x^2} \ dx = a \int_0^{\infty} \frac{1}{a^2 + a^2u^2} \ du
+
+    = a \int_0^{\infty} \frac{1}{a^2} \ \frac{1}{1 + u^2} \ du
+
+    = \frac{1}{a} \int_0^{\infty} \ \frac{1}{1 + u^2} \ du
+    
+    = \frac{1}{a} \tan^{-1} u \ \bigg |_0^{\infty} = \frac{\pi}{2a}
+
+So, start with that one and differentiate:
+
+.. math::
+
+    \int_0^{\infty} \frac{\partial}{\partial a} \ \frac{1}{a^2 + x^2} \ dx = \frac{d}{da} \ \frac{\pi}{2a}
+
+    - 2a \int_0^{\infty} \frac{1}{(a^2 + x^2)^2} \ dx = - \frac{\pi}{2a^2}
+    
+    \int_0^{\infty} \frac{1}{(a^2 + x^2)^2} \ dx = \frac{\pi}{4a^3}
+
+    

@@ -4,23 +4,25 @@
 Moments
 #######
 
-The moment of inertia of a collection of discrete masses is the sum of each mass, times the square of the distance to the chosen axis of rotation.  
+The moment of inertia of a collection of discrete masses is the sum of the product of each mass times the square of the distance to the chosen axis of rotation.  
 
 ====
 Rods
 ====
 
-Imagine that we have a uniform (thin) rod, and it's going to rotate around the center of the rod.  Choose that as the origin of coordinates.  The ends of the rod are then at :math:`-l/2` and :math:`+l/2`.
+Imagine that we have a uniform (thin) rod, and the long arms rotate around the center of the rod.  Choose the center as the origin of coordinates.  The ends of the rod are then at :math:`-l/2` and :math:`+l/2`.
 
-Calculate the mass per unit length :math:`M/l`, and so in a tiny sliver of the rod of width :math:`dx`, the mass at that position is :math:`M/l \ dx` and its moment is :math:`Mx^2/l \ dx`.  We add them all up:
+Calculate the mass per unit length :math:`M/l`, and so in a tiny sliver of the rod of width :math:`dx`, the mass at that position is :math:`M/l \ dx` and its moment is :math:`M/l \ dx \ x^2`.  We add them all up:
 
 .. math::
 
     I = \int_{-l/2}^{l/2} \frac{M}{l} x^2 \ dx
 
-    =  \frac{M}{l} \ \frac{x^3}{3} \bigg |_{-l/2}^{l/2} = Ml^2 (\frac{1}{24} - - \frac{1}{24}) = \frac{1}{12} Ml^2
+    =  \frac{M}{l} \ \frac{x^3}{3} \bigg |_{-l/2}^{l/2} 
+    
+    = Ml^2 (\frac{1}{24} - - \frac{1}{24}) = \frac{1}{12} Ml^2
 
-If we move the axis to the end of the rod, then move the coordinate system as well, and we have
+If we move the axis to the end of the rod, then change the coordinate system to the end as well, and we have
 
 .. math::
 
@@ -32,7 +34,7 @@ There is a principle called the "parallel axis theorem" which says that
 
 .. math::
 
-    I = I_{CM} + md^2
+    I = I_{CM} + Md^2
 
 where :math:`CM` is the center of mass and :math:`d` is the distance between the two axes.  The first example was at the :math:`CM` of the rod, and the distance we moved was :math:`l/2` so we have
 
@@ -40,11 +42,13 @@ where :math:`CM` is the center of mass and :math:`d` is the distance between the
 
     I = \frac{1}{12} Ml^2 + M (\frac{l}{2})^2 = Ml^2 (\frac{1}{12} + \frac{1}{4}) = \frac{1}{3} Ml^2
 
+which checks.
+
 ===============
 Rings and disks
 ===============
 
-Imagine the object is a ring, and we're rotating around the center.  Think of it as a sum of discrete pieces
+Imagine the object is a thin ring, and it is rotating around the center.  Think of the ring as a sum of a large number of discrete pieces
 
 .. math::
 
@@ -56,7 +60,7 @@ But :math:`r = R` for every piece so we have
 
     I = R^2 \sum_i m_i = MR^2
 
-For a disk, we imagine adding up the contribution for a series of rings with increasing radius.  At radius :math:`r`, the circumference of the ring is :math:`2 \pi r`, and the area of the ring is :math:`2 \pi r \ dr`.  The mass per unit area is :math:`M/\pi R^2` so the mass of each ring is
+For a disk, we imagine adding up the contributions for each of a series of rings with increasing radius.  At radius :math:`r`, the circumference of the ring is :math:`2 \pi r`, and the area of the ring is :math:`2 \pi r \ dr`.  The mass per unit area is :math:`M/\pi R^2` so the mass of each ring is
 
 .. math::
 
@@ -70,7 +74,7 @@ Integrate mass times radius squared from :math:`r=0 \rightarrow R`
 
     = \frac{2M}{R^2} \ \frac{r^4}{4} \bigg |_{0}^{R} =  \frac{1}{2} MR^2
 
-Now, if we were to move the axis of rotation to the edge, we would have
+Now, if we were to move the axis of rotation to the edge, we can use the parallel axis theorem to calculate:
 
 .. math::
 
@@ -80,7 +84,7 @@ Now, if we were to move the axis of rotation to the edge, we would have
 Sphere
 ======
 
-Start with the sphere.  It's analogous to the ring, but harder.  I struggled with this one, by not using the appropriate slant height when calculating the area of a slice.  I found another approach online:
+Start with the sphere.  It's analogous to the ring.  I struggled with this one, by not using the appropriate slant height when calculating the area of a slice.  I found another approach online:
 
 http://www.miniphysics.com/uy1-calculation-of-moment-of-inertia-of_04.html
 
@@ -93,35 +97,53 @@ and I liked it so much I want to show that approach.  We slice the sphere perpen
 
     dI = r^2 \ dm
 
-where
+Start by computing the mass per unit area:
 
 .. math::
 
-    dm = \frac{M}{A} \ dA = \frac{M}{4\pi R^2} \ dA
+    \frac{M}{4 \pi R^2}
 
-The trick is to express the area of the ring (parametrize our slices) in terms of an angle :math:`\theta`, shown in the figure (:math:`\theta = 0 \rightarrow \pi`, where :math:`\theta = \pi/2` is perpendicular to the axis).  Doing this, we get the correct area for the width of the ring, namely :math:`R \ d \theta`, and a total area for the ring of
-
-.. math::
-
-    dA = 2 \pi r \ R \ d \theta
-
-so
-
-.. math::
-
-    dm =  \frac{M}{4\pi R^2} \ dA =   \frac{M}{4\pi R^2} \ 2 \pi r \ R \ d \theta =   \frac{M}{2 R} \ r \ d \theta
-
-and then
-
-.. math::
-
-    dI = r^2 \ dm =  \frac{M}{2 R} \ r^3 \ d \theta
-    
-Now, we need to get a relationship between :math:`r` and :math:`\theta`, but from the diagram it's clear that
+Now, think about the ring at angle :math:`\theta` and radius :math:`r`.  I hope your physics intuition is good enough that it is obvious that 
 
 .. math::
 
     r = R \sin \theta
+
+The circumference of the ring is 
+
+.. math::
+
+    2 \pi r = 2 \pi R \sin \theta
+
+The one thing that is a little hard to see is the width of the ring.  On the surface, the width does not depend on :math:`\theta` or :math:`r`, but only on :math:`R`
+
+.. math::
+
+    w = R \ d \theta
+    
+So the area of the ring is the circumference times the width 
+
+.. math::
+
+    2 \pi R^2 \sin \theta \ d \theta
+
+The mass is
+
+.. math::
+
+    dm = \frac{M}{4 \pi R^2} \ 2 \pi R^2 \sin \theta \ d \theta
+    
+    = \frac{M}{2} \sin \theta \ d \theta
+
+The moment is:
+
+.. math::
+
+    dI = dm r^2
+    
+    = R^2 \sin^2 \theta \  \frac{M}{2} \sin \theta \ d \theta
+    
+    = \frac{MR^2}{2} \sin^3 \theta \
 
 so we have the integral
 
@@ -183,7 +205,7 @@ Since the center of mass is at the origin
 
 with the integrals taken over the volume of the body.  The same is true for :math:`y` and :math:`z`.
 
-Now the square of the distance of any point in the body from the $z$-axis is $x^2 + y^2$, so the moment of inertion with respect to the center of mass is
+Now the square of the distance of any point in the body from the :math:`z`-axis is :math:`x^2 + y^2`, so the moment of inertion with respect to the center of mass is
 
 .. math::
 
@@ -257,7 +279,7 @@ Now, the first term is :math:`I_{CM}`, and in the third term, since :math:`\math
 
     I_{CM}' = I_{CM} + \sum_i m_i (-2)( \mathbf{r}_i \cdot \mathbf{d}) + Md^2 
 
-We're almost there.  We need the middle term to vanish.The coordinates were set up so that :math:`\mathbf{d}` lies along the :math:`x`-axis, so :math:` \mathbf{r}_i \cdot \mathbf{d}` is just the constant :math:`d` times the :math:`x`-component of :math:`\mathbf{r}_i` for each vector.
+We're almost there.  We need the middle term to vanish.The coordinates were set up so that :math:`\mathbf{d}` lies along the :math:`x`-axis, so :math:`\mathbf{r}_i \cdot \mathbf{d}` is just the constant :math:`d` times the :math:`x`-component of :math:`\mathbf{r}_i` for each vector.
 
 .. math::
 

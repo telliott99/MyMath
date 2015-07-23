@@ -153,7 +153,7 @@ which evaluates to :math:`V` at the lower bound.  Thus, it was essential that in
 
 We end up with just :math:`2 \pi V` for the entire volume.
 
-It remains to relate the volume integral to the integral.  I'll leave that for the second part of the next section.  There it will become clear that this is the square of 
+It remains to relate the volume integral to the single-variable Gaussian integral.  I'll leave that for the second part of the next section.  There it will become clear that this is the square of 
 
 .. math::
 

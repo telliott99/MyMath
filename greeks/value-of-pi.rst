@@ -1,10 +1,10 @@
 .. _value-of-pi:
 
-##############
-Determining Pi
-##############
+############
+Value for Pi
+############
 
-This short write-up is an explanation of Archimedes' method for finding an approximation to the irrational number :math:`\pi`.  The method uses *inscribed* and *circumscribed* polygons around a circle.  The circle has a diameter equal to :math:`1` and so its circumference is equal to :math:`\pi`.
+This is an explanation of Archimedes' method for finding an approximation to the irrational number :math:`\pi`.  The method uses *inscribed* and *circumscribed* polygons around a circle.  The circle has a diameter equal to :math:`1` and so its circumference is equal to :math:`\pi`.
 
 We will approximate the the value of :math:`\pi` by squeezing it between two other values, the perimeter of the inscribed polygon, which is less than the circumference, and the perimeter of the circumscribed polygon, which is greater than the circumference.
 

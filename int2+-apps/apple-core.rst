@@ -1,10 +1,10 @@
 .. _apple_core:
 
 ##########
-Apple_core
+Apple core
 ##########
 
-In this short write-up I want to explore the use of polar coordinates to solve a problem of volume. This is the shape known as "the cored apple", shown in the figure (from Adams et al.).
+In this section I want to explore the use of polar coordinates to solve a problem of volume. This is the shape known as "the cored apple", shown in the figure (from Adams et al.).
 
 .. image:: /figs/apple_core.png
    :scale: 50 %

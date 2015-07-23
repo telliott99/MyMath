@@ -14,9 +14,7 @@ We now generalize to any :math:`x > 0` and say that
 
 .. math::
 
-    \Gamma(x) = \int_0^{\infty} t^x e^{-t} \ \frac{dt}{t}
-    
-    = \int_0^{\infty} t^{x-1} e^{-t} \ dt
+    \Gamma(x) = \int_0^{\infty} t^{x-1} e^{-t} \ dt
 
 For integer :math:`n`
 
@@ -90,17 +88,21 @@ The first important property is:
 
     \Gamma(x+1) = x \ \Gamma(x)
 
-A second property that I got from here:
-
-http://www.math.uconn.edu/~kconrad/blurbs/analysis/gaussianintegral.pdf
+A second important property is:
 
 .. math::
     
     \frac{\Gamma(x) \Gamma(y)}{\Gamma (x+y)} = \int_0^1 t^{x-1}(1-t)^{y-1} \ dt
 
-(Need to justify this).
+http://www.math.uconn.edu/~kconrad/blurbs/analysis/gaussianintegral.pdf
 
-We used this :ref:`here <gauss-again2>` in deriving the total area under the Gaussian (normal) distribution.
+We will derive this after a look at the **beta function** (:ref:`here <beta>`).  In fact, the term on the right *is* the beta function so that:
+
+.. math::
+
+    B(x,y) = \frac{\Gamma(x) \Gamma(y)}{\Gamma (x+y)}
+
+We used the relationship :ref:`here <gauss-again2>` in deriving the total area under the Gaussian (normal) distribution.
 
 ++++++++++++
 Applications

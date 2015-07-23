@@ -11,6 +11,7 @@ Contents:
    gauss-again2
    apple-core
    center-of-mass
+   moments
    stovepipe
    sphere-plane
    

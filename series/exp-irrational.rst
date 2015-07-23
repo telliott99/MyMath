@@ -1,10 +1,10 @@
 .. _exp-irrational:
 
-#########################
-e is an irrational number
-#########################
+##########################
+Proof that e is irrational
+##########################
 
-I found a nice proof of the irrationality of :math:`e` in the calculus text by Courant and Robbins.  
+I found a nice proof of this in the calculus text by Courant and Robbins.  
 
 It is a proof by contradiction.  We start by assuming that :math:`e` is rational.
 

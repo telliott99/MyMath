@@ -4,7 +4,11 @@
 Continuity
 ##########
 
-Continuity has an intuitive definition:  we should be able to graph the function *without lifting the pencil from the paper*.  Basically, we require that for a function to be continuous at a point :math:`x=a`, if we move :math:`x` away from :math:`a` by a little bit, then :math:`f(x)` should not change from :math:`f(a)` by too much.  
+Continuity has an intuitive definition:  we should be able to graph the function *without lifting the pencil from the paper*.  Euler tried to define a continuous function as a "curve described by freely leading the hand".
+
+https://www.maa.org/external_archive/devlin/devlin_5_00.html
+
+Basically, we require that for a function to be continuous at a point :math:`x=a`, if we move :math:`x` away from :math:`a` by a little bit, then :math:`f(x)` should not change from :math:`f(a)` by too much.  
 
 A formal definition uses the apparatus of limits:  epsilons and deltas.  We implement this backwards (as usual) by specifying how small a change in :math:`f(x)` we will allow, call it (:math:`\epsilon`).
 
