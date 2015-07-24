@@ -165,7 +165,7 @@ It's worth pointing out that the complex conjugate is almost exactly the same po
 
     z z^* = a^2 + b^2 = r^2 e^{i(\theta + - \theta)} = r^2
 
-The complex conjugate is also written as :math:`\overline{z}`.  Another formula for :math:`r$ i`
+The complex conjugate is also written as :math:`\overline{z}`.  Another formula for :math:`r`
 
 .. math::
 
@@ -196,6 +196,22 @@ Let's work an example
     \frac{1+i}{1-i} \ \frac{1+i}{1+i} = \frac{1 + 2i - 1}{1 + 1}
 
     = \frac{2i}{2} = i
+
+which we can easily check because:
+
+.. math::
+
+    i(1 - i) = i + 1
+
+and then
+
+.. math::
+    
+    i(i + 1) = -1 + i
+    
+    i(-1 + i) = -i - 1
+    
+    i(-i - 1) = 1 - i
 
 The other way (with :math:`r`, :math:`\theta`) is
 
