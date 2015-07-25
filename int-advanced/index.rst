@@ -11,3 +11,4 @@ Contents:
    gamma
    beta
    diffunderint
+   dirac

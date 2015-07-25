@@ -10,7 +10,7 @@ Contents:
    limits-basic
    differentiable
    continuity
-   nice
+   functions
    min-max
    evt
    rolle

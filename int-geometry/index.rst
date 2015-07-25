@@ -14,4 +14,5 @@ Contents:
    cycloid
    ellipse-area-vol
    spherical-cap
+   pappus
 
