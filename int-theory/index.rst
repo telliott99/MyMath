@@ -11,6 +11,7 @@ Contents:
    circles
    ftc
    usub
+   trig
    ibp
    ibp_more
    trig_sub

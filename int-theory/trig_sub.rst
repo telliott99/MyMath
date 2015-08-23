@@ -225,59 +225,19 @@ which is a bit tricky.  If you look it up in a table of integrals, the individua
 
     \int \sec^3 x \ dx = \frac{1}{2}(\sec x \ \tan x + \ln | \sec x + \tan x|)
 
-============================
-Actually doing the integrals
-============================
 
-When faced with 
-
-.. math::
-
-    \int \sec x \ dx
-    
-somebody once had a wild idea!  Multiply and divide by :math:`\tan x + \sec x`:
-
-.. math::
-
-    \int \sec x \ \frac{\tan x + \sec x}{\tan x + \sec x}  \ dx
-
-    =  \int \frac{\sec x \ \tan x + \sec^2 x}{\sec x + \tan x}  \ dx
-
-Recall that the derivative of :math:`\tan x` is :math:`\sec^2 x` and the derivative of :math:`\sec x` is :math:`\sec x \tan x`.
-
-Our clever construction has produced an expression
-
-.. math::
-
-    \int \frac{\sec x \ \tan x + \sec^2 x}{\sec x + \tan x}  \ dx
-
-in which the numerator is the derivative of the denominator.  This is just
- 
-.. math::
- 
-    \int \frac{1}{u} \ du = \ln |u|
-
-    = \ln |\sec x + \tan x|
-    
-plus :math:`C`, of course.
-
-We can certainly check that.
-
-.. math::
-
-    \frac{d}{dx} \ln |\sec x + \tan x|
-    
-    = \frac{1}{\sec x + \tan x} \ (\sec x \tan x + \sec^2 x)
-
-    = \sec x \ \frac{\tan x + \sec x}{\sec x + \tan x}
-
-    = \sec x
 
 ======================
 Doing the cubed secant
 ======================
 
-We start by recalling that :math:`\sec^2 x = 1 + \tan^2 x`, so
+.. math::
+
+    \int  \sec^3 x \ dx
+
+This one is very similar to :ref:`cosine squared <cosine_sq>`.  We use integration by parts to obtain an expression that has the negative of secant-cubed on the right-hand side.
+
+Start by recalling that :math:`\sec^2 x = 1 + \tan^2 x`, so
 
 .. math::
 
