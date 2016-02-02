@@ -100,6 +100,22 @@ and
 
     \mathbf{u} = \mathbf{v} - \mathbf{w}
 
+=====================
+Vector multiplication
+=====================
+
+Vectors can also multiply vectors, we'll have much more to say about the subject in later sections, but for now, let's just introduce the dot product:
+
+.. math::
+
+    \mathbf{u} = \langle u_1, u_2 \rangle
+
+    \mathbf{v} = \langle v_1, v_2 \rangle
+
+    \mathbf{u} \cdot \mathbf{v} = u_1 v_1 + u_2 v_2
+
+We multiply the first component of :math:`\mathbf{u}` by the first component of :math:`\mathbf{v}`, the second component of :math:`\mathbf{u}` by the second component of :math:`\mathbf{v}` (and so on, for higher dimensions).  Then sum up all the terms.
+
 ==================
 Length of a vector
 ==================

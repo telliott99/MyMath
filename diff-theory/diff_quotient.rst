@@ -15,7 +15,7 @@ The slope of the line (the secant) connecting :math:`Q` and :math:`P` is
 
 .. math::
 
-    \frac{\Delta y}{\Delta x} = \frac{f(x+h) - f(x)}{x + h - h} = \frac{f(x+h) - f(x)}{h}
+    \frac{\Delta y}{\Delta x} = \frac{f(x+h) - f(x)}{x + h - x} = \frac{f(x+h) - f(x)}{h}
 
 This is a famous quantity, it's called the *difference quotient*.
 

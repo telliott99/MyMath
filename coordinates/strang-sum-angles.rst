@@ -11,9 +11,9 @@ Here is a proof from Strang's *Calculus*.
 
 It is simple and geometric, but does not require a fancy setup.
 
-In the left panel of the figure we have angle :math:`t` and angle :math:`s`, while the red triangle is drawn containing the angle which is the difference :math:`s-t`.
+In the left panel of the figure we have two points which are reached by rotation through the angle :math:`t` and the angle :math:`s`, while the red triangle is shown includes the angle which is the difference :math:`s-t`.
 
-Also shown are two points, one has coordinates :math:`\cos s, \sin s` and the other has coordinates :math:`\cos t, \sin t`, as well as the distance between them :math:`d` which is computed as :math:`d^2`:
+Also shown are two points, one has coordinates :math:`\cos s, \sin s` and the other has coordinates :math:`\cos t, \sin t`.  The distance between them :math:`d` is computed as :math:`d^2`:
 
 .. math::
 
@@ -23,7 +23,7 @@ Also shown are two points, one has coordinates :math:`\cos s, \sin s` and the ot
     
     = 2 - 2 \cos s \cos t - 2 \sin s \sin t
 
-In the right panel, the triangle has been rotated, preserving the same relationships, but now we see that the upper point labeled :math:`x,y` is :math:`\cos (s-t), \sin (s-t)`.  And the distance :math:`d` is now the distance from that point to :math:`(1,0)`.  So 
+In the right panel, the same red triangle has been rotated, preserving the distances between the two points, but now we see that the upper point labeled :math:`x,y` is :math:`\cos (s-t), \sin (s-t)`.  And the distance :math:`d` is now the distance from that point to :math:`(1,0)`.  So 
 
 .. math::
 

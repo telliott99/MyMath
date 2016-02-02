@@ -14,6 +14,7 @@ Contents:
    cosine-to-sine-alt
    vectors-matrices
    proof-product-rule
+   proof-chain-rule
    exp-basics
    exp-interest
    exp-binomial

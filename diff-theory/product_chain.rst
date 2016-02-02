@@ -260,7 +260,9 @@ which we can easily confirm by just substituting into :math:`y=x^2`
     
     \frac{dy}{dt} = 18t
 
-This is called the chain rule.  
+This is called the chain rule.
+
+Here is a :ref:`proof <proof-chain-rule>`)
 
 +++++++
 Example
