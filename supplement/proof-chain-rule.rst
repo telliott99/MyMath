@@ -4,21 +4,23 @@
 Proof of the chain rule
 #######################
 
-Given two functions :math:`f` and :math:`g` we are interested in the composite function :math:`f(g(x))`, often written as :math:`f \circ g`, and in particular, we wish to derive an expression for the derivative.  The difference quotient is:
+Given two functions :math:`f` and :math:`g` we are interested in the composite function :math:`f(g(x))`, often written as :math:`f \circ g`, and in particular, we wish to derive an expression for the derivative.  
+
+As always, we need to compute the limit of the difference quotient:
 
 .. math::
 
     \frac{d}{dx} \ (f \circ g) = \lim_{h \rightarrow 0} \frac{f(g(x+h)) - f(g(x))}{h}
     
-Naturally, we insist that :math:`g` be differentiable at :math:`x` and :math:`f` be differentiable at the point :math:`g(x)`.
+Naturally, we insist that :math:`g` be differentiable at :math:`x` and :math:`f` be differentiable at the point given by :math:`g(x)`.
 
-The chain rule is the simple formula:
+The chain rule is a simple formula:
 
 .. math::
 
     \frac{d}{dx} \ (f \circ g) = f'(g(x)) \cdot g'(x)
     
-which is more easily remembered as
+which is perhaps more easily remembered as
 
 .. math::
 
@@ -40,10 +42,10 @@ Or write it implicitly as
 
 .. math::
 
-    dz = 2y \ dy 
-    
     dy = 2x \ dx
-    
+
+    dz = 2y \ dy 
+        
     = 2 y \ 2 x \ dx 
     
     = 4 x^2 x \ dx
@@ -83,8 +85,10 @@ Rearrange and define a new variable :math:`v`
 .. math::
 
     v = \frac{g(x+h) - g(x)}{h} - g'(x)
-    
-:math:`v` depends on :math:`h` and :math:`v \rightarrow 0` as :math:`h \rightarrow 0` (the limit of the difference quotient is equal to the derivative :math:`g'(x)` by definition).  We can set up a similar expression involving :math:`f`, namely:
+
+We do this so we won't have to keep writing these terms as we do some algebra.  In the end, we will make :math:`v` go away by noting that :math:`v` depends on :math:`h` and :math:`v \rightarrow 0` as :math:`h \rightarrow 0` (the limit of the difference quotient is equal to the derivative :math:`g'(x)` by definition).  
+
+We can set up a similar expression involving :math:`f`, namely:
 
 .. math::
 
@@ -104,7 +108,7 @@ Rearrange some more:
 Rewrite
 +++++++
 
-So now we want to rewrite some things.  Using the first equation
+So now we want to rewrite :math:`f(g(x+h))` to be :math:`f(g(x)) +` stuff.  Using the first equation
 
 .. math::
 
@@ -116,13 +120,15 @@ rewrite :math:`f(g(x+h))`:
 
     f(g(x+h)) = f(g(x) + [ \ g'(x) + v \ ] \ h )
 
-Now, let us pick a particular
+Now, let us pick a particular value for :math:`k`
 
 .. math::
 
     k = \ [ \ g'(x) + v \ ] \ h
+    
+Notice that as :math:`h \rightarrow 0`, so :math:`k \rightarrow 0`.
 
-We have
+Substituting this value of :math:`k`, we have
 
 .. math::
 
@@ -135,16 +141,18 @@ Now, using the second equation:
     f(y+k) = f(y) + [ \ f'(y) + w \ ] \ k
 
 substitute on the right-hand side, giving:
+
+.. math::
     
     f(g(x + h)) = f(g(x)) + [ \ f'(g(x)) + w \ ] \ k
     
-substituting for :math:`k`:
+substituting back for :math:`k`:
 
 .. math::
 
     f(g(x+h)) = f(g(x)) + [ \ f'(g(x)) + w \ ] \ [ \ g'(x) + v \ ] \ h
 
-Now that we have extracted :math:`f(g(x))` from the first term we can put everything together and see some cancellations.
+Now that we have extracted :math:`f(g(x))` from :math:`f(g(x+h))`, we can put everything together and see some cancellation.
 
 +++++++++++++++++++
 Difference quotient
@@ -156,7 +164,7 @@ Go back to the difference quotient:
 
     \frac{f(g(x+h)) - f(g(x))} { h }
 
-substitute the expression for :math:`f(g(x+h)) from above:
+substitute the expression for :math:`f(g(x+h))` from above:
     
 .. math::
     
@@ -182,7 +190,7 @@ So now, we just need to take it to the limit:
     
     = \ [  \ \lim_{h \rightarrow 0} f'(g(x)) +  \lim_{h \rightarrow 0} w \ ] \ [ \  \lim_{h \rightarrow 0} g'(x) +  \lim_{h \rightarrow 0} v \ ]
 
-But, as :math:`h \rightarrow 0`, so :math:`k \rightarrow 0`, and as :math:`k \rightarrow 0`, so :math:`v \rightarrow 0` and :math:`w \rightarrow 0`, and we just have:
+But, as :math:`h \rightarrow 0`, so :math:`k \rightarrow 0`, and :math:`v \rightarrow 0`.  Also, as :math:`k \rightarrow 0` so :math:`w \rightarrow 0`.  That means we just have:
 
 .. math::
 
@@ -191,25 +199,3 @@ But, as :math:`h \rightarrow 0`, so :math:`k \rightarrow 0`, and as :math:`k \ri
     = f'(g(x)) \cdot g'(x)
     
 which is the chain rule.
-
-According to my source, the "often-seen proof" involves multiplying by the inverse of :math:`g'(x)`:
-
-.. math::
-
-    (f \circ g)'(x) = \lim_{h \rightarrow 0} \frac{f(g(x+h)) - f(g(x))}{h}
-    
-    (f \circ g)'(x) \ (\frac{1}{g'(x)} = \lim_{h \rightarrow 0} \frac{f(g(x+h)) - f(g(x))}{h} \ \frac{h}{g(x+h)-g(x)}
-
-whereupon we cancel the solitary :math:`h`
-    
-.. math::
-    
-    = \lim_{h \rightarrow 0} \frac{f(g(x+h)) - f(g(x))}{g(x+h)-g(x)}
-    
-    = f'(g(x))
-    
-Hence
-
-    (f \circ g)'(x) =  f'(g(x)) g'(x)
-
-But this proof is "technically incorrect".  I guess it has something to do with the cancellation step.
