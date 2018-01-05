@@ -74,7 +74,7 @@ Finally, we saw that for a sum of two functions
 
     f(x) + g(x)
     
-    [ \ f(x) + g(x) \ ] \ ' = f'(x) + g'(x)
+    ( f(x) + g(x) ) \ ' = f'(x) + g'(x)
 
 This leads naturally to the  question, what about a product of functions?
 
@@ -82,7 +82,7 @@ This leads naturally to the  question, what about a product of functions?
 
     f(x) \ g(x)
     
-    [ \ f(x) \ g(x) \ ] \ ' = \ ?
+    ( f(x) \ g(x) ) \ ' = \ ? 
 
 It's kind of embarrassing, but originally Leibnitz published that this derivative is equal to :math:`f'(x) g'(x)`.
 

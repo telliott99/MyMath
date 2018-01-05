@@ -4,24 +4,20 @@
 Differentiation: under the integral
 ###################################
 
-We start with a reference to Euler's factorial formula (see :ref:`here <euler-factorial>`):  for integral :math:`n \ge 0`
+We start with a reference to Euler's factorial formula (see :ref:`here <euler-factorial>`):  for integral :math:`n \ge 0`.
 
 .. math::
 
     n! = \int_0^{\infty} t^n e^{-t} \ dt
-
-We're going to derive this in a different way, using the following rule:
+    
+We're going to derive this in a different way, using what is called the Leibnitz rule.  The following is true for any function of two variables :math:`x` and :math:`y`, given that :math:`\partial y/\partial x` is continuous:
 
 .. math::
 
-    \frac{d}{dt} \ \int_a^b f(x,t) \ dt = \int_a^b \frac{\partial}{\partial t} f(x,t) \ dx
+    \frac{d}{dy} \ \int_a^b f(x,y) \ dx = \int_a^b \frac{\partial}{\partial y} f(x,y) \ dx
 
 This is called **differentiating under the integral sign**.
     
-What it means is that if we have a function of two variables :math:`x` *and* :math:`t`, then the above is true.
-
-The simple version of the rule (as we have it here) was discovered by Leibnitz and is called (of course) the Leibnitz Rule.
-
 Here is a proof:
 
 http://math.hawaii.edu/~rharron/teaching/MAT203/LeibnizRule.pdf
@@ -36,7 +32,9 @@ Let's start with Euler's formula for the base case (:math:`n = 0`) changing nota
 
     \int_0^{\infty} e^{-x} \ dx = 1
 
-We do this because we want to introduce the symbol :math:`t` as a *parameter*.  Let
+This is a standard example of an improper integral.  We evaluate the integral at some finite upper limit :math:`b` and then ask what happens in the limit as :math:`b \rightarrow \infty`.
+
+I changed notation because I want to introduce the symbol :math:`t` as a *parameter*.  Let
 
 .. math::
 
@@ -46,8 +44,6 @@ We do this because we want to introduce the symbol :math:`t` as a *parameter*.  
     
     \int_0^{\infty} t e^{-tu} \ du = 1
     
-So
-
 .. math::
 
     \int_0^{\infty} e^{-tu} \ du = \frac{1}{t}
@@ -150,7 +146,7 @@ Another one is the integral which yields the inverse tangent:
 
     \int_0^{\infty} \frac{1}{1 + x^2} \ dx 
     
-    = \tan^{-1} x \ bigg |_0^{\infty} = \frac{\pi}{2}
+    = \tan^{-1} x \bigg |_0^{\infty} = \frac{\pi}{2}
 
 It's easy to solve this with a trig substitution (see :ref:`here <inverse_trig>`):
 

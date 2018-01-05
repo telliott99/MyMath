@@ -15,4 +15,5 @@ Contents:
    evt
    rolle
    mvt
+   ftc-proof
    prove-Taylor-R

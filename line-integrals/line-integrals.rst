@@ -335,9 +335,15 @@ and we have equations for :math:`x(t), y(t), z(t)`
 
     \frac{d\mathbf{r}}{dt} = \  \langle \frac{dx}{dt},\frac{dy}{dt},\frac{dz}{dt} \rangle 
 
-    = \  \langle 1,1,4t \rangle 
+    = \  \langle 1,1,4t \rangle
 
-    \int_C \mathbf{F} \cdot dr \int \mathbf{F} \cdot \frac{d\mathbf{r}}{dt} \ dt = \int_C  \langle t,t,2t^2 \rangle \  \cdot  \langle 1,1,4t \rangle dt 
+Then
+
+.. math::
+
+    \int_C \mathbf{F} \cdot dr = \int \mathbf{F} \cdot \frac{d\mathbf{r}}{dt} \ dt 
+    
+    = \int_C  \langle t,t,2t^2 \rangle \  \cdot  \langle 1,1,4t \rangle dt 
 
     = \int_C (2t + 8t^3) dt = t^2 + 2t^4 
 
